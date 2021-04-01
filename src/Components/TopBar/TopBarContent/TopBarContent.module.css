@@ -1,0 +1,34 @@
+@import '../../../App.module.css';
+
+.topBar {
+    max-width: var(--global-max-width);
+    padding: 3px 0;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+}
+.contentList {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+.social {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+.socialItem {
+    padding: 0 5px;
+}
+.social > li:hower {
+    cursor: pointer;
+    color: pink;
+}
+/* .socialItem:li:hower {
+    cursor: pointer;
+    color: pink;
+} */
