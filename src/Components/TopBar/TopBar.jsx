@@ -4,7 +4,7 @@ function TopBar() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.topBar}>TopBar</div>
+        <div className={styles.topBar}>TopBar 2</div>
       </div>
     </>
   );
