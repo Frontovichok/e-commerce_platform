@@ -1,6 +1,10 @@
 @import '../../App.module.css';
 
-.header {
+.content {
+    flex: 1 0;
+    background-color: rgb(211, 226, 212);
+}
+.container {
     display: flex;
     justify-content: left;
     align-items: center;

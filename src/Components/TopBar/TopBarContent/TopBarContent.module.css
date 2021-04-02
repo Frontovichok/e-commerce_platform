@@ -13,6 +13,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-left: 0;
+    margin: 5px 0;
 }
 .social {
     display: flex;
@@ -20,13 +21,16 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-left: 0;
+    
 }
+
 .socialItem {
-    padding: 0 5px;
+    padding: 0 3px;
+    color: white;
 }
-.social > li:hower {
+.socialItem:hover {
     cursor: pointer;
-    color: pink;
+    color: rgb(18 248 206);
 }
 /* .socialItem:li:hower {
     cursor: pointer;

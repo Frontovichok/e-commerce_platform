@@ -16,18 +16,18 @@ function TopBarContent() {
           </li>
           <li>
             <Icon name="clock outline" size="large" />
-            Без выходных
+            08:00 - 22:00
           </li>
           <li>
             <ul className={styles.social}>
-              <li className={styles.socialItem}>
-                <Icon name="instagram" size="large" /> fdbsdfg
+              <li>
+                <a target="blank" href="https://iifrf.ru" className={styles.socialItem}><Icon name="instagram" size="large" /></a>
               </li>
               <li className={styles.socialItem}>
-                <Icon name="youtube" size="large" />
+                <a target="blank" href="https://iifrf.ru" className={styles.socialItem}><Icon name="youtube" size="large" /></a>
               </li>
               <li className={styles.socialItem}>
-                <Icon name="vk" size="large" />
+                <a target="blank" href="https://iifrf.ru" className={styles.socialItem}><Icon name="vk" size="large" /></a>
               </li>
             </ul>
           </li>

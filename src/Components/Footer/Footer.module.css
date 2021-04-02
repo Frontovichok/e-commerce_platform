@@ -1,0 +1,13 @@
+@import '../../App.module.css';
+
+.footer {
+    background-color: #4c85a9;
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: var(--global-max-width);
+    margin: auto;
+}

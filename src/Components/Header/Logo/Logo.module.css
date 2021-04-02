@@ -1,0 +1,14 @@
+
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.menuItem {
+    /* margin-right: 5px; */
+}
+.logoImg {
+    max-width: 230px;
+}

@@ -1,0 +1,18 @@
+
+.menuContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+}
+.menuItem {
+    margin-right: 20px;
+    color: #4c85a9;
+}
+.menuItem:last-child {
+    margin-right: 0;
+}
+.menuItem:hover {
+    cursor: pointer;
+    color: rgb(63, 6, 116);
+}
