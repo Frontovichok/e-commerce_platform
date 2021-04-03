@@ -1,12 +1,6 @@
-@import '../../App.module.css';
+@import "../../App.module.css";
 
 .container {
-    background-color: #4c85a9;
-}
-.topBar {
-    max-width: var(--global-max-width);
-    padding: 10px 0;
-    margin-right: auto;
-    margin-left: auto;
-    color: white;
+  background-color: #ff8843;
+  box-shadow: 1px 1px 5px #925617;
 }

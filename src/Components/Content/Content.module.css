@@ -2,12 +2,11 @@
 
 .content {
     flex: 1 0;
-    background-color: rgb(211, 226, 212);
+    background-color: white;
+    box-shadow: 0px 5px 5px -2px #8c8c8c;
+    padding-bottom: 30px;
 }
 .container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
     width: var(--global-max-width);
     margin: auto;
 }

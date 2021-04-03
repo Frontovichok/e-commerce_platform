@@ -7,18 +7,62 @@ function Menu() {
       <NavLink to={`/1`} className={styles.menuItem}>
         О компании
       </NavLink>
-      <NavLink to={`/2`} className={styles.menuItem}>
-        Услуги
-      </NavLink>
-      <NavLink to={`/3`} className={styles.menuItem}>
+      <div className={styles.menuItem}>
         Кровельные материалы
-      </NavLink>
-      <NavLink to={`/4`} className={styles.menuItem}>
+        <div className={styles.menuSubItems}>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+        </div>
+      </div>
+      <div className={styles.menuItem}>
+        Ебаные системы
+        <div className={styles.menuSubItems}>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+        </div>
+      </div>
+      <div className={styles.menuItem}>
         Фасадные системы
-      </NavLink>
-      <NavLink to={`/5`} className={styles.menuItem}>
+        <div className={styles.menuSubItems}>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+        </div>
+      </div>
+      <div className={styles.menuItem}>
         Водосточные системы
-      </NavLink>
+        <div className={styles.menuSubItems}>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+          <NavLink to={`/3`} className={styles.menuSubItem}>
+            Кровельные материалы
+          </NavLink>
+        </div>
+      </div>
     </div>
   );
 }

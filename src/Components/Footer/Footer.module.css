@@ -1,7 +1,8 @@
 @import '../../App.module.css';
 
 .footer {
-    background-color: #4c85a9;
+    background-color: #d0d0d070;
+    color: white;
 }
 
 .container {

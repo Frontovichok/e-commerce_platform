@@ -11,7 +11,7 @@
     display: flex;
     list-style: none;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding-left: 0;
     margin: 5px 0;
 }
@@ -31,6 +31,12 @@
 .socialItem:hover {
     cursor: pointer;
     color: rgb(18 248 206);
+}
+.socialItem:last-child {
+    padding-right: 0;
+}
+.socialItem:last-child > i{
+    margin-right: 0;
 }
 /* .socialItem:li:hower {
     cursor: pointer;
