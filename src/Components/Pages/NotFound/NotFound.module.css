@@ -1,0 +1,7 @@
+.link {
+    color: blue;
+}
+.notFoundContainer {
+    flex: 1 0;
+    text-align: center;
+}

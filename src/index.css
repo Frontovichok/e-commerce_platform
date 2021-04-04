@@ -5,6 +5,10 @@ body {
   text-align: ceter;
   margin: 0;
 }
+.body {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
 html, body {
   height: 100%;
 }
@@ -12,4 +16,16 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+.sectionTitle {
+  display: inline-block;
+  font-size: 35px;
+  text-align: left;
+  color: rgb(19, 19, 19);
+  border-bottom: solid 3px orange;
+  padding: 10px;
+  padding-left: 0;
+}
+.sectionMainPage {
+  margin-top: 20px;
 }

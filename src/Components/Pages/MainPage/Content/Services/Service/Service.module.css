@@ -1,0 +1,26 @@
+.service {
+    display: inline-block;
+    width: 32%;
+    position: relative;
+    margin-bottom: 10px;
+}
+.title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.description {
+
+}
+.sticker {
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: #ff8843;
+    padding: 3px 5px;
+    color: white;
+    box-shadow: 1px 1px 3px #5d5d5d;
+    font-weight: bold;
+}
+.image {
+    width: 100%;
+}
