@@ -1,0 +1,44 @@
+.formContainer {
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  background-color: #ffffffe6;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 1px 3px 5px #000000bd;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f98018;
+}
+.textField {
+  margin-bottom: 30px;
+}
+.calculateButton {
+  width: 100%;
+  display: inherit;
+  margin-top: 20px;
+  padding: 10px 30px;
+  align-items: inherit;
+  justify-content: inherit;
+  color: white;
+  outline: none;
+  text-align: center;
+  display: inline-block;
+  background-color: #f98018;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 1px 1px 5px #925617;
+  transition: .1s linear;
+}
+.calculateButton:hover {
+    background-color: #e96d00;
+    box-shadow: 1px 2px 5px #502f0c;
+}

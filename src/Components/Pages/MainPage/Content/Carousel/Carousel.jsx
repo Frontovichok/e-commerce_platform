@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import CalculatePrice from "../CalculatePrice/CalculatePrice";
 import styles from "./Carousel.module.css";
 
 function ControlledCarousel() {
@@ -11,7 +12,7 @@ function ControlledCarousel() {
 
   return (
     <div className={styles.carousel}>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel activeIndex={index} onSelect={handleSelect} fade>
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -19,7 +20,7 @@ function ControlledCarousel() {
             alt="First slide"
             height={500}
           />
-          <Carousel.Caption>
+          <Carousel.Caption className={styles.textLeft}>
             <h1 className={styles.carouselTtemTitle}>Кровля под ключ</h1>
             <p className={styles.carouselTtemDescription}>
               Nulla vitae elit libero, a pharetra augue mollis interdum.
@@ -57,6 +58,7 @@ function ControlledCarousel() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <CalculatePrice />
     </div>
   );
 }

@@ -1,0 +1,112 @@
+.callMe {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  padding: 13px;
+  width: 270px;
+  z-index: 2;
+  box-shadow: 1px 3px 5px #ff74008c;
+  background-color: white;
+  border-radius: 50px;
+  border: 3px solid #f87d21;
+  transition: 0.15s linear;
+  user-select: none;
+}
+.callMe:hover {
+  background-color: #ffe7be;
+  cursor: pointer;
+}
+.callMe.expanded:hover {
+  background-color: white;
+}
+.callMeHeader {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+/* .callMe.expanded .callMeHeader {
+  visibility: hidden;
+  height: 0;
+} */
+.callImage {
+  width: 50px;
+}
+.callMeHeaderTitleBlock {
+  display: flex;
+  flex: 1 0;
+  align-items: center;
+  justify-content: center;
+}
+.callMeHeaderTitle {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #f57a22;
+}
+.callMeExpandButton {
+  display: flex;
+  align-items: center;
+}
+.callMeExpandButton:hover > i {
+  background-color: #ffbe86;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s linear;
+  
+}
+.callMe.expanded .callMeExpandButton > i {
+  transform: rotate(180deg);
+}
+.callMeForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.1s linear;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: 0.2s linear;
+}
+.callMe.expanded .callMeForm {
+  visibility: visible;
+  height: 320px;
+  opacity: 1;
+}
+.formTitle {
+  text-align: center;
+  padding: 20px 0;
+  padding-top: 10px;
+  color: #f16b07;
+  font-size: 1.9rem;
+}
+.textField {
+  margin-bottom: 30px;
+}
+.calculateButton {
+  /* width: 100%; */
+  display: inherit;
+  margin-top: 20px;
+  padding: 10px 5px;
+  align-items: inherit;
+  justify-content: inherit;
+  color: white;
+  outline: none;
+  text-align: center;
+  display: inline-block;
+  background-color: #f87d21;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 49px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 1px 1px 5px #fb9446;
+  transition: 0.1s linear;
+  margin-bottom: 7px;
+  padding: 10px 30px;
+}
+.calculateButton:hover {
+  background-color: #e96d00;
+  box-shadow: 1px 2px 5px #502f0c;
+}

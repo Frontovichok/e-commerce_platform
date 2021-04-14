@@ -8,11 +8,15 @@ function TopBarContent() {
         <ul className={styles.contentList}>
           <li>
             <Icon name="globe" size="large" />
-            Строительство кровли в Москве под ключ
+            Кровля под ключ в Туле
+          </li>
+          <li>
+            <Icon name="car" size="large" />
+            Бесплатный выезд специалиста
           </li>
           <li>
             <Icon name="phone" size="large" />
-            8(923)443-23-23
+            8 (923) 443-23-23
           </li>
           <li>
             <Icon name="clock outline" size="large" />

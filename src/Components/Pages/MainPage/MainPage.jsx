@@ -4,6 +4,7 @@ import Content from "./Content/Content";
 import Footer from "../../Footer/Footer";
 import styles from "./MainPage.module.css";
 import GlobalContent from "../../GlobalContent/GlobalContent";
+import CallMe from "../../CallMe/CallMe";
 
 function MainPage() {
   return (
@@ -14,6 +15,7 @@ function MainPage() {
         <Content />
       </GlobalContent>
       <Footer />
+      <CallMe />
     </>
   );
 }
