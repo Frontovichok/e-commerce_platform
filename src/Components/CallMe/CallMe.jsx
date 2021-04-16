@@ -1,9 +1,46 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { TextField, InputAdornment, IconButton } from "@material-ui/core";
+import PropTypes from "prop-types";
+// import MaskedInput from 'react-text-mask';
+import NumberFormat from "react-number-format";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  TextField,
+  InputAdornment,
+  FormControl,
+  Input,
+  IconButton,
+} from "@material-ui/core";
 import styles from "./CallMe.module.css";
 import callImage from "./call-back.svg";
 import { Icon } from "semantic-ui-react";
+function NumberFormatCustom(props) {
+  const { inputRef, onChange, ...other } = props;
+
+  return (
+    <NumberFormat
+      {...other}
+      getInputRef={inputRef}
+      onValueChange={(values) => {
+        onChange({
+          target: {
+            name: props.name,
+            value: values.value,
+          },
+        });
+      }}
+      format="+7 (###) ###-##-##"
+      allowEmptyFormatting
+      mask="_"
+    />
+  );
+}
+
+NumberFormatCustom.propTypes = {
+  inputRef: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 function CallMe() {
   const { handleSubmit, register, errors } = useForm();
@@ -11,6 +48,17 @@ function CallMe() {
   const onSubmit = ({ username, password }) => {
     console.log("Hi");
   };
+
+  const [values, setValues] = React.useState({
+    numberformat: "",
+  });
+  const handleChange = (event) => {
+    setValues({
+      ...values,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <div
       className={styles.callMe + " " + `${callMeState ? styles.expanded : ""}`}
@@ -51,16 +99,18 @@ function CallMe() {
           </div>
           <div className={styles.textField}>
             <TextField
-              name="phone"
               label="Телефон"
-              placeholder="8(9**)-***-**-**"
-              fullWidth
-              inputRef={register({
-                required: "Введите телефонный номер",
-                validate: (value) => value !== "admin" || "Nice try!",
-              })}
+              className={styles.phoneField}
+              value={values.numberformat}
+              onChange={handleChange}
+              name="numberformat"
+              id="formatted-numberformat-input"
               InputProps={{
-                endAdornment: <InputAdornment position="end"></InputAdornment>,
+                inputComponent: NumberFormatCustom,
+              }}
+              fullWidth
+              InputLabelProps={{
+                shrink: true,
               }}
             />
           </div>
