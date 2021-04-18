@@ -1,0 +1,87 @@
+.card {
+  display: flex;
+  width: 22%;
+  flex-direction: column;
+  position: relative;
+  background-color: whitesmoke;
+  margin-bottom: 30px;
+}
+.content {
+  padding: 15px;
+  flex: 1;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.productImage {
+}
+.tagsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 5px;
+}
+.tag {
+  background-color: #8dc628;
+  margin-right: 5px;
+  margin-bottom: 0;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+.tag:nth-child(even) {
+  background-color: #f96363;
+}
+.title {
+  flex: 1;
+  font-weight: bold;
+}
+.priceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.priceSale {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.oldPrice {
+  color: gray;
+  margin-right: 5px;
+  text-decoration: line-through;
+  font-size: 1.2rem;
+}
+.newPrice {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-right: 5px;
+  color: #ff5555;
+}
+.price {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-right: 5px;
+}
+.priceUnit {
+  font-weight: bold;
+}
+.priceSale .priceUnit {
+  color: #ff5555;
+}
+.button {
+  padding: 7px 15px;
+  color: white;
+  background-color: #fd8531;
+  align-self: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: 0.1s linear;
+}
+.button:hover {
+  color: white;
+  box-shadow: 0 1px 3px #8a5512;
+  text-decoration: none;
+}

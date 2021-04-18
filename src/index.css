@@ -9,7 +9,8 @@ body {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 #root {
@@ -21,11 +22,14 @@ html, body {
   display: inline-block;
   font-size: 35px;
   text-align: left;
-  color: rgb(19, 19, 19);
+  color: rgb(74 74 74);
   border-bottom: solid 3px orange;
-  padding: 10px;
+  padding: 5px;
   padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 15px;
 }
 .sectionMainPage {
-  margin-top: 20px;
+  margin: 50px auto;
+  width: var(--global-max-width);
 }

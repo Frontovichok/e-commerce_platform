@@ -1,34 +1,67 @@
 .service {
-    display: inline-block;
-    width: 32%;
-    position: relative;
-    margin-bottom: 30px;
-    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 16%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 16%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  transition: 0.1s linear;
 }
-.title {
-    font-weight: bold;
-    font-size: 1.3rem;
-    padding-bottom: 10px;
-    color: black;
+.service:hover {
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 20%), 0px 1px 3px 0px rgb(0 0 0 / 40%);
 }
-.description {
-    color: grey;
-}
-.sticker {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 3px 5px;
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px #2a2929;
-    color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-.image {
-    width: 100%;
+.service:nth-child(n+4) {
+  margin-bottom: 0;
 }
 .content {
-    padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 0 20px;
+  padding-bottom: 10px;
+  color: black;
+}
+.description {
+  color: grey;
+  flex: 1;
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+.sticker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 5px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #2a2929;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.image {
+  width: 100%;
+}
+.content a {
+  color: #ff6500;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin: 0 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: 0.1s linear;
+}
+.content a:hover {
+  color: #ff5100;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f87d21;
 }

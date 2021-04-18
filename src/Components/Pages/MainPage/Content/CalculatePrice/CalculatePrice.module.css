@@ -34,11 +34,10 @@
   line-height: 1.75;
   letter-spacing: 0.02857em;
   text-transform: uppercase;
+  border-radius: 5px;
   border: none;
-  box-shadow: 1px 1px 5px #925617;
-  transition: .1s linear;
+  transition: 0.1s linear;
 }
 .calculateButton:hover {
-    background-color: #e96d00;
-    box-shadow: 1px 2px 5px #502f0c;
+  box-shadow: 0 1px 3px #8a5512;
 }

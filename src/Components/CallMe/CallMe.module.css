@@ -69,13 +69,15 @@
 }
 .callMe.expanded .callMeForm {
   visibility: visible;
-  height: 320px;
+  height: 290px;
   opacity: 1;
 }
 .formTitle {
   text-align: center;
   padding: 20px 0;
   padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
   color: #f16b07;
   font-size: 1.9rem;
 }
@@ -91,7 +93,7 @@
 .calculateButton {
   /* width: 100%; */
   display: inherit;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px 5px;
   align-items: inherit;
   justify-content: inherit;

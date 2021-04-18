@@ -7,6 +7,6 @@
     padding-bottom: 30px;
 }
 .container {
-    width: var(--global-max-width);
-    margin: auto;
+    /* width: var(--global-max-width); */
+    /* margin: auto; */
 }

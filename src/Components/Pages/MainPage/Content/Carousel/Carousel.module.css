@@ -4,6 +4,8 @@
 }
 .carousel {
     position: relative;
+    width: var(--global-max-width);
+    margin: auto;
 }
 .carouselTtemDescription {
     font-size: 1.5rem;
