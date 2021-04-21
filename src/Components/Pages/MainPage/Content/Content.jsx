@@ -11,9 +11,10 @@ function Content() {
     <>
       <Carousel />
       <Services />
-      <OurProducts />
       <WhyWe />
+      <OurProducts />
       <OurTeam />
+      <Services />
     </>
   );
 }
