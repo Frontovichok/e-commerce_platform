@@ -31,17 +31,17 @@
 .workerContainer {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 21%;
   text-align: center;
+  background-color: white;
 }
 .avatar {
   width: 100%;
   padding-top: 100%;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   position: relative;
   background-size: cover;
   background-position: center;
-  border: solid 2px #ffffff26;
 }
 .worker_1 {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/17/Vladimir_Putin_%282018-03-01%29_03_%28cropped%29.jpg);
@@ -60,19 +60,22 @@
   background-position: 50% -5%;
 }
 .aboutWorkerContainer {
+  padding: 10px 15px;
 }
 .name {
   font-size: 2rem;
   font-weight: bold;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-bottom: 5px;
-  color: white;
+  color: #3c3c3c;
 }
 .position {
   color: #ff5858;
   font-weight: bold;
 }
 .description {
-  color: white;
+  color: grey;
   font-size: 1.2rem;
+  font-style: italic;
+  padding-bottom: 10px;
 }
