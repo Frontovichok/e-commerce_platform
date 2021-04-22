@@ -4,6 +4,7 @@ import styles from "./Content.module.css";
 import News from "./News/News";
 import OurProducts from "./OurProducts/OutProducts";
 import OurTeam from "./OurTeam/OurTeam";
+import Reviews from "./Reviews/Reviews";
 import Services from "./Services/Services";
 import WhyWe from "./WhyWe/WhyWe";
 
@@ -16,6 +17,7 @@ function Content() {
       <OurProducts />
       <OurTeam />
       <News />
+      <Reviews />
     </>
   );
 }

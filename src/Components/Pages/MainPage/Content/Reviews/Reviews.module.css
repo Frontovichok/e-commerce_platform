@@ -1,0 +1,65 @@
+@import "../../../../../App.module.css";
+
+.ourTeam {
+  margin-top: 0;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  /* background-image: url(https://thumbs.dreamstime.com/z/%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%B0%D1%8F-%D0%BA%D0%B5%D1%80%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D0%BA%D1%80%D1%8B%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%86%D0%B5%D0%B9-%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F-%D0%BA%D1%80%D1%8B%D1%88%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D1%81-%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-123655480.jpg); */
+  background-size: cover;
+  background-position: 30% 50%;
+}
+.sectionTitle {
+  color: rgb(243 112 0);
+  border-bottom: none;
+  margin-bottom: 25px;
+  color: white;
+  border-bottom: solid 3px #f97131;
+}
+.sectionDarkBackground {
+  background-color: rgb(0 0 0 / 80%);
+  padding: 40px 0;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: var(--global-max-width);
+  margin: auto;
+  margin-top: 30px;
+}
+.reviewsContainer {
+  max-width: var(--global-max-width);
+  margin: auto;
+}
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  height: 100%;
+}
+.review {
+  box-shadow: 1px 1px 5px black;
+  height: 100%;
+}
+.avatarAndName {
+  display: flex;
+  flex-direction: row;
+}
+.reviewText {
+  color: grey;
+}
+.image {
+  width: 150px;
+  height: 150px;
+}
+.avatarBlock {
+  display: flex;
+  flex-direction: row;
+}
+:global .slide___3-Nqo {
+  padding-bottom: 15% !important;
+}
