@@ -11,4 +11,5 @@
     align-items: center;
     width: var(--global-max-width);
     margin: auto;
+    min-height: 200px;
 }
