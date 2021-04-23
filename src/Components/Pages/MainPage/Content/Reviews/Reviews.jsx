@@ -23,7 +23,7 @@ function Reviews() {
           </h2>
           <Slider>
             {reviewsList.map((review, i) => (
-              <Slide index={i}>
+              <Slide index={i} key={review.id}>
                 <div className={styles.reviewContainer}>
                   <div className={styles.review}>
                     <div className={styles.avatarBlock}>
@@ -38,7 +38,7 @@ function Reviews() {
                             borderColor="transparent"
                             className={styles.rating}
                           >
-                            <Rating name="read-only" value={3} readOnly />
+                            <Rating name="read-only" value={review.rating} readOnly />
                           </Box>
                         </div>
                       </div>
@@ -74,7 +74,7 @@ let reviewsList = [
     name: "Инокентий",
     avatar:
       "https://icdn.lenta.ru/images/2020/01/21/17/20200121173026292/pwa_vertical_1280_432cc897322b61cb9fe5778fc7a7521c.jpg",
-    data: "15.01.2021",
+    data: "11.01.2021",
     rating: 3,
     description:
       "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
@@ -89,7 +89,7 @@ let reviewsList = [
     name: "Валентин",
     avatar:
       "https://www.interfax.ru/ftproot/textphotos/2020/01/22/belousov700.jpg",
-    data: "15.01.2021",
+    data: "12.01.2021",
     rating: 4,
     description:
       "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
@@ -103,7 +103,7 @@ let reviewsList = [
     id: 2,
     name: "Костя",
     avatar: "https://altairk.ru/upload/news/87/31/20180926_fns_16.jpg",
-    data: "15.01.2021",
+    data: "13.01.2021",
     rating: 5,
     description:
       "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
@@ -118,7 +118,7 @@ let reviewsList = [
     name: "Автондил",
     avatar:
       "http://www.yugopolis.ru/data/img/996ef5b560e2a9bdc522a93e8ced2dc7/315404.jpg",
-    data: "15.01.2021",
+    data: "14.01.2021",
     rating: 4,
     description:
       "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",

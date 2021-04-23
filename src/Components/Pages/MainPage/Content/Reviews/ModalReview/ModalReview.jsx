@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import Rating from "@material-ui/lab/Rating";
-import { Button, Icon, Image, Modal } from "semantic-ui-react";
+import { Image, Modal } from "semantic-ui-react";
 import styles from "./ModalReview.module.css";
 
 function ModalReview(props) {
@@ -23,12 +23,12 @@ function ModalReview(props) {
           <p>{review.data}</p>
           <div className={styles.rating}>
             <Box component="fieldset" mb={3} borderColor="transparent">
-              <Rating name="read-only" value={3} readOnly />
+              <Rating name="read-only" value={review.rating} readOnly />
             </Box>
           </div>
           <p className={styles.description}>{review.description}</p>
           {review.images.map((image, i) => (
-            <Image size="massive" src={image} wrapped />
+            <Image key={i} size="massive" src={image} wrapped />
           ))}
         </Modal.Description>
       </Modal.Content>
