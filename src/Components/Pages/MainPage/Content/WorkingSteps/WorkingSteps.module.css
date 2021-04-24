@@ -1,0 +1,84 @@
+@import "../../../../../App.module.css";
+
+.ourTeam {
+  margin-top: 0;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  background-image: url(https://www.pkksib.ru/uploads/blog/5e856a48dae75.jpg);
+  background-size: cover;
+  background-position: 30% 50%;
+  background-attachment: fixed;
+}
+.sectionDarkBackground {
+  background-color: rgb(0 0 0 / 80%);
+}
+.container {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  max-width: 1300px;
+  margin: auto;
+}
+.sectionTitle {
+  color: rgb(243 112 0);
+  border-bottom: none;
+  margin-bottom: 25px;
+  color: white;
+  border-bottom: solid 3px #f97131;
+}
+.leftSide {
+  width: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.middleSide {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightSide {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.totalStepsContainer {
+  flex: 1 1;
+}
+.totalSteps {
+  color: orange;
+  font-size: 20rem;
+  font-weight: bold;
+  line-height: 0.8em;
+}
+.totalStepsText {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.arrow {
+  flex: 0 0;
+  width: 150px;
+}
+.stepsList {
+  list-style: none;
+  counter-reset: li;
+  text-align: left;
+}
+.step {
+  color: white;
+  font-size: 2.6rem;
+  counter-increment: li;
+}
+.step::before {
+  content: counter(li);
+  color: orange;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}

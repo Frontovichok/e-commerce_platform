@@ -11,10 +11,6 @@ function WhyWe() {
         <h2 className={`sectionTitle ${styles.sectionTitle}`}>
           Почему клиенты выбирают нас
         </h2>
-        <img
-          src="http://krovla.pro/files/remont_metallicheskoi_krovli3.jpg"
-          className={styles.image}
-        />
         <div className={styles.advantagesContainer}>
           <div className={styles.advantageCard}>
             <img src={hammer} className={styles.advantageImage} />

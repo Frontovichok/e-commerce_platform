@@ -7,6 +7,7 @@ import OurTeam from "./OurTeam/OurTeam";
 import Reviews from "./Reviews/Reviews";
 import Services from "./Services/Services";
 import WhyWe from "./WhyWe/WhyWe";
+import WorkingSteps from "./WorkingSteps/WorkingSteps";
 
 function Content() {
   return (
@@ -16,8 +17,9 @@ function Content() {
       <WhyWe />
       <OurProducts />
       <OurTeam />
-      <News />
       <Reviews />
+      <News />
+      <WorkingSteps />
     </>
   );
 }
