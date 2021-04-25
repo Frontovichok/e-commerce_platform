@@ -1,15 +1,60 @@
-@import '../../App.module.css';
+@import "../../App.module.css";
 
 .footer {
-    background-color: #d0d0d070;
-    color: white;
+  background-color: #111111;
+  padding: 50px 0;
 }
 
 .container {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: var(--global-max-width);
-    margin: auto;
-    min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: var(--global-max-width);
+  margin: auto;
+  min-height: 200px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.columnTitle {
+  font-size: 1.4rem;
+  padding-right: 30px;
+  color: #d4d4d4;
+  text-transform: uppercase;
+}
+.columnItems {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+}
+.itemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.subscribeContainer {
+  flex-direction: column;
+}
+.inputMail {
+  padding: 10px 25px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+}
+.buttonSubscribeMail {
+  outline: none;
+  background-color: #fd8531;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.item {
+  margin-left: 10px;
 }

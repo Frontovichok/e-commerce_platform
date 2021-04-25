@@ -28,6 +28,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 25px;
+  text-transform: uppercase;
 }
 .sectionMainPage {
   margin: 50px auto;

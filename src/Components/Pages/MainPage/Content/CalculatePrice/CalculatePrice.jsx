@@ -12,7 +12,7 @@ function CalculatePrice() {
   };
   return (
     <div className={styles.formContainer}>
-      <h2 className={styles.formTitle}>Рассчитать стоимость</h2>
+      <h2 className={styles.formTitle}>Получить консультацию</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.textField}>
           <TextField
@@ -24,10 +24,6 @@ function CalculatePrice() {
               required: "This field is required!",
               validate: (value) => value !== "admin" || "Nice try!",
             })}
-            // {...(errors.username && {
-            // 	error: true,
-            // 	helperText: errors.username.message,
-            // })}
           />
         </div>
         <div className={styles.textField}>
