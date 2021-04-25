@@ -14,6 +14,10 @@ function Footer() {
               <Icon name="building outline" size="small" />
               <p className={styles.item}>ИП Голодников</p>
             </div>
+            <div className={styles.itemContainer}>
+              <Icon name="building outline" size="small" />
+              <p className={styles.item}>2021 г.</p>
+            </div>
           </div>
         </div>
         <div className={styles.column}>
@@ -46,23 +50,49 @@ function Footer() {
           <div className={styles.columnItems}>
             <div className={styles.itemContainer}>
               <Icon name="vk" size="small" />
-              <p className={styles.item}>Вконтакте</p>
+              <a target="blank" href="https://vk.com" className={styles.item}>
+                Вконтакте
+              </a>
             </div>
             <div className={styles.itemContainer}>
               <Icon name="instagram" size="small" />
-              <p className={styles.item}>Instagram</p>
+              <a
+                target="blank"
+                href="https://instagram.com"
+                className={styles.item}
+              >
+                Instagram
+              </a>
             </div>
             <div className={styles.itemContainer}>
               <Icon name="youtube" size="small" />
-              <p className={styles.item}>YouTube</p>
+              <a
+                target="blank"
+                href="https://youtube.com"
+                className={styles.item}
+              >
+                YouTube
+              </a>
             </div>
             <div className={styles.itemContainer}>
               <Icon name="yandex" size="small" />
-              <p className={styles.item}>Яндекс отзывы</p>
+              <a
+                target="blank"
+                href="https://yandex.com"
+                className={styles.item}
+              >
+                Яндекс отзывы
+              </a>
             </div>
             <div className={styles.itemContainer}>
               <Icon name="google" size="small" />
-              <p className={styles.item}>Google отзывы</p>
+              <a
+                target="blank"
+                href="https://google.com"
+                className={styles.item}
+              >
+                Google отзывы
+              </a>
             </div>
           </div>
         </div>
