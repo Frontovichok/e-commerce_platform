@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import CalculatePrice from "../CalculatePrice/CalculatePrice";
+import CalculatePrice from "./CalculatePrice/CalculatePrice";
 import styles from "./Carousel.module.css";
 
 function ControlledCarousel() {

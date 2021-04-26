@@ -1,4 +1,3 @@
-import CalculatePrice from "./CalculatePrice/CalculatePrice";
 import Carousel from "./Carousel/Carousel";
 import styles from "./Content.module.css";
 import News from "./News/News";

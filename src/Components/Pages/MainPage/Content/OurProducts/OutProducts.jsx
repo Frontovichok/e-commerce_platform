@@ -88,7 +88,7 @@ function OurProducts() {
   let showedProductsList = [...products].slice(0, showedProducts);
   return (
     <section className="sectionMainPage">
-      <h2 className={"sectionTitle"}>Каталог наших товаров</h2>
+      <h2 className={"sectionTitle"}>Каталог товаров</h2>
       <div className={styles.productList}>
         {showedProductsList.map((product) => (
           <ProductCard key={product.id} {...product} />

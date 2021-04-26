@@ -5,13 +5,15 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "./Reviews.module.css";
 import ModalReview from "./ModalReview/ModalReview";
 
+const isMobile = window.innerWidth <= 500;
+
 function Reviews() {
   return (
-    <section className={`sectionMainPage ${styles.ourTeam}`}>
+    <section className={`sectionMainPage ${styles.reviews}`}>
       <div className={styles.reviewsContainer}>
         <CarouselProvider
-          touchEnabled={false}
-          visibleSlides={3}
+          touchEnabled={true}
+          visibleSlides={isMobile ? 1 : 3}
           totalSlides={5}
           step={1}
           naturalSlideWidth={100}
@@ -38,7 +40,11 @@ function Reviews() {
                             borderColor="transparent"
                             className={styles.rating}
                           >
-                            <Rating name="read-only" value={review.rating} readOnly />
+                            <Rating
+                              name="read-only"
+                              value={review.rating}
+                              readOnly
+                            />
                           </Box>
                         </div>
                       </div>

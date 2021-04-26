@@ -71,3 +71,34 @@
   text-transform: uppercase;
   border-bottom: 2px solid #f87d21;
 }
+
+@media (min-width: 320px) {
+  .service {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+  .content a {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .service {
+    width: 32%;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .content a {
+    font-size: 1rem;
+  }
+}

@@ -4,14 +4,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: ceter;
   margin: 0;
+  /* padding: 0 10px !important; */
 }
 .body {
-  overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
+  position: relative;
 }
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 #root {
   display: flex;
@@ -32,5 +34,6 @@ body {
 }
 .sectionMainPage {
   margin: 50px auto;
-  width: var(--global-max-width);
+  max-width: var(--global-max-width);
+  width: 100%;
 }

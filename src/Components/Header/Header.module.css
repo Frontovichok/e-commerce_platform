@@ -1,9 +1,10 @@
-@import '../../App.module.css';
+@import "../../App.module.css";
 
 .header {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: var(--global-max-width);
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--global-max-width);
+  margin: auto;
+  width: 100%;
 }

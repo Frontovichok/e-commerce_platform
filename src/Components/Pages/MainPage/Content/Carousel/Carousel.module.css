@@ -1,32 +1,83 @@
 .carouselTtemTitle {
-    font-size: 4rem;
-    text-shadow: 1px 1px 5px #2a2929;
+  font-size: 4rem;
+  text-shadow: 1px 1px 5px #2a2929;
 }
 .carousel {
-    position: relative;
-    width: var(--global-max-width);
-    margin: auto;
+  position: relative;
+  max-width: var(--global-max-width);
+  margin: auto;
 }
 .carouselTtemDescription {
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 5px #2a2929;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 5px #2a2929;
 }
 .asdf {
-    position: absolute;
-    /* right: 15%; */
-    top: 151px;
-    left: 150px;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center;
-    max-width: 526px;
+  position: absolute;
+  /* right: 15%; */
+  top: 151px;
+  left: 150px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  max-width: 526px;
 }
-:global(.carousel-caption)  {
-    left: 150px !important;
+:global(.carousel-caption) {
+  left: 150px !important;
+  right: auto !important;
+  bottom: 50% !important;
+  transform: translateY(50%);
+  max-width: 550px;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  :global(.carousel-caption) {
+    left: 15% !important;
+    right: 15% !important;
+  }
+  :global(.d-block.w-100) {
+    object-fit: cover;
+    height: 300px;
+  }
+  .carouselTtemTitle {
+    font-size: 2rem;
+    color: orange;
+    text-transform: uppercase;
+  }
+  .carouselTtemDescription {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  :global(.carousel-caption) {
+    left: 12% !important;
     right: auto !important;
-    bottom: 50% !important;
-    transform: translateY(50%);
-    max-width: 550px;
+  }
+  :global(.d-block.w-100) {
+    object-fit: cover;
+    height: 500px;
+  }
+  .carouselTtemTitle {
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+  }
+  .carouselTtemDescription {
+    font-size: 1.5rem;
+  }
 }

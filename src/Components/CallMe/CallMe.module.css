@@ -6,17 +6,16 @@
   width: 270px;
   z-index: 2;
   box-shadow: 1px 3px 5px #ff74008c;
-  background-color: white;
   border-radius: 50px;
   border: 3px solid #f87d21;
   transition: 0.15s linear;
   user-select: none;
 }
-.callMe:hover {
+/* .callMe:hover {
   background-color: #ffe7be;
   cursor: pointer;
-}
-.callMe.expanded:hover {
+} */
+.callMe.expanded {
   background-color: white;
 }
 .callMeHeader {
@@ -117,4 +116,16 @@
 .calculateButton:hover {
   background-color: #e96d00;
   box-shadow: 1px 2px 5px #502f0c;
+}
+
+@media (min-width: 320px) {
+  .callMe {
+    display: none;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .callMe {
+    display: block;
+  }
 }
