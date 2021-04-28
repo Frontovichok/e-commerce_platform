@@ -9,11 +9,11 @@ body {
 .body {
   margin-right: calc(-1 * (100vw - 100%));
   position: relative;
+  overflow-x: hidden;
 }
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
 }
 #root {
   display: flex;
@@ -36,4 +36,14 @@ body {
   margin: 50px auto;
   max-width: var(--global-max-width);
   width: 100%;
+}
+@media (min-width: 320px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 1281px) {
+  html {
+    overflow-x: visible;
+  }
 }

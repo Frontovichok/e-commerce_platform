@@ -7,6 +7,14 @@ function Menu() {
       <NavLink to={`/1`} className={styles.menuItem}>
         О компании
       </NavLink>
+      <NavLink to={`/price`} className={styles.menuItem}>
+        Цены
+        <div className={styles.menuSubItems}>
+          <NavLink to={`/calculator`} className={styles.menuSubItem}>
+            Калькулятор
+          </NavLink>
+        </div>
+      </NavLink>
       <NavLink to={`/krovelnye-materialy`} className={styles.menuItem}>
         Кровельные материалы
         <div className={styles.menuSubItems}>

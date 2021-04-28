@@ -1,3 +1,4 @@
+import PopUpWindow from "../../../PopUpWindow/PopUpWindow";
 import Carousel from "./Carousel/Carousel";
 import styles from "./Content.module.css";
 import News from "./News/News";
@@ -19,6 +20,7 @@ function Content() {
       <Reviews />
       <News />
       <WorkingSteps />
+      <PopUpWindow />
     </>
   );
 }
