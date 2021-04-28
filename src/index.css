@@ -37,6 +37,11 @@ body {
   max-width: var(--global-max-width);
   width: 100%;
 }
+.section {
+  margin: auto;
+  max-width: var(--global-max-width);
+  width: 100%;
+}
 @media (min-width: 320px) {
   html {
     overflow-x: hidden;

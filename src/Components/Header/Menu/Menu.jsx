@@ -4,13 +4,13 @@ import styles from "./Menu.module.css";
 function Menu() {
   return (
     <div className={styles.menuContainer}>
-      <NavLink to={`/1`} className={styles.menuItem}>
+      <NavLink to={`/about`} className={styles.menuItem}>
         О компании
       </NavLink>
       <NavLink to={`/price`} className={styles.menuItem}>
         Цены
         <div className={styles.menuSubItems}>
-          <NavLink to={`/calculator`} className={styles.menuSubItem}>
+          <NavLink to={`/calculate`} className={styles.menuSubItem}>
             Калькулятор
           </NavLink>
         </div>
@@ -43,7 +43,7 @@ function Menu() {
           </NavLink>
         </div>
       </NavLink>
-      <NavLink to={`/3`} className={styles.menuItem}>
+      <NavLink to={`/fasadnye-sistemy`} className={styles.menuItem}>
         Фасадные системы
         <div className={styles.menuSubItems}>
           <NavLink to={`/3`} className={styles.menuSubItem}>
