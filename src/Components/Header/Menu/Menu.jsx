@@ -57,7 +57,7 @@ function Menu() {
           </NavLink>
         </div>
       </NavLink>
-      <NavLink to={`/3`} className={styles.menuItem}>
+      <NavLink to={`/vodostochnye-sistemy`} className={styles.menuItem}>
         Водосточные системы
         <div className={styles.menuSubItems}>
           <NavLink to={`/3`} className={styles.menuSubItem}>

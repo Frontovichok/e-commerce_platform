@@ -5,7 +5,7 @@ function Content() {
     <div>
       <section className="section">
         <h2>Цены:</h2>
-        <table id="service-price" className="table table-bordered">
+        <table id="service-price" className={`${styles.priceTable}`}>
           <thead>
             <tr>
               <th>Наименование</th>
@@ -15,7 +15,9 @@ function Content() {
           </thead>
           <tbody>
             <tr>
-              <td colspan="3">Монтаж стропильной конструкции кровли</td>
+              <td colspan="3" className={styles.titleItems}>
+                Монтаж стропильной конструкции кровли
+              </td>
             </tr>
             <tr>
               <td>Монтаж стропильной системы</td>
@@ -34,7 +36,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Монтаж обрешетки</td>
+              <td colspan="3" className={styles.titleItems}>
+                Монтаж обрешетки
+              </td>
             </tr>
             <tr>
               <td>Устройство контробрешетки</td>
@@ -61,7 +65,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Устройство изоляции кровли</td>
+              <td colspan="3" className={styles.titleItems}>
+                Устройство изоляции кровли
+              </td>
             </tr>
             <tr>
               <td>Монтаж пароизоляции</td>
@@ -80,7 +86,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Монтаж кровельного покрытия</td>
+              <td colspan="3" className={styles.titleItems}>
+                Монтаж кровельного покрытия
+              </td>
             </tr>
             <tr>
               <td>Монтаж битумной гибкой черепицы</td>
@@ -121,7 +129,7 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">
+              <td colspan="3" className={styles.titleItems}>
                 Установка дополнительных элементов и комплектующих
               </td>
             </tr>
@@ -142,7 +150,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Подшивка карнизных и фронтонных свесов</td>
+              <td colspan="3" className={styles.titleItems}>
+                Подшивка карнизных и фронтонных свесов
+              </td>
             </tr>
             <tr>
               <td>Устройство каркаса карнизных и фронтонных свесов</td>
@@ -169,7 +179,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Монтаж водосточной системы</td>
+              <td colspan="3" className={styles.titleItems}>
+                Монтаж водосточной системы
+              </td>
             </tr>
             <tr>
               <td>Монтаж водосточных желобов</td>
@@ -183,7 +195,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Установка мансардных окон</td>
+              <td colspan="3" className={styles.titleItems}>
+                Установка мансардных окон
+              </td>
             </tr>
             <tr>
               <td>Монтаж мансардных окон в ходе кровельных работ</td>
@@ -192,7 +206,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Фасадные работы</td>
+              <td colspan="3" className={styles.titleItems}>
+                Фасадные работы
+              </td>
             </tr>
             <tr>
               <td>Монтаж сайдинга ПВХ/сталь</td>
@@ -201,7 +217,9 @@ function Content() {
             </tr>
 
             <tr>
-              <td colspan="3">Прочие работы</td>
+              <td colspan="3" className={styles.titleItems}>
+                Прочие работы
+              </td>
             </tr>
             <tr>
               <td>Монтаж рамных лесов при высоте строения до 10 м</td>

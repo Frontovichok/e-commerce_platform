@@ -10,3 +10,36 @@
     width: var(--global-max-width);
     margin: auto;
 } */
+.priceTable {
+  width: 100%;
+  border: 1px solid #f2f4f5;
+}
+.priceTable thead {
+  background-color: #ff9e65;
+}
+.priceTable thead th {
+  vertical-align: bottom;
+  color: #252525;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.priceTable td,
+.priceTable th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #f2f4f5;
+  border-right: none;
+}
+.priceTable td:last-child {
+  border-right: 1px solid #f2f4f5;
+}
+.priceTable th:last-child {
+  border-right: 1px solid #f2f4f5;
+}
+.titleItems {
+  color: #323232;
+  font-weight: bold;
+  padding-left: 60px;
+  font-size: 1.1rem;
+  background-color: #e7e7e7;
+}
