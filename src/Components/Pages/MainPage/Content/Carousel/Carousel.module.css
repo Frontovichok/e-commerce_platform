@@ -36,6 +36,9 @@
 }
 
 @media (min-width: 320px) {
+  .carousel {
+    border-radius: 0;
+  }
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   :global(.carousel-caption) {
     left: 15% !important;
@@ -69,6 +72,9 @@
 }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
+  .carousel {
+    border-radius: 5px;
+  }
   :global(.carousel-caption) {
     left: 12% !important;
     right: auto !important;

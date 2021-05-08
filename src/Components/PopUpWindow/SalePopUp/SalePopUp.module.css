@@ -1,0 +1,6 @@
+:global .ui.mini.modal > .close {
+  right: 0;
+  top: 0;
+  color: #ff1a1a;
+  position: relative;
+}
