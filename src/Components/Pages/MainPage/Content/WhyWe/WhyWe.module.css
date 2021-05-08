@@ -66,6 +66,9 @@
 }
 
 @media (min-width: 320px) {
+  .whyWe {
+    background-attachment: local;
+  }
   .sectionTitle {
     text-align: left;
   }
@@ -83,6 +86,9 @@
   }
 }
 @media (min-width: 1281px) {
+  .whyWe {
+    background-attachment: fixed;
+  }
   .sectionTitle {
     text-align: center;
   }

@@ -11,6 +11,9 @@
   background-position: 30% 50%;
   background-attachment: fixed;
 }
+/* .WorkingSteps:before {
+  
+} */
 .sectionDarkBackground {
   background-color: rgb(0 0 0 / 80%);
 }
@@ -92,6 +95,7 @@
 @media (min-width: 320px) {
   .WorkingSteps {
     margin-top: 50px;
+    background-attachment: local;
   }
   .container {
     flex-direction: column;
@@ -128,6 +132,7 @@
 @media (min-width: 1281px) {
   .WorkingSteps {
     margin-top: 0;
+    background-attachment: fixed;
   }
   .container {
     flex-direction: row;
