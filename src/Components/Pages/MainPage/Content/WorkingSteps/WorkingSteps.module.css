@@ -1,6 +1,6 @@
 @import "../../../../../App.module.css";
 
-.ourTeam {
+.WorkingSteps {
   margin-top: 0;
   text-align: center;
   margin: 0;
@@ -87,4 +87,76 @@
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+@media (min-width: 320px) {
+  .WorkingSteps {
+    margin-top: 50px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .middleSide {
+    display: none;
+  }
+  .rightSide {
+    width: 100%;
+    padding: 20px;
+    padding-top: 40px;
+  }
+  .totalStepsContainer {
+    padding: 0 20px;
+  }
+  .totalSteps {
+    font-size: 15rem;
+  }
+  .totalStepsText {
+    font-size: 2.5rem;
+    color: orange;
+  }
+  .arrow {
+    width: 90px;
+    transform: rotate(90deg);
+  }
+  .step {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1281px) {
+  .WorkingSteps {
+    margin-top: 0;
+  }
+  .container {
+    flex-direction: row;
+  }
+  .leftSide {
+    width: 40%;
+  }
+  .middleSide {
+    display: flex;
+  }
+  .rightSide {
+    width: 40%;
+    padding: 0;
+  }
+  .totalStepsContainer {
+    padding: 0;
+  }
+  .totalSteps {
+    font-size: 20rem;
+  }
+  .totalStepsText {
+    font-size: 3rem;
+    color: #f5e5c9;
+  }
+  .arrow {
+    width: 150px;
+    transform: rotate(0deg);
+  }
+  .step {
+    font-size: 3rem;
+  }
 }

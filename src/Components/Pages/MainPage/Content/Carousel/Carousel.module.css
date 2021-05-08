@@ -48,7 +48,7 @@
   }
   .carouselTtemTitle {
     font-size: 2rem;
-    color: orange;
+    color: #f98018;
     text-transform: uppercase;
   }
   .carouselTtemDescription {
@@ -79,7 +79,6 @@
   }
   .carouselTtemTitle {
     font-size: 4rem;
-    color: white;
     text-transform: uppercase;
   }
   .carouselTtemDescription {

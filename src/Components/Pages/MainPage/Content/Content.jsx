@@ -1,5 +1,6 @@
 import PopUpWindow from "../../../PopUpWindow/PopUpWindow";
 import Carousel from "./Carousel/Carousel";
+import ContactWithMe from "./ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
 import News from "./News/News";
 import OurProducts from "./OurProducts/OutProducts";
@@ -20,6 +21,7 @@ function Content() {
       <Reviews />
       <News />
       <WorkingSteps />
+      <ContactWithMe />
       <PopUpWindow />
     </>
   );

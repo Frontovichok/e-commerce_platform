@@ -10,7 +10,7 @@ body {
   margin-right: calc(-1 * (100vw - 100%));
   position: relative;
   overflow-x: hidden;
-  background: #f9f9f9;
+  background: #f1f1f1;
 }
 html,
 body {
@@ -49,7 +49,7 @@ body {
   }
   .sectionTitle {
     padding-left: 10px;
-    font-size: 30px;
+    font-size: 29px;
   }
 }
 @media (min-width: 1281px) {

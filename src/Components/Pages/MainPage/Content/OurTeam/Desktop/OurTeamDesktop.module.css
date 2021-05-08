@@ -32,30 +32,25 @@
   width: 21%;
   text-align: center;
   background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .avatar {
   width: 100%;
-  padding-top: 100%;
-  /* border-radius: 50%; */
-  position: relative;
-  background-size: cover;
-  background-position: center;
+  max-height: 300px;
+  object-fit: cover;
 }
-.worker_1 {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/17/Vladimir_Putin_%282018-03-01%29_03_%28cropped%29.jpg);
-  background-position: 50% 19%;
+:global .worker_1 {
+  object-position: 0 0%;
 }
-.worker_2 {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c7/Alexey_Navalny_in_2020_%28cropped%29.jpg);
-  background-position: 50% 28%;
+:global .worker_2 {
+  object-position: 0 15%;
 }
-.worker_3 {
-  background-image: url(https://i.guim.co.uk/img/media/c26a3091bedf5bdb164460a2c0ee27191d7622d6/0_45_2037_1223/master/2037.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=8c5f62a0c0588403a08eb4ac961fbe9f);
-  background-position: center;
+:global .worker_3 {
+  object-position: 0 10%;
 }
-.worker_4 {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/9f/Dmitry_Medvedev_2016.jpg);
-  background-position: 50% -5%;
+:global .worker_4 {
+  object-position: 0 0%;
 }
 .aboutWorkerContainer {
   padding: 10px 15px;

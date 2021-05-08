@@ -1,22 +1,17 @@
-import NewsItem from "./NewsItem/NewsItem";
-import styles from "./News.module.css";
+import NewsDesktop from "./Desktop/NewsDesktop";
+import NewsMobile from "./Mobile/NewsMobile";
+
+const isMobile = window.innerWidth <= 500;
 
 function News() {
-  return (
-    <section className="sectionMainPage">
-      <div>
-        <h2 className={"sectionTitle"}>Последние события</h2>
-        <div className={styles.servicesContainer}>
-          {servicesList.map((service, i) => (
-            <NewsItem {...service} />
-          ))}
-        </div>
-      </div>
-    </section>
+  return isMobile ? (
+    <NewsMobile newsList={newsList} />
+  ) : (
+    <NewsDesktop newsList={newsList} />
   );
 }
 
-let servicesList = [
+let newsList = [
   {
     title: "Сдана работа по монтажу крыши",
     img:

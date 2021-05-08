@@ -38,12 +38,15 @@
   /* padding-left: 0; */
 }
 .review {
-  box-shadow: 1px 1px 4px rgb(136 136 136);
   height: 100%;
   padding: 30px;
   border-radius: 3px;
   overflow: hidden;
   background-color: white;
+  transition: 0.1s all;
+}
+.review:hover {
+  box-shadow: 0 1px 3px #d2d2d2;
 }
 .avatarAndName {
   display: flex;

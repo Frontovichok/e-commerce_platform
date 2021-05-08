@@ -2,10 +2,9 @@
   position: absolute;
   top: 50%;
   right: 150px;
-  background-color: #ffffffe6;
+  background-color: white;
   padding: 30px;
   text-align: center;
-  box-shadow: 1px 3px 5px #000000bd;
   transform: translateY(-50%);
   z-index: 1;
   border-radius: 3px;

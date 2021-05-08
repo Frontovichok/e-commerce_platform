@@ -1,10 +1,9 @@
 import styles from "./WorkingSteps.module.css";
 import arrowImg from "./right-arrow.svg";
-import ContactWithMe from "./ContactWithMe/ContactWithMe";
 
 function WorkingSteps() {
   return (
-    <section className={`sectionMainPage ${styles.ourTeam}`}>
+    <section className={`sectionMainPage ${styles.WorkingSteps}`}>
       <div className={styles.sectionDarkBackground}>
         <div className={styles.container}>
           <div className={styles.leftSide}>
@@ -27,7 +26,6 @@ function WorkingSteps() {
           </div>
         </div>
       </div>
-      <ContactWithMe />
     </section>
   );
 }
