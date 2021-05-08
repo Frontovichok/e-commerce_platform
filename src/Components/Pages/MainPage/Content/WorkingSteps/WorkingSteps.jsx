@@ -10,10 +10,7 @@ function WorkingSteps() {
           <div className={styles.leftSide}>
             <div className={styles.totalStepsContainer}>
               <p className={styles.totalSteps}>5</p>
-              <p className={styles.totalStepsText}>
-                Этапов
-                <br /> работы с нами
-              </p>
+              <p className={styles.totalStepsText}>Этапов работы с нами</p>
             </div>
           </div>
           <div className={styles.middleSide}>

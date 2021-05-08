@@ -1,0 +1,93 @@
+@import "../../../../../../App.module.css";
+
+.ourTeam {
+  text-align: center;
+  background-image: url(https://thumbs.dreamstime.com/z/%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%B0%D1%8F-%D0%BA%D0%B5%D1%80%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D0%BA%D1%80%D1%8B%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%BF%D0%B8%D1%86%D0%B5%D0%B9-%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F-%D0%BA%D1%80%D1%8B%D1%88%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D1%81-%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D0%B9-123655480.jpg);
+  background-size: cover;
+  background-position: 30% 50%;
+  background-attachment: fixed;
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+.sectionTitle {
+  color: white;
+}
+.sectionDarkBackground {
+  background-color: rgb(0 0 0 / 80%);
+  padding: 40px 0;
+}
+.workersContainer {
+  max-width: var(--global-max-width);
+  margin: auto;
+}
+.workerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  height: 100%;
+}
+.worker {
+  background-color: white;
+}
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 10% 30%;
+}
+:global .n1 {
+  object-position: 10% 5%;
+}
+:global .n2 {
+  object-position: 10% 15%;
+}
+:global .n3 {
+  object-position: 10% 10%;
+}
+:global .n4 {
+  object-position: 10% 0%;
+}
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-bottom: 5px;
+  color: #3c3c3c;
+}
+.position {
+  color: #ff5858;
+  font-weight: bold;
+}
+.description {
+  color: grey;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.ourTeam :global .slide___3-Nqo {
+  padding-bottom: 31% !important;
+}
+.ourTeam :global .carousel__dot-group {
+  text-align: center;
+}
+.ourTeam :global .dot___3c3SI {
+  cursor: pointer;
+  margin-right: 8px;
+  outline: none;
+  border: none;
+  background-color: grey;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+.ourTeam :global .dot___3c3SI:hover {
+  background-color: #ffbb94;
+}
+.ourTeam :global button.carousel__dot.carousel__dot--selected {
+  background-color: #ff7625;
+}
+.ourTeam :global .carousel__slide-focus-ring {
+  display: none;
+}

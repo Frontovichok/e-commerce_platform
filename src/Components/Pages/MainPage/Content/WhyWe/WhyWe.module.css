@@ -66,13 +66,33 @@
 }
 
 @media (min-width: 320px) {
+  .sectionTitle {
+    text-align: left;
+  }
+  .advantagesContainer .advantageCard:last-child {
+    border-bottom: none;
+  }
   .advantageCard {
     width: 100%;
+    border-bottom: 1px solid #f98727;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .description {
+    display: none;
   }
 }
 @media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
+  .sectionTitle {
+    text-align: center;
+  }
   .advantageCard {
     width: 20%;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-top: 30px;
+  }
+  .description {
+    display: unset;
   }
 }

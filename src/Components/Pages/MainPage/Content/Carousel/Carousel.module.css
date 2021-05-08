@@ -1,15 +1,19 @@
 .carouselTtemTitle {
   font-size: 4rem;
   text-shadow: 1px 1px 5px #2a2929;
+  margin-bottom: 1.3rem;
 }
 .carousel {
   position: relative;
   max-width: var(--global-max-width);
   margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .carouselTtemDescription {
   font-size: 1.5rem;
   text-shadow: 1px 1px 5px #2a2929;
+  color: #e4e4e4;
 }
 .asdf {
   position: absolute;
@@ -40,6 +44,7 @@
   :global(.d-block.w-100) {
     object-fit: cover;
     height: 300px;
+    filter: brightness(30%);
   }
   .carouselTtemTitle {
     font-size: 2rem;

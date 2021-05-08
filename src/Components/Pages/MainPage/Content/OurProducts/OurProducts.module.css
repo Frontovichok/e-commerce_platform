@@ -1,26 +1,27 @@
 .productList {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 10px;
 }
 .showMoreContainer {
-    text-align: center;
-    padding-top: 25px;
+  text-align: center;
+  padding-top: 25px;
 }
 .showMoreBtn {
-    padding: 10px 25px;
-    color: white;
-    background-color: #fd8531;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: .1s linear;
+  padding: 10px 25px;
+  color: white;
+  background-color: #fd8531;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.1s linear;
 }
 .showMoreBtn:hover {
-    color: white;
-    box-shadow: 0 1px 3px #8a5512;
-    text-decoration: none;
-  }
+  color: white;
+  box-shadow: 0 1px 3px #8a5512;
+  text-decoration: none;
+}

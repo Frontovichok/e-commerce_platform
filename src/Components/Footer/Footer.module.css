@@ -62,3 +62,21 @@
 .item:hover {
   color: #fd8531;
 }
+@media (min-width: 320px) {
+  .container {
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .column {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1281px) {
+  .container {
+    flex-direction: row;
+    padding-left: 0;
+  }
+  .column {
+    margin-bottom: 0;
+  }
+}

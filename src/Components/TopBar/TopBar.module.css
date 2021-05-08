@@ -4,3 +4,13 @@
   background-color: #ff8843;
   box-shadow: 1px 1px 5px #925617;
 }
+@media (min-width: 320px) {
+  .container {
+    display: none;
+  }
+}
+@media (min-width: 1281px) {
+  .container {
+    display: block;
+  }
+}

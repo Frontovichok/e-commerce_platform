@@ -1,6 +1,16 @@
 .servicesContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 320px) {
+  .servicesContainer {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 1281px) {
+  .servicesContainer {
+    padding: 0;
+  }
 }
