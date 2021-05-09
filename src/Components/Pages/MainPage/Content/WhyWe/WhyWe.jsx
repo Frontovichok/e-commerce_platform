@@ -13,45 +13,48 @@ function WhyWe() {
         </h2>
         <div className={styles.advantagesContainer}>
           <div className={styles.advantageCard}>
-            <img src={hammer} className={styles.advantageImage} />
+            <img
+              src={hammer}
+              className={styles.advantageImage}
+              alt="Why We"
+            />
             <div>
               <p className={styles.number}>1500 м²</p>
               <p className={styles.title}>Смонтировано</p>
             </div>
-
-            <p className={styles.description}>
-              Опианывад лыр фдрр олрлоыв лоарв ддол
-            </p>
           </div>
           <div className={styles.advantageCard}>
-            <img src={rating} className={styles.advantageImage} />
+            <img
+              src={rating}
+              className={styles.advantageImage}
+              alt="Why We"
+            />
             <div>
               <p className={styles.number}>15</p>
               <p className={styles.title}>Выполненных проектов</p>
             </div>
-            <p className={styles.description}>
-              Опианывад лыр фдрр олрлоыв лоарв ддол
-            </p>
           </div>
           <div className={styles.advantageCard}>
-            <img src={calendar} className={styles.advantageImage} />
+            <img
+              src={calendar}
+              className={styles.advantageImage}
+              alt="Why We"
+            />
             <div>
               <p className={styles.number}>5</p>
               <p className={styles.title}>Лет на рынке</p>
             </div>
-            <p className={styles.description}>
-              Опианывад лыр фдрр олрлоыв лоарв ддол
-            </p>
           </div>
           <div className={styles.advantageCard}>
-            <img src={term} className={styles.advantageImage} />
+            <img
+              src={term}
+              className={styles.advantageImage}
+              alt="Why We"
+            />
             <div>
               <p className={styles.number}>2</p>
               <p className={styles.title}>Года гарантии на работу</p>
             </div>
-            <p className={styles.description}>
-              Опианывад лыр фдрр олрлоыв лоарв ддол
-            </p>
           </div>
         </div>
       </div>

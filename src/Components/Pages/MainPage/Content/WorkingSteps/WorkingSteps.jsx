@@ -9,11 +9,14 @@ function WorkingSteps() {
           <div className={styles.leftSide}>
             <div className={styles.totalStepsContainer}>
               <p className={styles.totalSteps}>5</p>
-              <p className={styles.totalStepsText}>Этапов работы с нами</p>
+              <p className={styles.totalStepsText}>
+                Этапов <br />
+                для получения результата
+              </p>
             </div>
           </div>
           <div className={styles.middleSide}>
-            <img className={styles.arrow} src={arrowImg} />
+            <img className={styles.arrow} src={arrowImg} alt="Arrow" />
           </div>
           <div className={styles.rightSide}>
             <ol className={styles.stepsList}>

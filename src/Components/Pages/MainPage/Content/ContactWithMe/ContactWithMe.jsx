@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
 import NumberFormat from "react-number-format";
 import { TextField } from "@material-ui/core";
-import { Icon } from "semantic-ui-react";
 import styles from "./ContactWithMe.module.css";
 
 function NumberFormatCustom(props) {
@@ -35,9 +34,12 @@ NumberFormatCustom.propTypes = {
 };
 
 function ContactWithMe() {
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register } = useForm();
   const onSubmit = ({ name, phone }) => {
-    console.log("Hi");
+    console.log(name, phone);
+    fetch("/api")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   };
 
   const [values, setValues] = React.useState({
@@ -71,7 +73,6 @@ function ContactWithMe() {
           </div>
           <div className={styles.inputField}>
             <TextField
-              // {...register("lastName", { required: true })}
               inputRef={register({
                 required: "This field is required!",
               })}
@@ -80,17 +81,10 @@ function ContactWithMe() {
               value={values.numberformat}
               onChange={handleChange}
               name="phone"
-              id="formatted-numberformat-input"
               InputProps={{
                 inputComponent: NumberFormatCustom,
               }}
-              inputRef={register({
-                required: "This field is required!",
-              })}
               fullWidth
-              // InputLabelProps={{
-              //   shrink: true,
-              // }}
             />
           </div>
           <button type="submit" className={styles.submitButton}>

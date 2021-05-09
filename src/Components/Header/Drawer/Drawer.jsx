@@ -6,10 +6,6 @@ import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import hamburgerMenu from "./hamburger-menu.png";
 import { NavLink } from "react-router-dom";
 
@@ -65,9 +61,6 @@ export default function DrawerMenu() {
           "Кровельные материалы 3",
         ].map((text, index) => (
           <ListItem button key={text}>
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
             <NavLink to="124">{text}</NavLink>
           </ListItem>
         ))}
@@ -81,9 +74,6 @@ export default function DrawerMenu() {
           "Ебаные системы 3",
         ].map((text, index) => (
           <ListItem button key={text}>
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
             <NavLink to="124">{text}</NavLink>
           </ListItem>
         ))}
@@ -97,9 +87,6 @@ export default function DrawerMenu() {
           "Фасадные системы 3",
         ].map((text, index) => (
           <ListItem button key={text}>
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
             <NavLink to="124">{text}</NavLink>
           </ListItem>
         ))}
@@ -113,9 +100,6 @@ export default function DrawerMenu() {
           "Водосточные системы 3",
         ].map((text, index) => (
           <ListItem button key={text}>
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
             <NavLink to="124">{text}</NavLink>
           </ListItem>
         ))}
@@ -127,7 +111,7 @@ export default function DrawerMenu() {
     <div>
       <React.Fragment key={"left"}>
         <Button onClick={toggleDrawer("left", true)}>
-          <img width={30} src={hamburgerMenu} />
+          <img width={30} src={hamburgerMenu} alt="hamburgerMenu"/>
         </Button>
         <Drawer
           anchor={"left"}

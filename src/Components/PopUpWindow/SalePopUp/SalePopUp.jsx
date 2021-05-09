@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Header, Icon, Modal } from "semantic-ui-react";
-import styles from "./SalePopUp.module.css";
+import { Button, Icon, Modal } from "semantic-ui-react";
+// import styles from "./SalePopUp.module.css";
 
 function SalePopUp(props) {
   const [open, setOpen] = React.useState(false);

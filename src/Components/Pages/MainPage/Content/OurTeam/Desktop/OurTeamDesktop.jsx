@@ -7,10 +7,11 @@ function OurTeamDesktop(props) {
         <h2 className={`sectionTitle ${styles.sectionTitle}`}>Наша команда</h2>
         <div className={styles.container}>
           {props.workers.map((worker, i) => (
-            <div className={styles.workerContainer}>
+            <div className={styles.workerContainer} key={worker.id}>
               <img
                 className={`${styles.avatar} worker_${i + 1}`}
                 src={worker.avatar}
+                alt="Worker"
               />
               <div className={styles.aboutWorkerContainer}>
                 <p className={styles.name}>{worker.name}</p>

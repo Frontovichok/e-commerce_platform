@@ -36,10 +36,10 @@ NumberFormatCustom.propTypes = {
 };
 
 function CallMe() {
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register } = useForm();
   const [callMeState, toggleCallMeState] = useState(false);
   const onSubmit = ({ username, password }) => {
-    console.log("Hi");
+    console.log(username, password);
   };
 
   const [values, setValues] = React.useState({
@@ -54,11 +54,11 @@ function CallMe() {
 
   return (
     <div
-      className={styles.callMe + " " + `${callMeState ? styles.expanded : ""}`}
+      className={styles.callMe + ` ${callMeState ? styles.expanded : ""}`}
     >
       <div className={styles.callMeHeader}>
         <div>
-          <img src={callImage} className={styles.callImage} />
+          <img src={callImage} className={styles.callImage} alt="callMe"/>
         </div>
         <div className={styles.callMeHeaderTitleBlock}>
           <p className={styles.callMeHeaderTitle}>Заказать звонок</p>
@@ -97,7 +97,6 @@ function CallMe() {
               value={values.numberformat}
               onChange={handleChange}
               name="numberformat"
-              id="formatted-numberformat-input"
               InputProps={{
                 inputComponent: NumberFormatCustom,
               }}

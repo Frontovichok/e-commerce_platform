@@ -27,6 +27,7 @@ function OurTeamMobile(props) {
                       <img
                         className={`${styles.image} n${i + 1}`}
                         src={worker.avatar}
+                        alt="Worker"
                       />
                       <p className={styles.name}>{worker.name}</p>
                       <p className={styles.position}>{worker.position}</p>

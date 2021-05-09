@@ -27,6 +27,7 @@ function NewsMobile(props) {
                     <img
                       className={`${styles.image} n${i + 1}`}
                       src={news.img}
+                      alt="News"
                     />
                     <div className={styles.content}>
                       <p className={styles.name}>{news.name}</p>

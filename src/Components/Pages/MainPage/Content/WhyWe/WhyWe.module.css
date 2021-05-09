@@ -59,11 +59,6 @@
   color: #fff1da;
   text-transform: uppercase;
 }
-.description {
-  margin-top: auto;
-  font-size: 1.3rem;
-  color: #cecece;
-}
 
 @media (min-width: 320px) {
   .whyWe {
@@ -81,9 +76,6 @@
     padding-bottom: 20px;
     padding-top: 20px;
   }
-  .description {
-    display: none;
-  }
 }
 @media (min-width: 1281px) {
   .whyWe {
@@ -97,8 +89,5 @@
     border-bottom: none;
     padding-bottom: 0;
     padding-top: 30px;
-  }
-  .description {
-    display: unset;
   }
 }

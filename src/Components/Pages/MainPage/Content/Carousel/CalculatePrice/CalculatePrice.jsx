@@ -1,14 +1,14 @@
 import styles from "./CalculatePrice.module.css";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import { TextField, InputAdornment, IconButton } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 
 function CalculatePrice() {
   // const [showPassword, setPasswordVisibility] = useState(false)
   // const togglePasswordVisibility = () => setPasswordVisibility(!showPassword)
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register } = useForm();
   const onSubmit = ({ username, password }) => {
-    console.log("Hi");
+    console.log(username, password);
   };
   return (
     <div className={styles.formContainer}>
@@ -42,9 +42,11 @@ function CalculatePrice() {
             // 	error: true,
             // 	helperText: errors.password.message,
             // })}
-            InputProps={{
-              endAdornment: <InputAdornment position="end"></InputAdornment>,
-            }}
+            InputProps={
+              {
+                // endAdornment: <InputAdornment position="end"></InputAdornment>,
+              }
+            }
           />
         </div>
         {/* {isFailed && (

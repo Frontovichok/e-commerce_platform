@@ -8,9 +8,9 @@ function NewsDesktop(props) {
         <h2 className={"sectionTitle"}>Последние события</h2>
         <div className={styles.newsContainer}>
           {props.newsList.map((news, i) => (
-            <div className={styles.news}>
+            <div className={styles.news} key={news.id}>
               <div className={styles.imageContainer}>
-                <img className={styles.image} src={news.img}></img>
+                <img className={styles.image} src={news.img} alt="News"></img>
                 <p className={styles.sticker}>{news.sticker}</p>
               </div>
               <div className={styles.content}>

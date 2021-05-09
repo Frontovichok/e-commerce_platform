@@ -1,7 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
 import styles from "./Footer.module.css";
-import FooterMenu from "./FooterMenu/FooterMenu";
 
 function Footer() {
   return (

@@ -29,7 +29,7 @@ function Reviews() {
                 <div className={styles.reviewContainer}>
                   <div className={styles.review}>
                     <div className={styles.avatarBlock}>
-                      <img className={styles.image} src={review.avatar} />
+                      <img className={styles.image} src={review.avatar} alt="Review"/>
                       <div className={styles.nameContainer}>
                         <p className={styles.name}>{review.name}</p>
                         <p className={styles.reviewData}>{review.data}</p>
