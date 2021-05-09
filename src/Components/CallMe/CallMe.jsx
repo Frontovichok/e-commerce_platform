@@ -38,8 +38,21 @@ NumberFormatCustom.propTypes = {
 function CallMe() {
   const { handleSubmit, register } = useForm();
   const [callMeState, toggleCallMeState] = useState(false);
-  const onSubmit = ({ username, password }) => {
-    console.log(username, password);
+  const onSubmit = ({ name, phone }) => {
+    console.log(name, phone);
+    // e.preventDefault();
+    // axios({
+    //   method: "POST",
+    //   url: "http://localhost:3002/send",
+    //   data: this.state,
+    // }).then((response) => {
+    //   if (response.data.status === "success") {
+    //     alert("Message Sent.");
+    //     this.resetForm();
+    //   } else if (response.data.status === "fail") {
+    //     alert("Message failed to send.");
+    //   }
+    // });
   };
 
   const [values, setValues] = React.useState({
@@ -53,12 +66,10 @@ function CallMe() {
   };
 
   return (
-    <div
-      className={styles.callMe + ` ${callMeState ? styles.expanded : ""}`}
-    >
+    <div className={styles.callMe + ` ${callMeState ? styles.expanded : ""}`}>
       <div className={styles.callMeHeader}>
         <div>
-          <img src={callImage} className={styles.callImage} alt="callMe"/>
+          <img src={callImage} className={styles.callImage} alt="callMe" />
         </div>
         <div className={styles.callMeHeaderTitleBlock}>
           <p className={styles.callMeHeaderTitle}>Заказать звонок</p>
@@ -96,7 +107,7 @@ function CallMe() {
               className={styles.phoneField}
               value={values.numberformat}
               onChange={handleChange}
-              name="numberformat"
+              name="phone"
               InputProps={{
                 inputComponent: NumberFormatCustom,
               }}

@@ -37,9 +37,19 @@ function ContactWithMe() {
   const { handleSubmit, register } = useForm();
   const onSubmit = ({ name, phone }) => {
     console.log(name, phone);
-    fetch("/api")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
+    // e.preventDefault();
+    // axios({
+    //   method: "POST",
+    //   url: "http://localhost:3002/send",
+    //   data: this.state,
+    // }).then((response) => {
+    //   if (response.data.status === "success") {
+    //     alert("Message Sent.");
+    //     this.resetForm();
+    //   } else if (response.data.status === "fail") {
+    //     alert("Message failed to send.");
+    //   }
+    // });
   };
 
   const [values, setValues] = React.useState({
