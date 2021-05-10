@@ -38,8 +38,10 @@ NumberFormatCustom.propTypes = {
 function CallMe() {
   const { handleSubmit, register } = useForm();
   const [callMeState, toggleCallMeState] = useState(false);
-  const onSubmit = ({ name, phone }) => {
-    console.log(name, phone);
+  const onSubmit = (data, e) => {
+    console.log(data);
+    e.target.reset();
+    setValues({ ...values, phone: "" });
     // e.preventDefault();
     // axios({
     //   method: "POST",
@@ -56,7 +58,7 @@ function CallMe() {
   };
 
   const [values, setValues] = React.useState({
-    numberformat: "",
+    phone: "",
   });
   const handleChange = (event) => {
     setValues({
@@ -81,14 +83,13 @@ function CallMe() {
             color="orange"
             onClick={() => {
               toggleCallMeState(!callMeState);
-              console.log(callMeState);
             }}
           />
         </div>
       </div>
       <div className={styles.callMeForm}>
         <h2 className={styles.formTitle}>Мы вам перезвоним</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <div className={styles.textField}>
             <TextField
               name="name"
@@ -97,20 +98,25 @@ function CallMe() {
               fullWidth
               inputRef={register({
                 required: "This field is required!",
-                validate: (value) => value !== "admin" || "Nice try!",
+                validate: (value) => value.length < 30 || "Nice try!",
               })}
             />
           </div>
           <div className={styles.textField}>
             <TextField
+              name="phone"
               label="Телефон"
               className={styles.phoneField}
-              value={values.numberformat}
+              value={values.phone}
               onChange={handleChange}
-              name="phone"
               InputProps={{
                 inputComponent: NumberFormatCustom,
               }}
+              inputRef={register({
+                required: "This field is required!",
+                validate: (value) =>
+                  value.match(/\d/g).length === 11 || "Nice try!",
+              })}
               fullWidth
               InputLabelProps={{
                 shrink: true,
