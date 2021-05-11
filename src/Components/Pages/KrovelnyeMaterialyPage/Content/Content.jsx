@@ -1,10 +1,16 @@
-// import styles from "./Content.module.css";
+import Services from "./Services/RoofTypes";
+import Navbar from "./NavBar/Navbar";
+import styles from "./Content.module.css";
 
 function Content() {
   return (
-    <>
-        Кровельная залупа
-    </>
+    <div className={styles.container}>
+      <p>Кровельная залупа</p>
+      <div className={styles.content}>
+        <Navbar />
+        <Services />
+      </div>
+    </div>
   );
 }
 

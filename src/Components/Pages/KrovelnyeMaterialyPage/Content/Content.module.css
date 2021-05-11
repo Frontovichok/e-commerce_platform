@@ -1,12 +1,20 @@
-/* @import '../../App.module.css'; */
+@import "../../../../index.css";
 
-/* .content {
-    flex: 1 0;
-    background-color: white;
-    box-shadow: 0px 5px 5px -2px #8c8c8c;
-    padding-bottom: 30px;
+.content {
+  display: flex;
+  flex-direction: row;
 }
 .container {
-    width: var(--global-max-width);
-    margin: auto;
-} */
+  width: var(--global-max-width);
+  margin: auto;
+}
+@media (min-width: 320px) {
+  .content {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1281px) {
+  .content {
+    flex-direction: row;
+  }
+}

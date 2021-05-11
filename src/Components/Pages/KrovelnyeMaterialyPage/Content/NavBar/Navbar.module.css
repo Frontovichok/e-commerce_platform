@@ -1,0 +1,33 @@
+.container {
+  flex: 0 0;
+  position: sticky;
+  top: 10px;
+  align-self: baseline;
+  min-width: 280px;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+.navbarItems {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 0;
+  border-radius: 5px;
+}
+.item {
+  font-size: 1.1rem;
+  color: #1d1d1d;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #c8c8c8;
+}
+.item.active {
+  border-bottom: 1px solid #ff8843;
+  color: #ff8843;
+}
+.item:hover {
+  text-decoration: none;
+  color: #ff8843;
+}

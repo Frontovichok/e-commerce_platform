@@ -1,0 +1,102 @@
+.roofType {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  position: relative;
+  margin-bottom: 10px;
+  transition: 0.1s linear;
+  background: white;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.roofType:hover {
+  box-shadow: 0 1px 3px #d2d2d2;
+}
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  flex: 1 1;
+  margin: 0 20px;
+  padding-bottom: 20px;
+  color: #3c3c3c;
+}
+.description {
+  color: grey;
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+.sticker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 5px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #2a2929;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.image {
+  width: 100%;
+}
+.content a {
+  color: #ff6500;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin: 0 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: 0.1s linear;
+}
+.content a:hover {
+  color: #ff5100;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f87d21;
+}
+
+@media (min-width: 320px) {
+  .service {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+  .content a {
+    font-size: 0.8rem;
+  }
+  .sticker {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .service {
+    width: calc(33% - 10px);
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .content a {
+    font-size: 1rem;
+  }
+  .sticker {
+    font-size: 1rem;
+  }
+}
