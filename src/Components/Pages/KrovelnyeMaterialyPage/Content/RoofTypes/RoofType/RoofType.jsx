@@ -11,7 +11,7 @@ function RoofType(props) {
       <div className={styles.content}>
         <h3 className={styles.title}>{props.title}</h3>
         <p className={styles.description}>{props.description}</p>
-        <NavLink to="/bla">Подробнее</NavLink>
+        <NavLink to={props.link}>Перейти в каталог</NavLink>
       </div>
     </div>
   );

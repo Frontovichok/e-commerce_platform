@@ -18,7 +18,10 @@
   border-radius: 5px;
   transition: all 0.1s linear;
 }
-.menuItem:last-child {
+.menuItems:last-child {
+  padding-right: 0;
+}
+.menuItems:last-child .menuItem {
   margin-right: 0;
   padding-right: 0;
 }

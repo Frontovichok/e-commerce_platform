@@ -1,7 +1,7 @@
 .container {
   flex: 0 0;
   position: sticky;
-  top: 10px;
+  top: 30px;
   align-self: baseline;
   min-width: 280px;
   margin-right: 50px;

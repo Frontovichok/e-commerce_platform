@@ -1,6 +1,6 @@
 import PopUpWindow from "../../../PopUpWindow/PopUpWindow";
 import Carousel from "./Carousel/Carousel";
-import ContactWithMe from "./ContactWithMe/ContactWithMe";
+import ContactWithMe from '../../../ContactWithMe/ContactWithMe';
 import News from "./News/News";
 import OurProducts from "./OurProducts/OutProducts";
 import OurTeam from "./OurTeam/OurTeam";

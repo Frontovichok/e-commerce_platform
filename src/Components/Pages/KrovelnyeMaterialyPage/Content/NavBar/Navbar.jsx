@@ -12,7 +12,7 @@ function Navbar() {
           Металлочерепица
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/gibkaya cherepitca"
+          to="krovelnye-materialy/gibkaya_cherepitca"
           className={styles.item}
         >
           Гибкая черепица
@@ -21,25 +21,25 @@ function Navbar() {
           Профнастил
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/kompositnaya cherepitca"
+          to="krovelnye-materialy/kompositnaya_cherepitca"
           className={styles.item}
         >
           Композитная черепица
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/naturalnaya cherepitca"
+          to="krovelnye-materialy/naturalnaya_cherepitca"
           className={styles.item}
         >
           Натуральная черепица
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/falcevaya cherepitca"
+          to="krovelnye-materialy/falcevaya_cherepitca"
           className={styles.item}
         >
           Фальцевая кровля
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/gidroizolyazionnye materialy"
+          to="krovelnye-materialy/gidroizolyazionnye_materialy"
           className={styles.item}
         >
           Рулонные гидроизоляционные материалы

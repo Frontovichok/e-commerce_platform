@@ -1,0 +1,30 @@
+.advaces .sectionTitle {
+  margin-top: 30px;
+}
+.articles {
+  background-color: white;
+  border-radius: 5px;
+  padding: 35px;
+}
+.article {
+  margin-bottom: 30px;
+}
+.title {
+  margin-bottom: 15px;
+  color: #e57214;
+}
+.description {
+  color: #5b5b5b;
+}
+
+/* @media (min-width: 1281px) {
+  .sectionTitle {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 320px) {
+  .sectionTitle {
+    margin-top: 30px;
+  }
+} */

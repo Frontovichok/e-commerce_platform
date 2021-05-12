@@ -42,7 +42,7 @@ let workers = [
     id: 4,
     name: "Шакал Галимый",
     avatar:
-      "https://upload.wikimedia.org/wikipedia/commons/9/9f/Dmitry_Medvedev_2016.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d6/Vladimir_Putin_in_KGB_uniform.jpg",
     position: "Старший менеджер",
     description: "Классный чел, но иногда кидает на бабки",
   },

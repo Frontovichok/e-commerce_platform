@@ -1,6 +1,8 @@
-import Services from "./Services/RoofTypes";
+import RoofTypes from "./RoofTypes/RoofTypes";
 import Navbar from "./NavBar/Navbar";
+import ContactWithMe from "../../../ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
+import Advaces from "./Advices/Advaces";
 
 function Content() {
   return (
@@ -8,7 +10,13 @@ function Content() {
       <p>Кровельная залупа</p>
       <div className={styles.content}>
         <Navbar />
-        <Services />
+        <div>
+          <RoofTypes />
+          <Advaces />
+          <div className={styles.contactWithMe2}>
+            <ContactWithMe />
+          </div>
+        </div>
       </div>
     </div>
   );
