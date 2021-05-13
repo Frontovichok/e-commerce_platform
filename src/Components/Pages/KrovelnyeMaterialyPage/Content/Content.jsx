@@ -1,5 +1,5 @@
 import RoofTypes from "./RoofTypes/RoofTypes";
-import Navbar from "./NavBar/Navbar";
+import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
 import ContactWithMe from "../../../ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
 import Advaces from "./Advices/Advaces";
@@ -9,11 +9,11 @@ function Content() {
     <div className={styles.container}>
       <p>Кровельная залупа</p>
       <div className={styles.content}>
-        <Navbar />
+        <ProductsNavBar />
         <div>
           <RoofTypes />
           <Advaces />
-          <div className={styles.contactWithMe2}>
+          <div className={styles.contactWithMe}>
             <ContactWithMe />
           </div>
         </div>

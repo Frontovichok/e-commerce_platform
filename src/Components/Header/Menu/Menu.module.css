@@ -18,6 +18,9 @@
   border-radius: 5px;
   transition: all 0.1s linear;
 }
+.activeMenuItem {
+  color: orange;
+}
 .menuItems:last-child {
   padding-right: 0;
 }
@@ -50,7 +53,7 @@
   z-index: 2;
   transition: all 0.1s linear;
 }
-.menuSubItems a {
+.menuSubItem {
   white-space: nowrap;
   font-size: 1.1rem;
   color: #f3f3f3;
@@ -59,13 +62,16 @@
   text-decoration: none;
   transition: all 0.1s linear;
 }
-.menuSubItems a:last-child {
+.menuSubItem:last-child {
   margin-bottom: 0;
 }
-.menuSubItems a:hover {
+.menuSubItem:hover {
   white-space: nowrap;
   /* background-color: #ff8843; */
   color: #df6620;
   text-decoration: none;
   /* border-radius: 5px; */
+}
+.menuSubItem:global(.active) {
+  color: #df6620;
 }

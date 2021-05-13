@@ -16,12 +16,17 @@
   padding-bottom: 0;
   border-radius: 5px;
 }
+.item:global(.active) {
+  color: #ff8843;
+  border-bottom: 1px solid #ff8843;
+}
 .item {
   font-size: 1.1rem;
   color: #1d1d1d;
   margin-bottom: 10px;
   padding: 5px;
   border-bottom: 1px solid #c8c8c8;
+  transition: 0.1s all linear;
 }
 .item.active {
   border-bottom: 1px solid #ff8843;

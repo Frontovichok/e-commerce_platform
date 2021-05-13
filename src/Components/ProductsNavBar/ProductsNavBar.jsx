@@ -1,51 +1,51 @@
 import { NavLink } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import styles from "./ProductsNavBar.module.css";
 
-function Navbar() {
+function ProductsNavBar() {
   return (
     <div className={styles.container}>
       <ul className={styles.navbarItems}>
         <NavLink
-          to="krovelnye-materialy/metallocherepitca"
+          to="/krovelnye-materialy/metallocherepitca"
           className={styles.item}
         >
           Металлочерепица
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/gibkaya_cherepitca"
+          to="/krovelnye-materialy/gibkaya_cherepitca"
           className={styles.item}
         >
           Гибкая черепица
         </NavLink>
-        <NavLink to="krovelnye-materialy/profnastil" className={styles.item}>
+        <NavLink to="/krovelnye-materialy/profnastil" className={styles.item}>
           Профнастил
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/kompositnaya_cherepitca"
+          to="/krovelnye-materialy/kompositnaya_cherepitca"
           className={styles.item}
         >
           Композитная черепица
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/naturalnaya_cherepitca"
+          to="/krovelnye-materialy/naturalnaya_cherepitca"
           className={styles.item}
         >
           Натуральная черепица
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/falcevaya_cherepitca"
+          to="/krovelnye-materialy/falcevaya_cherepitca"
           className={styles.item}
         >
-          Фальцевая кровля
+          Фальцевая черепица
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/gidroizolyazionnye_materialy"
+          to="/krovelnye-materialy/gidroizolyazionnye_materialy"
           className={styles.item}
         >
           Рулонные гидроизоляционные материалы
         </NavLink>
         <NavLink
-          to="krovelnye-materialy/kopmplectuyshie"
+          to="/krovelnye-materialy/kopmplectuyshie"
           className={styles.item}
         >
           Комплектующие
@@ -54,4 +54,4 @@ function Navbar() {
     </div>
   );
 }
-export default Navbar;
+export default ProductsNavBar;

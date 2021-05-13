@@ -1,4 +1,4 @@
-@import "../../../../index.css";
+@import "../../../index.css";
 
 .content {
   display: flex;
@@ -12,6 +12,9 @@
   margin: 30px 0;
   border-radius: 5px;
   overflow: hidden;
+}
+.productsContainer {
+  flex: 1 1;
 }
 @media (min-width: 320px) {
   .content {
