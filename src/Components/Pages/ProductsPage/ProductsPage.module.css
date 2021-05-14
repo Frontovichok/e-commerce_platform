@@ -16,6 +16,11 @@
 .productsContainer {
   flex: 1 1;
 }
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
 @media (min-width: 320px) {
   .content {
     flex-direction: column;

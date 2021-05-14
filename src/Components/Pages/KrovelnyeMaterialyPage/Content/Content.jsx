@@ -7,7 +7,7 @@ import Advaces from "./Advices/Advaces";
 function Content() {
   return (
     <div className={styles.container}>
-      <p>Кровельная залупа</p>
+      <p>Кровельные материалы</p>
       <div className={styles.content}>
         <ProductsNavBar />
         <div>

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Icon } from "semantic-ui-react";
 import styles from "./Menu.module.css";
 
 function Menu() {
@@ -146,6 +147,9 @@ function Menu() {
             Кровельные материалы
           </NavLink>
         </div>
+      </div>
+      <div className={styles.menuItems}>
+        <Icon name="cart" size="big" />
       </div>
     </div>
   );

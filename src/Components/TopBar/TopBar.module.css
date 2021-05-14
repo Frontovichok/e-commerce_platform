@@ -1,7 +1,7 @@
 @import "../../App.module.css";
 
 .container {
-  background-color: #9f5d24;
+  background-color: #e9a56a;
 }
 @media (min-width: 320px) {
   .container {
