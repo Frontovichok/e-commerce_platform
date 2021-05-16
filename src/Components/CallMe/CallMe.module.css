@@ -100,7 +100,7 @@
   outline: none;
   text-align: center;
   display: inline-block;
-  background-color: #f87d21;
+  background: var(--global-gradient);;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
   line-height: 1.75;
@@ -108,7 +108,7 @@
   letter-spacing: 0.02857em;
   text-transform: uppercase;
   border: none;
-  box-shadow: 1px 1px 5px #fb9446;
+  /* box-shadow: 1px 1px 5px #fb9446; */
   transition: 0.1s linear;
   margin-bottom: 7px;
   padding: 10px 30px;

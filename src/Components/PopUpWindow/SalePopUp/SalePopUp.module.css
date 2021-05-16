@@ -4,3 +4,7 @@
   color: #ff1a1a;
   position: relative;
 }
+:global(.ui.button).getDiscountButton {
+  background: var(--global-gradient);
+  color: white;
+}

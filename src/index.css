@@ -1,5 +1,6 @@
 :root {
   --global-max-width: 1300px;
+  --global-gradient: linear-gradient(45deg, #f46b45, #eea849);
 }
 body {
   display: flex;

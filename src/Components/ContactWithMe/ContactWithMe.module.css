@@ -38,7 +38,7 @@
   border: 2px solid #747474;
 }
 .submitButton {
-  background-color: #fd8531;
+  background: var(--global-gradient);
   padding: 10px 40px;
   padding-top: 5px;
   border-radius: 5px;

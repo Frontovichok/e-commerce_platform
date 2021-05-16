@@ -81,7 +81,7 @@
 .button {
   padding: 7px 15px;
   color: white;
-  background-color: #fd8531;
+  background: var(--global-gradient);
   align-self: center;
   border-radius: 5px;
   text-transform: uppercase;
@@ -119,7 +119,7 @@
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
   .card {
-    width: calc(25% - 20px);
+    width: calc(25% - 15px);
     margin-bottom: 20px;
   }
 }

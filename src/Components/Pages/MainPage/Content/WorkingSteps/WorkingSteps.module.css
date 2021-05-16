@@ -56,7 +56,9 @@
   flex: 1 1;
 }
 .totalSteps {
-  color: orange;
+  background: linear-gradient(#eea649, #ff6433);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 20rem;
   font-weight: bold;
   line-height: 0.8em;
@@ -64,7 +66,9 @@
 .totalStepsText {
   font-size: 4rem;
   text-transform: uppercase;
-  color: #f5e5c9;
+  color: #ff6433;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .arrow {
   flex: 0 0;
@@ -86,7 +90,7 @@
 }
 .step::before {
   content: counter(li);
-  color: orange;
+  color: #f6883f;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
@@ -119,7 +123,9 @@
   }
   .totalStepsText {
     font-size: 2.5rem;
-    color: orange;
+    background: linear-gradient(#eea649, #ff6433);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .arrow {
     width: 90px;

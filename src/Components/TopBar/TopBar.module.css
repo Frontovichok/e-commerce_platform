@@ -1,7 +1,7 @@
-@import "../../App.module.css";
+/* @import "../../index.css"; */
 
 .container {
-  background-color: #e9a56a;
+  background: var(--global-gradient);
 }
 @media (min-width: 320px) {
   .container {

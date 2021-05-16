@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Icon, Modal } from "semantic-ui-react";
-// import styles from "./SalePopUp.module.css";
+import styles from "./SalePopUp.module.css";
 
 function SalePopUp(props) {
   const [open, setOpen] = React.useState(false);
@@ -20,11 +20,11 @@ function SalePopUp(props) {
       </Modal.Content>
       <Modal.Actions>
         <Button
-          color="green"
           onClick={() => {
             props.onClickHandler();
             setOpen(false);
           }}
+          className={styles.getDiscountButton}
         >
           <Icon name="checkmark" /> Подписаться
         </Button>

@@ -12,7 +12,7 @@
 .showMoreBtn {
   padding: 10px 25px;
   color: white;
-  background-color: #fd8531;
+  background: var(--global-gradient);
   outline: none;
   border: none;
   border-radius: 5px;

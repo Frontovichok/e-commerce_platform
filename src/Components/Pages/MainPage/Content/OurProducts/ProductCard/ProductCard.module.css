@@ -81,7 +81,7 @@
 .button {
   padding: 7px 15px;
   color: white;
-  background-color: #fd8531;
+  background: var(--global-gradient);
   align-self: center;
   border-radius: 5px;
   text-transform: uppercase;
