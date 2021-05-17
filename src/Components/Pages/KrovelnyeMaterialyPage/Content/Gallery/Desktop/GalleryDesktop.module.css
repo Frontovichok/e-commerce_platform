@@ -1,16 +1,25 @@
-.roofType {
+.newsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.news {
   display: flex;
   flex-direction: column;
   width: 32%;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   transition: 0.1s linear;
-  background: white;
+  background-color: #272727;
   border-radius: 3px;
   overflow: hidden;
 }
-.roofType:hover {
-  box-shadow: 0 1px 3px #d2d2d2;
+.news:hover {
+  background-color: #131313;
+}
+.news:nth-child(n + 4) {
+  margin-bottom: 0;
 }
 .content {
   display: flex;
@@ -21,16 +30,15 @@
 .title {
   font-weight: bold;
   font-size: 1.3rem;
-  flex: 1 1;
+  flex: 1;
   margin: 0 20px;
-  padding-bottom: 20px;
-  color: #3c3c3c;
+  padding-bottom: 30px;
+  color: white;
 }
 .description {
-  color: grey;
+  color: #e4e4e4;
   margin: 0 20px;
   margin-bottom: 20px;
-  text-align: justify;
 }
 .sticker {
   position: absolute;
@@ -44,52 +52,36 @@
   font-size: 1rem;
   text-transform: uppercase;
 }
+.imageContainer {
+  max-height: 280px;
+  overflow: hidden;
+}
 .image {
   width: 100%;
 }
-.buttons {
-  display: flex;
-  margin: 0 20px;
-  justify-content: space-between;
-}
-.buttons a {
-  color: #ffffff;
+.continueReadButton {
+  color: #ff9b00;
+  background: none;
   text-decoration: none;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
   align-self: flex-start;
   margin: 0 20px;
+  padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   transition: 0.1s linear;
-  display: inline-block;
-  align-self: flex-end;
-  margin: 0;
-  outline: none;
-  align-self: flex-end;
-  background: var(--global-gradient);
-  border-radius: 4px;
-  padding: 5px 10px;
-  transition: 0.1s all linear;
 }
-.buttons a:hover {
+.continueReadButton:hover {
   text-decoration: none;
-  /* background: var(--global-gradient);
-  color: white; */
+  text-transform: uppercase;
+  border-bottom: 2px solid #ff6500;
 }
-.galleryButton {
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  align-self: flex-end;
-  color: white;
 
-  padding: 5px 10px;
-  color: #f37c46;
-  border: 1px solid #f18146;
-  background: none;
-}
 @media (min-width: 320px) {
   .service {
-    width: calc(50% - 5px);
-    margin-bottom: 10px;
+    width: 49%;
+    margin-bottom: 20px;
   }
   .title {
     font-size: 1rem;
@@ -97,18 +89,14 @@
   .description {
     font-size: 0.8rem;
   }
-  .content a {
+  .continueReadButton {
     font-size: 0.8rem;
-  }
-  .sticker {
-    font-size: 0.7rem;
   }
 }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
   .service {
-    width: calc(33% - 10px);
-    margin-bottom: 20px;
+    width: 32%;
   }
   .title {
     font-size: 1.3rem;
@@ -116,10 +104,7 @@
   .description {
     font-size: 1rem;
   }
-  .content a {
-    font-size: 1rem;
-  }
-  .sticker {
+  .continueReadButton {
     font-size: 1rem;
   }
 }

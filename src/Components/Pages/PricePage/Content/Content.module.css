@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 .priceTable thead {
-  background-color: #ff9e65;
+  background: var(--global-gradient);
 }
 .priceTable thead th {
   vertical-align: bottom;

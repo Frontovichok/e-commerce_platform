@@ -3,6 +3,7 @@ import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
 import ContactWithMe from "../../../ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
 import Advaces from "./Advices/Advaces";
+// import Gallery from "./Gallery/Gallery";
 
 function Content() {
   return (
@@ -13,6 +14,7 @@ function Content() {
         <div>
           <RoofTypes />
           <Advaces />
+          {/* <Gallery /> */}
           <div className={styles.contactWithMe}>
             <ContactWithMe />
           </div>

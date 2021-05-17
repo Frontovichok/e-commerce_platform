@@ -10,11 +10,13 @@ import CalculatePage from "./Components/Pages/PricePage/SubPages/CalculatePage/C
 import About from "./Components/Pages/About/About";
 import FasadnyeSistemyPage from "./Components/Pages/FasadnyeSistemyPage/FasadnyeSistemyPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <>
+        <ScrollToTop />
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route
