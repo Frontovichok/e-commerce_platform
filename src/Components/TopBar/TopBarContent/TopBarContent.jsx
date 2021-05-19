@@ -8,32 +8,20 @@ function TopBarContent() {
         <ul className={styles.contentList}>
           <li>
             <Icon name="globe" size="large" />
-            Кровля под ключ в Туле
+            Кровля под ключ в{" "}
+            <strong className={styles.colored}>Тульской</strong> и{" "}
+            <strong className={styles.colored}>Московской области</strong>
           </li>
           <li>
             <Icon name="car" size="large" />
             Бесплатный выезд специалиста
           </li>
           <li>
-            <Icon name="phone" size="large" />
-            8 (923) 443-23-23
-          </li>
-          <li>
             <Icon name="clock outline" size="large" />
             08:00 - 22:00
           </li>
           <li>
-            <ul className={styles.social}>
-              <li>
-                <a target="blank" href="https://iifrf.ru" className={styles.socialItem}><Icon name="instagram" size="large" /></a>
-              </li>
-              <li className={styles.socialItem}>
-                <a target="blank" href="https://iifrf.ru" className={styles.socialItem}><Icon name="youtube" size="large" /></a>
-              </li>
-              <li className={styles.socialItem}>
-                <a target="blank" href="https://iifrf.ru" className={styles.socialItem}><Icon name="vk" size="large" /></a>
-              </li>
-            </ul>
+            <Icon name="phone" size="large" />8 (923) 443-23-23
           </li>
         </ul>
       </div>

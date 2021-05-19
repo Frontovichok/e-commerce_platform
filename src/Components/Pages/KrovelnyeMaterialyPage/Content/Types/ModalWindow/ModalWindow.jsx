@@ -14,11 +14,14 @@ function ModalWindow(props) {
       trigger={props.button}
     >
       <Modal.Header>Галлерея</Modal.Header>
-      <Modal.Content image scrolling>
-        <Image size="massive" src={gallery.img} wrapped />
+      <Modal.Content scrolling>
         <Modal.Description>
           <p className={styles.name}>{gallery.name}</p>
+          <p>{gallery.data}</p>
           <p className={styles.description}>{gallery.description}</p>
+          {gallery.images.map((image, i) => (
+            <Image key={i} size="massive" src={image} wrapped />
+          ))}
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>

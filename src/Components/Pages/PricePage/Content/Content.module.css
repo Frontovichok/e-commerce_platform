@@ -14,7 +14,7 @@
   width: 100%;
   /* border: 1px solid #f2f4f5; */
   background: white;
-  box-shadow: 0 1px 20px #c2c2c2;
+  box-shadow: 0 1px 6px #c4c4c4;
   margin-bottom: 20px;
   border-radius: 5px;
   overflow: hidden;
@@ -52,4 +52,12 @@
   padding-left: 60px;
   font-size: 1.1rem;
   background-color: #e7e7e7;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.tableContainer {
+  flex: 1 1;
+  margin-top: 10px;
 }

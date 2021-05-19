@@ -156,7 +156,7 @@ function ProductsPage() {
       <Header />
       <GlobalContent>
         <div className={styles.container}>
-          <div className={styles.breadcrumb}>
+          <div className={styles.breadCrumb}>
             <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
             <p>&nbsp; / &nbsp;</p>
             <p>{pageData.title}</p>

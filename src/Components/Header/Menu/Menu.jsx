@@ -148,9 +148,6 @@ function Menu() {
           </NavLink>
         </div>
       </div>
-      <div className={styles.menuItems}>
-        <Icon name="cart" size="big" />
-      </div>
     </div>
   );
 }

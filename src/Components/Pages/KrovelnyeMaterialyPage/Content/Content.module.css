@@ -13,6 +13,9 @@
   border-radius: 5px;
   overflow: hidden;
 }
+.breadCrumb {
+  margin-bottom: 1.5rem;
+}
 @media (min-width: 320px) {
   .content {
     flex-direction: column;

@@ -1,4 +1,4 @@
-import RoofTypes from "./RoofTypes/RoofTypes";
+import Types from "./Types/Types";
 import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
 import ContactWithMe from "../../../ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
@@ -8,11 +8,13 @@ import Advaces from "./Advices/Advaces";
 function Content() {
   return (
     <div className={styles.container}>
-      <p>Кровельные материалы</p>
+      <div className={styles.breadCrumb}>
+        <p>Кровельные материалы</p>
+      </div>
       <div className={styles.content}>
         <ProductsNavBar />
         <div>
-          <RoofTypes />
+          <Types />
           <Advaces />
           {/* <Gallery /> */}
           <div className={styles.contactWithMe}>

@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import ModalWindow from "../ModalWindow/ModalWindow";
-import styles from "./RoofType.module.css";
+import styles from "./Type.module.css";
 
-function RoofType(props) {
+function Type(props) {
   return (
-    <div className={styles.roofType}>
+    <div className={styles.type}>
       <div>
         <img className={styles.image} src={props.img} alt="Service"></img>
         <p className={styles.sticker}>{props.sticker}</p>
@@ -14,14 +14,20 @@ function RoofType(props) {
         <p className={styles.description}>{props.description}</p>
         <div className={styles.buttons}>
           <NavLink to={props.link}>Перейти в каталог</NavLink>
-          <ModalWindow
-            gallery={props.gallery}
-            button={<button className={styles.galleryButton}>Галлерея</button>}
-          />
+          {props.gallery ? (
+            <ModalWindow
+              gallery={props.gallery}
+              button={
+                <button className={styles.galleryButton}>Галлерея</button>
+              }
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
   );
 }
 
-export default RoofType;
+export default Type;

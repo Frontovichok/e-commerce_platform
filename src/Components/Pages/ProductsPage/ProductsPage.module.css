@@ -16,11 +16,18 @@
 .productsContainer {
   flex: 1 1;
 }
-.breadcrumb {
+.breadCrumb {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   line-height: 1.4285em;
+  margin-bottom: 1.5rem;
+}
+.breadCrumb p {
+  margin: 0;
+}
+.breadcrumb a {
+  color: #ff8200;
 }
 @media (min-width: 320px) {
   .content {
