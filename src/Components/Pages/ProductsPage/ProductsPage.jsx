@@ -146,6 +146,41 @@ function getPageData(pagePath) {
   return pageData;
 }
 
+let productsLinks = [
+  {
+    link: "/krovelnye-materialy/metallocherepitca",
+    name: "Металлочерепица",
+  },
+  {
+    link: "/krovelnye-materialy/gibkaya_cherepitca",
+    name: "Гибкая черепица",
+  },
+  {
+    link: "/krovelnye-materialy/profnastil",
+    name: "Профнастил",
+  },
+  {
+    link: "/krovelnye-materialy/kompositnaya_cherepitca",
+    name: "Композитная черепица",
+  },
+  {
+    link: "/krovelnye-materialy/naturalnaya_cherepitca",
+    name: "Натуральная черепица",
+  },
+  {
+    link: "/krovelnye-materialy/falcevaya_cherepitca",
+    name: "Фальцевая черепица",
+  },
+  {
+    link: "/krovelnye-materialy/gidroizolyazionnye_materialy",
+    name: "Рулонные гидроизоляционные материалы",
+  },
+  {
+    link: "/krovelnye-materialy/kopmplectuyshie",
+    name: "Комплектующие",
+  },
+];
+
 function ProductsPage() {
   const location = useLocation();
   let currentPagePath = location.pathname.split("/")[2];
@@ -156,13 +191,13 @@ function ProductsPage() {
       <Header />
       <GlobalContent>
         <div className={styles.container}>
-          <div className={styles.breadCrumb}>
+          <div className={styles.breadcrumb}>
             <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
             <p>&nbsp; / &nbsp;</p>
             <p>{pageData.title}</p>
           </div>
           <div className={styles.content}>
-            <ProductsNavBar />
+            <ProductsNavBar products={productsLinks} />
             <div className={styles.productsContainer}>
               <Products pageData={pageData} />
               <div className={styles.contactWithMe}>

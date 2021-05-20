@@ -1,55 +1,37 @@
 import { NavLink } from "react-router-dom";
 import styles from "./ProductsNavBar.module.css";
 
-function ProductsNavBar() {
+function ProductsGroup(props) {
+  let productsGroup = props.productsGroup;
+  return (
+    <>
+      <p className={styles.navbarGroupItem}>{productsGroup.name}</p>
+      <div className={styles.navbarItemsGroup}>
+        {productsGroup.products.map((product, i) => (
+          <NavLink key={i} to={product.link} className={styles.item}>
+            {product.name}
+          </NavLink>
+        ))}
+      </div>
+    </>
+  );
+}
+
+function ProductsNavBar(props) {
+  let products = props.products;
+  console.log(products);
   return (
     <div className={styles.container}>
       <ul className={styles.navbarItems}>
-        <NavLink
-          to="/krovelnye-materialy/metallocherepitca"
-          className={styles.item}
-        >
-          Металлочерепица
-        </NavLink>
-        <NavLink
-          to="/krovelnye-materialy/gibkaya_cherepitca"
-          className={styles.item}
-        >
-          Гибкая черепица
-        </NavLink>
-        <NavLink to="/krovelnye-materialy/profnastil" className={styles.item}>
-          Профнастил
-        </NavLink>
-        <NavLink
-          to="/krovelnye-materialy/kompositnaya_cherepitca"
-          className={styles.item}
-        >
-          Композитная черепица
-        </NavLink>
-        <NavLink
-          to="/krovelnye-materialy/naturalnaya_cherepitca"
-          className={styles.item}
-        >
-          Натуральная черепица
-        </NavLink>
-        <NavLink
-          to="/krovelnye-materialy/falcevaya_cherepitca"
-          className={styles.item}
-        >
-          Фальцевая черепица
-        </NavLink>
-        <NavLink
-          to="/krovelnye-materialy/gidroizolyazionnye_materialy"
-          className={styles.item}
-        >
-          Рулонные гидроизоляционные материалы
-        </NavLink>
-        <NavLink
-          to="/krovelnye-materialy/kopmplectuyshie"
-          className={styles.item}
-        >
-          Комплектующие
-        </NavLink>
+        {products.map((product, i) =>
+          product.products ? (
+            <ProductsGroup key={i} productsGroup={product} />
+          ) : (
+            <NavLink key={i} to={product.link} className={styles.item}>
+              {product.name}
+            </NavLink>
+          )
+        )}
       </ul>
     </div>
   );

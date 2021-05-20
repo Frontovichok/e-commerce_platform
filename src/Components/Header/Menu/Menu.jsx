@@ -22,11 +22,6 @@ function Menu() {
         >
           Цены
         </NavLink>
-        <div className={styles.menuSubItems}>
-          <NavLink to={`/price/calculate`} className={styles.menuSubItem}>
-            Калькулятор
-          </NavLink>
-        </div>
       </div>
       <div className={styles.menuItems}>
         <NavLink

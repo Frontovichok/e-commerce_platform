@@ -1,3 +1,4 @@
+import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
 import PriceNavBar from "../PriceNavBar/PriceNavBar";
 import styles from "./Content.module.css";
 
@@ -5,14 +6,17 @@ function Content() {
   return (
     <div>
       <section className="section">
-        <h2>Цены</h2>
+        <div className={styles.breadcrumb}>
+          <p>Цены</p>
+        </div>
         <div className={styles.content}>
-          <PriceNavBar />
+          <ProductsNavBar products={products} />
           <div className={styles.tableContainer}>
+            <h2 className={"sectionTitle"}>Цены за работу</h2>
             <table id="service-price" className={`${styles.priceTable}`}>
               <thead>
                 <tr>
-                  <th>Наименование</th>
+                  <th>Наименование работы</th>
                   <th>Цена, руб.</th>
                   <th>Ед.изм.</th>
                 </tr>
@@ -245,3 +249,64 @@ function Content() {
 }
 
 export default Content;
+
+let products = [
+  {
+    name: "Композитные материалы",
+    products: [
+      {
+        link: "/krovelnye-materialy/metallocherepitca",
+        name: "Металлочерепица",
+      },
+      {
+        link: "/krovelnye-materialy/gibkaya_cherepitca",
+        name: "Гибкая черепица",
+      },
+      {
+        link: "/krovelnye-materialy/profnastil",
+        name: "Профнастил",
+      },
+      {
+        link: "/krovelnye-materialy/kompositnaya_cherepitca",
+        name: "Композитная черепица",
+      },
+      {
+        link: "/krovelnye-materialy/naturalnaya_cherepitca",
+        name: "Натуральная черепица",
+      },
+      {
+        link: "/krovelnye-materialy/falcevaya_cherepitca",
+        name: "Фальцевая черепица",
+      },
+      {
+        link: "/krovelnye-materialy/gidroizolyazionnye_materialy",
+        name: "Рулонные гидроизоляционные материалы",
+      },
+      {
+        link: "/krovelnye-materialy/kopmplectuyshie",
+        name: "Комплектующие",
+      },
+    ],
+  },
+  {
+    name: "Фасадные системы",
+    products: [
+      {
+        link: "/fasadnye-sistemy/1",
+        name: "1",
+      },
+      {
+        link: "/fasadnye-sistemy/2",
+        name: "2",
+      },
+      {
+        link: "/fasadnye-sistemy/3",
+        name: "3",
+      },
+      {
+        link: "/fasadnye-sistemy/4",
+        name: "4",
+      },
+    ],
+  },
+];

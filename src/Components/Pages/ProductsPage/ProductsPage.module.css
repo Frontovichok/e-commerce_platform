@@ -16,14 +16,14 @@
 .productsContainer {
   flex: 1 1;
 }
-.breadCrumb {
+.breadcrumb {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   line-height: 1.4285em;
   margin-bottom: 1.5rem;
 }
-.breadCrumb p {
+.breadcrumb p {
   margin: 0;
 }
 .breadcrumb a {

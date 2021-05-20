@@ -13,7 +13,7 @@
   border-radius: 5px;
   overflow: hidden;
 }
-.breadCrumb {
+.breadcrumb {
   margin-bottom: 1.5rem;
 }
 @media (min-width: 320px) {

@@ -17,8 +17,12 @@
   border-radius: 5px;
   box-shadow: 0 1px 6px #c4c4c4;
 }
+.navbarItemsGroup {
+  display: flex;
+  flex-direction: column;
+}
 .item:global(.active) {
-  color: #ff8843;
+  color: #ff8843 !important;
   border-bottom: 1px solid #ff8843;
 }
 .item {
@@ -36,4 +40,15 @@
 .item:hover {
   text-decoration: none;
   color: #ff8843;
+}
+
+.navbarItemsGroup .item {
+  color: #5c5c5c;
+}
+.navbarGroupItem {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  padding: 10px 5px;
 }
