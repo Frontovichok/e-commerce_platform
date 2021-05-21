@@ -30,7 +30,7 @@
   color: #1d1d1d;
   margin-bottom: 10px;
   padding: 5px;
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid #e1e1e1;
   transition: 0.1s all linear;
 }
 .item.active {

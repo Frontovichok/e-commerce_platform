@@ -33,7 +33,7 @@ let newsList = [
   {
     id: 3,
     title: "Открыт офис",
-    img: "https://finestra.biz/upload/medialibrary/8d5/IMG_6738.jpg",
+    img: "https://dizajnroom.ru/wp-content/uploads/2018/10/Dizayn-chastnogo-doma.jpg",
     sticker: "",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf",

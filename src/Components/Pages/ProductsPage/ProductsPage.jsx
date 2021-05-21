@@ -192,6 +192,8 @@ function ProductsPage() {
       <GlobalContent>
         <div className={styles.container}>
           <div className={styles.breadcrumb}>
+            <NavLink to="/">Главная</NavLink>
+            <p>&nbsp; / &nbsp;</p>
             <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
             <p>&nbsp; / &nbsp;</p>
             <p>{pageData.title}</p>

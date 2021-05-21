@@ -3,12 +3,15 @@ import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
 import ContactWithMe from "../../../ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
 import Advaces from "./Advices/Advaces";
+import { NavLink } from "react-router-dom";
 // import Gallery from "./Gallery/Gallery";
 
 function Content() {
   return (
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
+        <NavLink to="/">Главная</NavLink>
+        <p>&nbsp; / &nbsp;</p>
         <p>Кровельные материалы</p>
       </div>
       <div className={styles.content}>

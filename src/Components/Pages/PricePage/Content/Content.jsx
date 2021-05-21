@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
 import PriceNavBar from "../PriceNavBar/PriceNavBar";
 import styles from "./Content.module.css";
@@ -7,6 +8,8 @@ function Content() {
     <div>
       <section className="section">
         <div className={styles.breadcrumb}>
+          <NavLink to="/">Главная</NavLink>
+          <p>&nbsp; / &nbsp;</p>
           <p>Цены</p>
         </div>
         <div className={styles.content}>
