@@ -19,7 +19,6 @@ function ProductsGroup(props) {
 
 function ProductsNavBar(props) {
   let products = props.products;
-  console.log(products);
   return (
     <div className={styles.container}>
       <ul className={styles.navbarItems}>

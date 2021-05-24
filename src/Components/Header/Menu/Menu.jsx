@@ -1,148 +1,47 @@
 import { NavLink } from "react-router-dom";
-import { Icon } from "semantic-ui-react";
+// import { Icon } from "semantic-ui-react";
 import styles from "./Menu.module.css";
 
-function Menu() {
+function RenderMenuSubItems({ subMenu }) {
+  return (
+    <div className={styles.menuSubItems}>
+      {subMenu.map((subItem, i) => (
+        <NavLink
+          key={i}
+          to={subItem.link}
+          className={styles.menuSubItem}
+          activeClassName={styles.activeMenuSubItem}
+        >
+          {subItem.title}
+        </NavLink>
+      ))}
+    </div>
+  );
+}
+
+function RenderMenuItem({ menuItem }) {
+  return (
+    <div className={styles.menuItems}>
+      <NavLink
+        to={menuItem.link}
+        className={styles.menuItem}
+        activeClassName={styles.activeMenuItem}
+      >
+        {menuItem.title}
+      </NavLink>
+      {menuItem.subMenu.length > 0 ? (
+        <RenderMenuSubItems subMenu={menuItem.subMenu} />
+      ) : null}
+    </div>
+  );
+}
+
+function Menu({ menuItems }) {
   return (
     <div className={styles.menuContainer}>
-      <div className={styles.menuItems}>
-        <NavLink
-          to={`/about`}
-          className={styles.menuItem}
-          activeClassName={styles.activeMenuItem}
-        >
-          О компании
-        </NavLink>
-      </div>
-      <div className={styles.menuItems}>
-        <NavLink
-          to={`/price`}
-          className={styles.menuItem}
-          activeClassName={styles.activeMenuItem}
-        >
-          Цены
-        </NavLink>
-      </div>
-      <div className={styles.menuItems}>
-        <NavLink
-          to={`/krovelnye-materialy`}
-          className={styles.menuItem}
-          activeClassName={styles.activeMenuItem}
-        >
-          Кровельные материалы
-        </NavLink>
-        <div className={styles.menuSubItems}>
-          <NavLink
-            to={`/krovelnye-materialy/metallocherepitca`}
-            className={styles.menuSubItem}
-            activeClassName={styles.activeMenuSubItem}
-          >
-            Металлочерепица
-          </NavLink>
-          <NavLink
-            to={`/krovelnye-materialy/gibkaya_cherepitca`}
-            className={styles.menuSubItem}
-          >
-            Гибкая черепица
-          </NavLink>
-          <NavLink
-            to={`/krovelnye-materialy/profnastil`}
-            className={styles.menuSubItem}
-          >
-            Профнастил
-          </NavLink>
-          <NavLink
-            to={`/krovelnye-materialy/kompositnaya_cherepitca`}
-            className={styles.menuSubItem}
-          >
-            Композитная черепица
-          </NavLink>
-          <NavLink
-            to={`/krovelnye-materialy/naturalnaya_cherepitca`}
-            className={styles.menuSubItem}
-          >
-            Натуральная черепица
-          </NavLink>
-          <NavLink
-            to={`/krovelnye-materialy/falcevaya_cherepitca`}
-            className={styles.menuSubItem}
-          >
-            Фасадная черепица
-          </NavLink>
-          <NavLink
-            to={`/krovelnye-materialy/gidroizolyazionnye_materialy`}
-            className={styles.menuSubItem}
-          >
-            гидроизоляционные материалы
-          </NavLink>
-          <NavLink
-            to={`/krovelnye-materialy/kopmplectuyshie`}
-            className={styles.menuSubItem}
-          >
-            Комплектующие
-          </NavLink>
-        </div>
-      </div>
-      <div className={styles.menuItems}>
-        <NavLink
-          to={`/3`}
-          className={styles.menuItem}
-          activeClassName={styles.activeMenuItem}
-        >
-          Ебаные системы
-        </NavLink>
-        <div className={styles.menuSubItems}>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-        </div>
-      </div>
-      <div className={styles.menuItems}>
-        <NavLink
-          to={`/fasadnye-sistemy`}
-          className={styles.menuItem}
-          activeClassName={styles.activeMenuItem}
-        >
-          Фасадные системы
-        </NavLink>
-        <div className={styles.menuSubItems}>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-        </div>
-      </div>
-      <div className={styles.menuItems}>
-        <NavLink
-          to={`/vodostochnye-sistemy`}
-          className={styles.menuItem}
-          activeClassName={styles.activeMenuItem}
-        >
-          Водосточные системы
-        </NavLink>
-        <div className={styles.menuSubItems}>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-          <NavLink to={`/3`} className={styles.menuSubItem}>
-            Кровельные материалы
-          </NavLink>
-        </div>
-      </div>
+      {menuItems.map((menuItem, i) => (
+        <RenderMenuItem key={i} menuItem={menuItem} />
+      ))}
     </div>
   );
 }
