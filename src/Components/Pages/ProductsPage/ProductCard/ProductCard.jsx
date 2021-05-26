@@ -28,9 +28,9 @@ function ProductCard(product) {
           )}
         </div>
       </div>
-      <button className={styles.button}>
+      {/* <button className={styles.button}>
         Добавить в избранное
-      </button>
+      </button> */}
     </div>
   );
 }
