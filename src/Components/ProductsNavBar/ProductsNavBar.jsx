@@ -10,6 +10,7 @@ function ProductsGroup(props) {
         {productsGroup.products.map((product, i) => (
           <NavLink key={i} to={product.link} className={styles.item}>
             {product.name}
+            <sup className={styles.productsCount}>4</sup>
           </NavLink>
         ))}
       </div>
@@ -28,6 +29,7 @@ function ProductsNavBar(props) {
           ) : (
             <NavLink key={i} to={product.link} className={styles.item}>
               {product.name}
+              <sup className={styles.productsCount}>4</sup>
             </NavLink>
           )
         )}

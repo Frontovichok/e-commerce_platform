@@ -40,11 +40,11 @@
     border-radius: 0;
   }
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-  :global(.carousel-caption) {
+  .carousel :global(.carousel-caption) {
     left: 15% !important;
     right: 15% !important;
   }
-  :global(.d-block.w-100) {
+  .carousel :global(.d-block.w-100) {
     object-fit: cover;
     height: 300px;
     filter: brightness(30%);
@@ -75,13 +75,14 @@
   .carousel {
     border-radius: 5px;
   }
-  :global(.carousel-caption) {
+  .carousel :global(.carousel-caption) {
     left: 12% !important;
     right: auto !important;
   }
-  :global(.d-block.w-100) {
+  .carousel :global(.d-block.w-100) {
     object-fit: cover;
     height: 500px;
+    filter: brightness(50%);
   }
   .carouselTtemTitle {
     font-size: 4rem;
