@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import KrovelnyeMaterialyPage from "./Components/Pages/KrovelnyeMaterialyPage/KrovelnyeMaterialyPage";
 import NotFound from "./Components/Pages/NotFound/NotFound";
 import PricePage from "./Components/Pages/PricePage/PricePage";
-import CalculatePage from "./Components/Pages/PricePage/SubPages/CalculatePage/CalculatePage";
 import About from "./Components/Pages/About/About";
 import FasadnyeSistemyPage from "./Components/Pages/FasadnyeSistemyPage/FasadnyeSistemyPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
@@ -67,7 +66,6 @@ function App() {
           />
 
           <Route exact path="/price" component={PricePage} />
-          <Route exact path="/price/calculate" component={CalculatePage} />
           <Route exact path="/about" component={About} />
           <Route component={NotFound} />
         </Switch>

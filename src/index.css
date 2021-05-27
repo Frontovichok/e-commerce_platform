@@ -48,6 +48,21 @@ body {
   max-width: var(--global-max-width);
   width: 100%;
 }
+.body .breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  line-height: 1.4285em;
+  margin-bottom: 0;
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+}
+.body .breadcrumb1 p {
+  margin: 0;
+}
+.body .breadcrumb a {
+  color: #ff8200;
+}
 @media (min-width: 320px) {
   html {
     overflow-x: hidden;
@@ -55,6 +70,9 @@ body {
   .sectionTitle {
     padding-left: 10px;
     font-size: 29px;
+  }
+  .body .breadcrumb {
+    padding-left: 10px;
   }
 }
 @media (min-width: 1281px) {
@@ -64,5 +82,8 @@ body {
   .sectionTitle {
     padding-left: 0px;
     font-size: 35px;
+  }
+  .body .breadcrumb {
+    padding-left: 0;
   }
 }

@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 function Content() {
   return (
     <div className={styles.container}>
-      <div className={styles.breadcrumb}>
+      <div className="breadcrumb">
         <NavLink to="/">Главная</NavLink>
         <p>&nbsp; / &nbsp;</p>
         <p>Кровельные материалы</p>

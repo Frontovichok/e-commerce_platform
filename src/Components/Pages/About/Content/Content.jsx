@@ -9,7 +9,7 @@ function Content() {
   return (
     <div>
       <section className="section">
-        <div className={styles.breadcrumb}>
+        <div className="breadcrumb">
           <NavLink to="/">Главная</NavLink>
           <p>&nbsp; / &nbsp;</p>
           <p>О компании</p>

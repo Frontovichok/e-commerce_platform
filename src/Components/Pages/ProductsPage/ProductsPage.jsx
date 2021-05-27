@@ -10,6 +10,41 @@ import styles from "./ProductsPage.module.css";
 import Products from "./Products/Products";
 import { NavLink } from "react-router-dom";
 
+function ProductsPage() {
+  const location = useLocation();
+  let currentPagePath = location.pathname.split("/")[2];
+  let pageData = getPageData(currentPagePath);
+  return (
+    <>
+      <TopBar />
+      <Header />
+      <GlobalContent>
+        <div className={styles.container}>
+          <div className="breadcrumb">
+            <NavLink to="/">Главная</NavLink>
+            <p>&nbsp; / &nbsp;</p>
+            <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
+            <p>&nbsp; / &nbsp;</p>
+            <p>{pageData.title}</p>
+          </div>
+          <div className={styles.content}>
+            <ProductsNavBar products={productsLinks} />
+            <div className={styles.productsContainer}>
+              <Products pageData={pageData} />
+              <div className={styles.contactWithMe}>
+                <ContactWithMe />
+              </div>
+            </div>
+          </div>
+        </div>
+      </GlobalContent>
+      <Footer />
+      <CallMe />
+    </>
+  );
+}
+
+export default ProductsPage;
 let products = [
   {
     id: 1,
@@ -180,39 +215,3 @@ let productsLinks = [
     name: "Комплектующие",
   },
 ];
-
-function ProductsPage() {
-  const location = useLocation();
-  let currentPagePath = location.pathname.split("/")[2];
-  let pageData = getPageData(currentPagePath);
-  return (
-    <>
-      <TopBar />
-      <Header />
-      <GlobalContent>
-        <div className={styles.container}>
-          <div className={styles.breadcrumb}>
-            <NavLink to="/">Главная</NavLink>
-            <p>&nbsp; / &nbsp;</p>
-            <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
-            <p>&nbsp; / &nbsp;</p>
-            <p>{pageData.title}</p>
-          </div>
-          <div className={styles.content}>
-            <ProductsNavBar products={productsLinks} />
-            <div className={styles.productsContainer}>
-              <Products pageData={pageData} />
-              <div className={styles.contactWithMe}>
-                <ContactWithMe />
-              </div>
-            </div>
-          </div>
-        </div>
-      </GlobalContent>
-      <Footer />
-      <CallMe />
-    </>
-  );
-}
-
-export default ProductsPage;

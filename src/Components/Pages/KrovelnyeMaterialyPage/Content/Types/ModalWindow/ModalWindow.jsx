@@ -5,7 +5,6 @@ import styles from "./ModalWindow.module.css";
 function ModalWindow(props) {
   const gallery = props.gallery;
   const [open, setOpen] = React.useState(false);
-  console.log("gallery: ", gallery);
   return (
     <Modal
       open={open}
