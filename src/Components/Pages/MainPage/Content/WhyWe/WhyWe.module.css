@@ -12,6 +12,9 @@
 }
 .sectionTitle {
   color: white;
+  text-align: center;
+  padding-left: 0;
+  padding: 0 10px;
 }
 .imageContainer {
   background-color: rgb(0 0 0 / 80%);
@@ -64,30 +67,26 @@
   .whyWe {
     background-attachment: local;
   }
-  .sectionTitle {
-    text-align: left;
-  }
   .advantagesContainer .advantageCard:last-child {
     border-bottom: none;
   }
   .advantageCard {
     width: 100%;
-    border-bottom: 1px solid #f98727;
+    border-bottom: 1px solid #918c80;
     padding-bottom: 20px;
     padding-top: 20px;
+    margin: 0 50px;
   }
 }
 @media (min-width: 1281px) {
   .whyWe {
     background-attachment: fixed;
   }
-  .sectionTitle {
-    text-align: center;
-  }
   .advantageCard {
     width: 20%;
     border-bottom: none;
     padding-bottom: 0;
     padding-top: 30px;
+    margin: 0;
   }
 }

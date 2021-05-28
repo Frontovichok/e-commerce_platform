@@ -140,12 +140,12 @@
 }
 
 @media (min-width: 320px) {
-  :global .slide___3-Nqo {
-    padding-bottom: 20% !important;
+  .reviews :global .slide___3-Nqo {
+    padding-bottom: 370px !important;
   }
 }
 @media (min-width: 1281px) {
-  :global .slide___3-Nqo {
+  .reviews :global .slide___3-Nqo {
     padding-bottom: 17.5% !important;
   }
 }

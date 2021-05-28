@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import DrawerMenu from "./Drawer/Drawer";
 
 function Header() {
-  const isMobile = window.innerWidth <= 500;
+  const isMobile = window.innerWidth <= 700;
   return (
     <div className={styles.header}>
       <Logo />

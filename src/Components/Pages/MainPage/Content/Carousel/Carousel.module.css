@@ -7,6 +7,10 @@
   position: relative;
   max-width: var(--global-max-width);
   margin: auto;
+  overflow: hidden;
+  padding: 0 10px;
+}
+:global(.carousel) {
   border-radius: 5px;
   overflow: hidden;
 }

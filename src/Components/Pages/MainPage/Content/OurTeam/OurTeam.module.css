@@ -80,3 +80,12 @@
   font-style: italic;
   padding-bottom: 10px;
 }
+/* @media (min-width: 320px) {
+  
+}
+@media (min-width: 1281px) {
+  .sectionTitle {
+    padding-left: 10px;
+    text-align: left;
+  }
+} */
