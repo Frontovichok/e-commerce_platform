@@ -7,7 +7,9 @@ function NewsMobile(props) {
   return (
     <section className={`sectionMainPage ${styles.news}`}>
       <h2 className={`sectionTitle ${styles.sectionTitle}`}>
-        Последние события
+        {["Последние события"].map((word, i) => (
+          <span key={i}>{word}</span>
+        ))}
       </h2>
       <div className={styles.newsContainer}>
         <CarouselProvider

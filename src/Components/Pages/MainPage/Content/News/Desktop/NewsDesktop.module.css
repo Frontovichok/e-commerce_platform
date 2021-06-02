@@ -53,10 +53,13 @@
   text-transform: uppercase;
 }
 .imageContainer {
-  max-height: 280px;
+  height: 280px;
   overflow: hidden;
 }
 .image {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 .continueReadButton {

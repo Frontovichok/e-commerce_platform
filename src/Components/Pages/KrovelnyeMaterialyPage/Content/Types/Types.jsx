@@ -5,7 +5,11 @@ function Types() {
   return (
     <section className={styles.container}>
       <div>
-        <h2 className={"sectionTitle"}>Виды кровли</h2>
+        <h2 className={"sectionTitle"}>
+          {["Виды кровли"].map((word, i) => (
+            <span key={i}>{word}</span>
+          ))}
+        </h2>
         <div className={styles.typesContainer}>
           {servicesList.map((service, i) => (
             <Type {...service} gallery={gallery[i]} key={service.id} />

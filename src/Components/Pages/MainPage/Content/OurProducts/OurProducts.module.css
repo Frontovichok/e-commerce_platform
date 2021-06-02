@@ -29,9 +29,15 @@
   .productList {
     padding: 0 10px;
   }
+  .showMoreContainer {
+    padding-top: 10px;
+  }
 }
 @media (min-width: 1281px) {
   .productList {
     padding: 0;
+  }
+  .showMoreContainer {
+    padding-top: 25px;
   }
 }

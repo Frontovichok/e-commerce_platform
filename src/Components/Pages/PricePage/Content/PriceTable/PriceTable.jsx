@@ -3,7 +3,11 @@ import styles from "./PriceTable.module.css";
 function PriceTable() {
   return (
     <div className={styles.tableContainer}>
-      <h2 className={"sectionTitle"}>Цены за работу</h2>
+      <h2 className={"sectionTitle"}>
+        {["Цены за работу"].map((word, i) => (
+          <span key={i}>{word}</span>
+        ))}
+      </h2>
       <table id="service-price" className={`${styles.priceTable}`}>
         <thead>
           <tr>

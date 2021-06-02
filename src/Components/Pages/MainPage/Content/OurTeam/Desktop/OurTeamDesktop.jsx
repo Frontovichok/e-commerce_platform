@@ -4,7 +4,11 @@ function OurTeamDesktop(props) {
   return (
     <section className={`sectionMainPage ${styles.ourTeam}`}>
       <div className={styles.sectionDarkBackground}>
-        <h2 className={`sectionTitle ${styles.sectionTitle}`}>Наша команда</h2>
+        <h2 className={`sectionTitle dark ${styles.sectionTitle}`}>
+          {["Наша команда"].map((word, i) => (
+            <span key={i}>{word}</span>
+          ))}
+        </h2>
         <div className={styles.container}>
           {props.workers.map((worker, i) => (
             <div className={styles.workerContainer} key={worker.id}>

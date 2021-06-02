@@ -66,7 +66,9 @@ function ContactWithMe() {
       <div className={styles.callMeFormContainer}>
         <div className={styles.sectionTitleContainer}>
           <h2 className={`sectionTitle ${styles.sectionTitle}`}>
-            Оставить заявку
+            {["Оставить заявку"].map((word, i) => (
+              <span key={i}>{word}</span>
+            ))}
           </h2>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.callMeForm}>

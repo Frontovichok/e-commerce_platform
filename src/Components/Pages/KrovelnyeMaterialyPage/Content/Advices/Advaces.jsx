@@ -4,7 +4,9 @@ function Advaces() {
   return (
     <section className={styles.advaces}>
       <h2 className={`sectionTitle ${styles.sectionTitle}`}>
-        Рекомендации при выборе кровли
+        {["Рекомендации при выборе кровли"].map((word, i) => (
+          <span key={i}>{word}</span>
+        ))}
       </h2>
       <div className={styles.articles}>
         <article className={styles.article}>

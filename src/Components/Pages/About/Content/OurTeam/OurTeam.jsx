@@ -16,11 +16,11 @@ export default OurTeam;
 let workers = [
   {
     id: 1,
-    name: "Инокентий Галимый",
+    name: "Капитальный красаучег!",
     avatar:
       "https://upload.wikimedia.org/wikipedia/commons/d/d6/Vladimir_Putin_in_KGB_uniform.jpg",
     position: "Старший менеджер",
-    description: "Классный чел, но иногда кидает на бабки",
+    description: "Капитальный красаучег!",
   },
   {
     id: 2,
@@ -32,18 +32,18 @@ let workers = [
   },
   {
     id: 3,
-    name: "Инокентий Галимый",
+    name: "Мужчина такая!",
     avatar:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Alexander_Lukashenko_in_April_2021.jpg/230px-Alexander_Lukashenko_in_April_2021.jpg",
     position: "Старший менеджер",
-    description: "Классный чел, но иногда кидает на бабки",
+    description: "Мужчина такая!",
   },
   {
     id: 4,
-    name: "Шакал Галимый",
+    name: "Четкий пацан!",
     avatar:
       "https://upload.wikimedia.org/wikipedia/commons/d/d6/Vladimir_Putin_in_KGB_uniform.jpg",
     position: "Старший менеджер",
-    description: "Классный чел, но иногда кидает на бабки",
+    description: "Четкий пацан!",
   },
 ];

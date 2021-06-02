@@ -1,4 +1,4 @@
-:global .ui.modal {
+/* :global .ui.modal {
   left: auto;
 }
 :global .ui.modal.visible.active {
@@ -10,7 +10,7 @@
 }
 :global .ui.image {
   margin-bottom: 20px;
-}
+} */
 .name {
   font-weight: bold;
   font-size: 2rem;

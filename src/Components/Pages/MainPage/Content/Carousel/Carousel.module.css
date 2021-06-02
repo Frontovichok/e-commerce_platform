@@ -2,6 +2,11 @@
   font-size: 4rem;
   text-shadow: 1px 1px 5px #2a2929;
   margin-bottom: 1.3rem;
+  transform: translate3d(0.08em, -0.08em, 0);
+  text-shadow: -0.08em 0.08em #ff78047a;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .carousel {
   position: relative;
@@ -42,6 +47,7 @@
 @media (min-width: 320px) {
   .carousel {
     border-radius: 0;
+    padding: 0 10px;
   }
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .carousel :global(.carousel-caption) {
@@ -54,9 +60,8 @@
     filter: brightness(30%);
   }
   .carouselTtemTitle {
-    font-size: 2rem;
-    color: #f98018;
-    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-shadow: -0.08em 0.08em #ff78047a;
   }
   .carouselTtemDescription {
     font-size: 1.2rem;
@@ -78,6 +83,7 @@
   /* hi-res laptops and desktops */
   .carousel {
     border-radius: 5px;
+    padding: 0;
   }
   .carousel :global(.carousel-caption) {
     left: 12% !important;
@@ -90,7 +96,7 @@
   }
   .carouselTtemTitle {
     font-size: 4rem;
-    text-transform: uppercase;
+    text-shadow: -0.08em 0.08em #ff78047a;
   }
   .carouselTtemDescription {
     font-size: 1.5rem;

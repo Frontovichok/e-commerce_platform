@@ -5,7 +5,11 @@ function NewsDesktop(props) {
   return (
     <section className="sectionMainPage">
       <div>
-        <h2 className={"sectionTitle"}>Последние события</h2>
+        <h2 className={"sectionTitle"}>
+          {["Последние события"].map((word, i) => (
+            <span key={i}>{word}</span>
+          ))}
+        </h2>
         <div className={styles.newsContainer}>
           {props.newsList.map((news, i) => (
             <div className={styles.news} key={news.id}>

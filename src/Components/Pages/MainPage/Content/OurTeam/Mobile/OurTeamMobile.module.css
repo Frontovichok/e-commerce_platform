@@ -16,7 +16,7 @@
 }
 .sectionDarkBackground {
   background-color: rgb(0 0 0 / 80%);
-  padding: 40px 0;
+  padding: 25px 0;
 }
 .workersContainer {
   max-width: var(--global-max-width);
