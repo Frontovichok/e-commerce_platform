@@ -39,7 +39,7 @@
 }
 .submitButton {
   background: var(--global-gradient);
-  padding: 10px 40px;
+  padding: 21px 40px;
   border-radius: 5px;
   border: none;
   font-weight: bold;
@@ -65,9 +65,10 @@
   }
   .inputField {
     margin-bottom: 30px;
+    width: auto;
   }
   .sectionTitleContainer {
-    padding-top: 20px;
+    padding-top: 30px;
   }
 }
 @media (min-width: 1281px) {
@@ -78,6 +79,7 @@
   }
   .inputField {
     margin-bottom: 0;
+    width: 17rem;
   }
   .sectionTitleContainer {
     padding-top: 50px;

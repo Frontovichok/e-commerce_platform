@@ -9,7 +9,7 @@ function OurTeamDesktop(props) {
             <span key={i}>{word}</span>
           ))}
         </h2>
-        <div className={styles.container}>
+        <div className={`${styles.container} teamContainer`}>
           {props.workers.map((worker, i) => (
             <div className={styles.workerContainer} key={worker.id}>
               <img

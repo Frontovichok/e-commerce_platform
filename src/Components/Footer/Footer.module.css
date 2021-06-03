@@ -65,7 +65,7 @@
 @media (min-width: 320px) {
   .container {
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 40px;
   }
   .column {
     margin-bottom: 30px;

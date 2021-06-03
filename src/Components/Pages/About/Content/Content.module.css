@@ -5,7 +5,7 @@
 .blocksContainer {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .block:nth-child(2n + 1) {
   flex-direction: row-reverse;
@@ -15,13 +15,13 @@
   flex-direction: row;
   margin-bottom: 30px;
   background-color: white;
-  /* box-shadow: 0 1px 5px rgb(184, 184, 184); */
   border-radius: 5px;
   overflow: hidden;
 }
 .imageContainer {
   width: 50%;
   min-height: 400px;
+  position: relative;
 }
 .imageContainer img {
   width: 100%;
@@ -32,14 +32,6 @@
   width: 50%;
   padding: 40px;
 }
-.textContainer .title {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  color: #5b5b5b;
-  font-size: 2.5rem;
-}
 .description {
   color: grey;
   font-size: 1.2rem;
@@ -48,8 +40,94 @@
 .ourTeamContainer {
   border-radius: 5px;
   overflow: hidden;
+  margin-top: 20px;
 }
 .contactWithMeContainer {
   border-radius: 5px;
   overflow: hidden;
+}
+.titleDesktop {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #5b5b5b;
+  font-size: 2.5rem;
+}
+.titleMobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  z-index: 1;
+  text-transform: uppercase;
+}
+@media (min-width: 320px) {
+  .titleMobile {
+    display: block;
+  }
+  .titleDesktop {
+    display: none;
+  }
+  .block {
+    flex-direction: column;
+    margin: 10px;
+  }
+  .block:nth-child(2n + 1) {
+    flex-direction: column;
+  }
+  .imageContainer {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+  }
+  .textContainer {
+    width: 100%;
+    padding: 25px;
+  }
+  .imageContainer img {
+    filter: brightness(0.5);
+  }
+  .contactWithMeContainer {
+    margin: 0 10px;
+  }
+  .ourTeamContainer :global(.teamContainer) {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1281px) {
+  .titleMobile {
+    display: none;
+  }
+  .titleDesktop {
+    display: block;
+  }
+  .block {
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .block:nth-child(2n + 1) {
+    flex-direction: row-reverse;
+  }
+  .imageContainer {
+    width: 50%;
+    min-height: 400px;
+    position: relative;
+  }
+  .textContainer {
+    width: 50%;
+    padding: 40px;
+  }
+  .imageContainer img {
+    filter: brightness(1);
+  }
+  .contactWithMeContainer {
+    margin: 0;
+  }
+  .ourTeamContainer :global(.teamContainer) {
+    justify-content: space-evenly;
+  }
 }

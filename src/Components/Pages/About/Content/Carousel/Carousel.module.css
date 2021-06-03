@@ -26,6 +26,7 @@
 @media (min-width: 320px) {
   .carousel {
     border-radius: 0;
+    padding: 0 10px;
   }
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   :global(.carousel-caption) {
@@ -63,6 +64,7 @@
   /* hi-res laptops and desktops */
   .carousel {
     border-radius: 5px;
+    padding: 0;
   }
   :global(.carousel-caption) {
     left: 12% !important;

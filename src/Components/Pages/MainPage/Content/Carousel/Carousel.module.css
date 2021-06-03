@@ -3,7 +3,6 @@
   text-shadow: 1px 1px 5px #2a2929;
   margin-bottom: 1.3rem;
   transform: translate3d(0.08em, -0.08em, 0);
-  text-shadow: -0.08em 0.08em #ff78047a;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -60,8 +59,7 @@
     filter: brightness(30%);
   }
   .carouselTtemTitle {
-    font-size: 1.7rem;
-    text-shadow: -0.08em 0.08em #ff78047a;
+    font-size: 1.8rem;
   }
   .carouselTtemDescription {
     font-size: 1.2rem;
@@ -96,7 +94,6 @@
   }
   .carouselTtemTitle {
     font-size: 4rem;
-    text-shadow: -0.08em 0.08em #ff78047a;
   }
   .carouselTtemDescription {
     font-size: 1.5rem;
