@@ -4,11 +4,13 @@ import styles from "./ProductCard.module.css";
 function ProductCard(product) {
   return (
     <div className={styles.card}>
-      <img src={product.img} alt="Product"/>
+      <img src={product.img} alt="Product" />
       {product.tags.length !== 0 && (
         <div className={styles.tagsContainer}>
           {product.tags.map((tag, i) => (
-            <label className={styles.tag} key={i}>{tag}</label>
+            <label className={styles.tag} key={i}>
+              {tag}
+            </label>
           ))}
         </div>
       )}
@@ -29,7 +31,7 @@ function ProductCard(product) {
           )}
         </div>
       </div>
-      <NavLink to="/ksjdf" className={styles.button}>
+      <NavLink to="/krovelnye-materialy" className={styles.button}>
         Перейти в каталог
       </NavLink>
     </div>

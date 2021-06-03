@@ -96,6 +96,9 @@
   .ourTeamContainer :global(.teamContainer) {
     justify-content: space-between;
   }
+  .blocksContainer {
+    padding-top: 20px;
+  }
 }
 @media (min-width: 1281px) {
   .titleMobile {
@@ -129,5 +132,8 @@
   }
   .ourTeamContainer :global(.teamContainer) {
     justify-content: space-evenly;
+  }
+  .blocksContainer {
+    padding-top: 35px;
   }
 }
