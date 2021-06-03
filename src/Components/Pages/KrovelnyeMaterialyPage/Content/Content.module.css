@@ -17,9 +17,21 @@
   .content {
     flex-direction: column;
   }
+  .container {
+    width: auto;
+  }
+  .contactWithMe {
+    margin: 30px 10px;
+  }
 }
 @media (min-width: 1281px) {
   .content {
     flex-direction: row;
+  }
+  .container {
+    width: var(--global-max-width);
+  }
+  .contactWithMe {
+    margin: 30px 0;
   }
 }

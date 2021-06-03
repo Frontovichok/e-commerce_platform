@@ -17,14 +17,16 @@
   color: #5b5b5b;
 }
 
-/* @media (min-width: 1281px) {
-  .sectionTitle {
-    margin-top: 30px;
+@media (min-width: 320px) {
+  .articles {
+    margin: 0 10px;
+    padding: 25px;
   }
 }
 
-@media (min-width: 320px) {
-  .sectionTitle {
-    margin-top: 30px;
+@media (min-width: 1281px) {
+  .articles {
+    margin: 0;
+    padding: 35px;
   }
-} */
+}

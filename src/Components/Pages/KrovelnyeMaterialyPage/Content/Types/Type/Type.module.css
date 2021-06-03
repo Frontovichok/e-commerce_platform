@@ -98,10 +98,22 @@
     font-size: 0.8rem;
   }
   .content a {
+    align-self: flex-start;
     font-size: 0.8rem;
+  }
+  .galleryButton {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
   }
   .sticker {
     font-size: 0.7rem;
+  }
+  .type {
+    width: calc(50% - 5px);
+  }
+  .buttons {
+    flex-direction: column-reverse;
   }
 }
 @media (min-width: 1281px) {
@@ -117,9 +129,21 @@
     font-size: 1rem;
   }
   .content a {
+    align-self: flex-end;
     font-size: 1rem;
+  }
+  .galleryButton {
+    align-self: flex-end;
+    font-size: 1rem;
+    margin-bottom: 0;
   }
   .sticker {
     font-size: 1rem;
+  }
+  .type {
+    width: 32%;
+  }
+  .buttons {
+    flex-direction: row;
   }
 }

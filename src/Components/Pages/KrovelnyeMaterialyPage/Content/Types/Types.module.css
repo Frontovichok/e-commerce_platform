@@ -11,9 +11,15 @@
   .roofTypesContainer {
     padding: 0 10px;
   }
+  .typesContainer {
+    padding: 0 10px;
+  }
 }
 @media (min-width: 1281px) {
   .roofTypesContainer {
+    padding: 0;
+  }
+  .typesContainer {
     padding: 0;
   }
 }

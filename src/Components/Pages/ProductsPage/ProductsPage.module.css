@@ -17,11 +17,17 @@
   flex: 1 1;
 }
 @media (min-width: 320px) {
+  .container {
+    width: auto;
+  }
   .content {
     flex-direction: column;
   }
 }
 @media (min-width: 1281px) {
+  .container {
+    width: var(--global-max-width);
+  }
   .content {
     flex-direction: row;
   }
