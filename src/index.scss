@@ -21,7 +21,6 @@ body {
   margin-right: calc(-1 * (100vw - 100%));
   position: relative;
   overflow-x: hidden;
-  // background: #f1f1f1;
 }
 html,
 body {
@@ -32,25 +31,11 @@ body {
   flex-direction: column;
   height: 100%;
 }
-// .sectionTitle {
-//   display: block;
-//   font-size: 35px;
-//   font-weight: bold;
-//   text-align: left;
-//   color: #2e2e2e;
-//   padding: 5px;
-//   padding-left: 0;
-//   padding-right: 0;
-//   padding-top: 0;
-//   margin-bottom: 15px;
-//   text-transform: uppercase;
-//   animation-duration: 3s;
-//   animation-name: slidein;
-// }
 .sectionTitle {
   font-family: Futura, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  text-align: left;
 
   @keyframes ani {
     0% {

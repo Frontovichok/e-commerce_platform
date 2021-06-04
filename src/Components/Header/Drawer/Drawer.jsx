@@ -48,24 +48,29 @@ export default function DrawerMenu({ menuItems }) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      {menuItems.map((menuItem, i) => (
-        <>
-          <List className={styles.list}>
-            {[...[{ ...menuItem }], ...menuItem.subMenu].map((item, index) => (
-              <ListItem className={styles.listItem} button key={index}>
-                <NavLink
-                  className={styles.menuItem}
-                  activeClassName={styles.activeMenuItem}
-                  to={item.link}
-                >
-                  {item.title}
-                </NavLink>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-        </>
-      ))}
+      {[{ title: "Главная", link: "/", subMenu: [] }, ...menuItems].map(
+        (menuItem, i) => (
+          <>
+            <List className={styles.list}>
+              {[...[{ ...menuItem }], ...menuItem.subMenu].map(
+                (item, index) => (
+                  <ListItem className={styles.listItem} button key={index}>
+                    <NavLink
+                      exact
+                      className={styles.menuItem}
+                      activeClassName={styles.activeMenuItem}
+                      to={item.link}
+                    >
+                      {item.title}
+                    </NavLink>
+                  </ListItem>
+                )
+              )}
+            </List>
+            <Divider />
+          </>
+        )
+      )}
     </div>
   );
 
