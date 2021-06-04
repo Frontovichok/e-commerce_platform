@@ -53,7 +53,13 @@ export default function DrawerMenu({ menuItems }) {
           <List className={styles.list}>
             {[...[{ ...menuItem }], ...menuItem.subMenu].map((item, index) => (
               <ListItem className={styles.listItem} button key={index}>
-                <NavLink to={item.link}>{item.title}</NavLink>
+                <NavLink
+                  className={styles.menuItem}
+                  activeClassName={styles.activeMenuItem}
+                  to={item.link}
+                >
+                  {item.title}
+                </NavLink>
               </ListItem>
             ))}
           </List>

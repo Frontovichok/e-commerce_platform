@@ -1,11 +1,14 @@
-.listItem a {
-  color: rgb(112, 112, 112);
-}
-
 .listItem:first-child a {
   color: black;
   font-weight: bold;
 }
 .list:first-child {
   margin-top: 10px;
+}
+.activeMenuItem {
+  color: #f28547 !important;
+}
+.listItem .menuItem {
+  color: rgb(112, 112, 112);
+  flex: 1 1;
 }
