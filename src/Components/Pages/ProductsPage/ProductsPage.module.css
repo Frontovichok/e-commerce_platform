@@ -12,6 +12,7 @@
   margin: 30px 0;
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0 0 3px #a9a9a9;
 }
 .productsContainer {
   flex: 1 1;
@@ -23,6 +24,9 @@
   .content {
     flex-direction: column;
   }
+  .contactWithMe {
+    margin: 30px 10px;
+  }
 }
 @media (min-width: 1281px) {
   .container {
@@ -30,5 +34,8 @@
   }
   .content {
     flex-direction: row;
+  }
+  .contactWithMe {
+    margin: 30px 0;
   }
 }

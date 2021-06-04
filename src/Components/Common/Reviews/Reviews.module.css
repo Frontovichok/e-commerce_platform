@@ -36,14 +36,12 @@
 }
 .review {
   height: 100%;
-  padding: 30px;
+  padding: 25px;
   border-radius: 3px;
   overflow: hidden;
   background-color: white;
   transition: 0.1s all;
-}
-.review:hover {
-  box-shadow: 0 1px 3px #d2d2d2;
+  box-shadow: 0 0 3px #a9a9a9;
 }
 .avatarAndName {
   display: flex;
@@ -82,6 +80,7 @@
   text-overflow: ellipsis;
   position: relative;
   line-height: 26px;
+  font-size: 1.1rem;
 }
 .reviewText:after {
   content: "";

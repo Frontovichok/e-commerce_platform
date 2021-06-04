@@ -8,6 +8,7 @@
   background: white;
   border-radius: 3px;
   overflow: hidden;
+  box-shadow: 0 1px 3px #a9a9a9;
 }
 .type:hover {
   box-shadow: 0 1px 3px #d2d2d2;
@@ -22,13 +23,13 @@
   font-weight: bold;
   font-size: 1.3rem;
   flex: 1 1;
-  margin: 0 20px;
+  margin: 0 15px;
   padding-bottom: 20px;
   color: #3c3c3c;
 }
 .description {
   color: grey;
-  margin: 0 20px;
+  margin: 0 15px;
   margin-bottom: 20px;
   text-align: justify;
 }
@@ -49,7 +50,7 @@
 }
 .buttons {
   display: flex;
-  margin: 0 20px;
+  margin: 0 15px;
   justify-content: space-between;
 }
 .buttons a {
@@ -92,22 +93,22 @@
     margin-bottom: 10px;
   }
   .title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .description {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .content a {
     align-self: flex-start;
-    font-size: 0.8rem;
+    font-size: .95rem;
   }
   .galleryButton {
     align-self: flex-start;
-    font-size: 0.8rem;
+    font-size: .95rem;
     margin-bottom: 10px;
   }
   .sticker {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .type {
     width: calc(50% - 5px);

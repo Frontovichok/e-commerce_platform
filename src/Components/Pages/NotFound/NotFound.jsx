@@ -21,6 +21,12 @@ export default function NotFound() {
     <>
       <TopBar />
       <Header />
+      <div className={styles.breadcrumbContainer}>
+        <div className="breadcrumb">
+          <NavLink to="/">Главная</NavLink>
+          <p>&nbsp; / &nbsp;</p>
+        </div>
+      </div>
       <div className={styles.notFoundContainer}>
         <h1 className={styles.errorCode}>404</h1>
         <h3 className={styles.title}>Страница не найдена</h3>

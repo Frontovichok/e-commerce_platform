@@ -68,6 +68,7 @@
     position: relative;
     top: unset;
     margin-top: 10px;
+    margin-left: 10px;
   }
 }
 @media (min-width: 1281px) {
@@ -75,5 +76,6 @@
     position: sticky;
     top: 30px;
     margin-top: 0;
+    margin-left: 0;
   }
 }

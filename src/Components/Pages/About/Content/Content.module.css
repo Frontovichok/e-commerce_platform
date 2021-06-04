@@ -17,6 +17,7 @@
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0 0 3px #a9a9a9;
 }
 .imageContainer {
   width: 50%;
@@ -45,6 +46,7 @@
 .contactWithMeContainer {
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0 0 3px #a9a9a9;
 }
 .titleDesktop {
   text-align: center;

@@ -1,7 +1,12 @@
 .link {
-    color: blue;
+  color: blue;
 }
 .notFoundContainer {
-    flex: 1 0;
-    text-align: center;
+  flex: 1 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.breadcrumbContainer {
+  width: var(--global-max-width);
+  margin: auto;
 }

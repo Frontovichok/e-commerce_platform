@@ -8,6 +8,7 @@
   background: white;
   border-radius: 3px;
   overflow: hidden;
+  box-shadow: 0 1px 3px #a9a9a9;
 }
 .service:hover {
   box-shadow: 0 1px 3px #d2d2d2;
@@ -16,19 +17,19 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 .title {
   font-weight: bold;
   font-size: 1.3rem;
   flex: 1 1;
-  margin: 0 20px;
+  margin: 0 15px;
   padding-bottom: 20px;
   color: #3c3c3c;
 }
 .description {
   color: grey;
-  margin: 0 20px;
+  margin: 0 15px;
   margin-bottom: 20px;
 }
 .sticker {
@@ -42,6 +43,7 @@
   color: white;
   font-size: 1rem;
   text-transform: uppercase;
+  text-align: right;
 }
 .image {
   width: 100%;
@@ -69,16 +71,16 @@
     margin-bottom: 10px;
   }
   .title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .description {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .content a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .sticker {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 1281px) {
