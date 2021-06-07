@@ -23,13 +23,13 @@ function Types() {
 let gallery = [
   {
     id: 0,
-    name: "Инокентий",
+    name: "Металлочерепица",
     avatar:
       "https://icdn.lenta.ru/images/2020/01/21/17/20200121173026292/pwa_vertical_1280_432cc897322b61cb9fe5778fc7a7521c.jpg",
     data: "11.01.2021",
     rating: 3,
     description:
-      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
+      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider.",
     images: [
       "https://www.ctep.ru/blog/wp-content/uploads/2018/11/DJI_0011_isp-620x350.jpg",
       "https://blokspb.ru/upload/iblock/538/53870594c6d01d21322efd70f55890c8.jpg",
@@ -38,13 +38,13 @@ let gallery = [
   },
   {
     id: 1,
-    name: "Валентин",
+    name: "Гибкая черепица",
     avatar:
       "https://www.interfax.ru/ftproot/textphotos/2020/01/22/belousov700.jpg",
     data: "12.01.2021",
     rating: 4,
     description:
-      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
+      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider.",
     images: [
       "https://www.ctep.ru/blog/wp-content/uploads/2018/11/DJI_0011_isp-620x350.jpg",
       "https://blokspb.ru/upload/iblock/538/53870594c6d01d21322efd70f55890c8.jpg",
@@ -53,12 +53,12 @@ let gallery = [
   },
   {
     id: 2,
-    name: "Костя",
+    name: "Композитная черепица",
     avatar: "https://altairk.ru/upload/news/87/31/20180926_fns_16.jpg",
     data: "13.01.2021",
     rating: 5,
     description:
-      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
+      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider.",
     images: [
       "https://www.ctep.ru/blog/wp-content/uploads/2018/11/DJI_0011_isp-620x350.jpg",
       "https://blokspb.ru/upload/iblock/538/53870594c6d01d21322efd70f55890c8.jpg",
@@ -67,13 +67,13 @@ let gallery = [
   },
   {
     id: 3,
-    name: "Автондил",
+    name: "Натуральная черепица",
     avatar:
       "http://www.yugopolis.ru/data/img/996ef5b560e2a9bdc522a93e8ced2dc7/315404.jpg",
     data: "14.01.2021",
     rating: 4,
     description:
-      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
+      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch. ",
     images: [
       "https://www.ctep.ru/blog/wp-content/uploads/2018/11/DJI_0011_isp-620x350.jpg",
       "https://blokspb.ru/upload/iblock/538/53870594c6d01d21322efd70f55890c8.jpg",
@@ -82,13 +82,13 @@ let gallery = [
   },
   {
     id: 4,
-    name: "Катюша",
+    name: "Фальцевая кровля",
     avatar:
       "https://img.gazeta.ru/files3/4/12922004/RIAN_6129842.HR-pic4_zoom-1500x1500-43145.jpg",
     data: "15.01.2021",
     rating: 2,
     description:
-      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. Slide components also contain a div thatacts as an aria compliant focus ring when the Slidereceives focus either by using a keyboard tab, mouseclick, or touch",
+      "The Slide component is a container with an intrinsic ratio computed by the CarouselProvider naturalSlide Width andnaturalSlideHeight properties. By default, only one slideis visible in the Slider at a time. You can change this byaltering the visibleSlides property of theCarouselProvider. ",
     images: [
       "https://www.ctep.ru/blog/wp-content/uploads/2018/11/DJI_0011_isp-620x350.jpg",
       "https://blokspb.ru/upload/iblock/538/53870594c6d01d21322efd70f55890c8.jpg",
@@ -104,7 +104,7 @@ let servicesList = [
     img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/polimernye-membrany-gallery-12.png?itok=ihxv8eqP",
     sticker: "Металлочерепица",
     description:
-      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sfLorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf",
+      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
     link: "krovelnye-materialy/metallocherepitca",
   },
   {
@@ -113,7 +113,7 @@ let servicesList = [
     img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/remont-krovli-krishy.jpg?itok=QTNL25_G",
     sticker: "Гибкая черепица",
     description:
-      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sfLorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf",
+      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
     link: "krovelnye-materialy/gibkaya_cherepitca",
   },
   {
@@ -122,7 +122,7 @@ let servicesList = [
     img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/naplav.jpg?itok=7SRJsVGa",
     sticker: "Композитная черепица",
     description:
-      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sfLorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf",
+      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
     link: "krovelnye-materialy/kompositnaya_cherepitca",
   },
   {
@@ -131,7 +131,7 @@ let servicesList = [
     img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/fa97f11bb4ee7e7954824fcf12a26778.jpg?itok=7aBHpVyu",
     sticker: "Натуральная черепица",
     description:
-      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sfLorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf",
+      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
     link: "krovelnye-materialy/naturalnaya_cherepitca",
   },
   {
@@ -140,7 +140,7 @@ let servicesList = [
     img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/ondulinmon3t.jpg?itok=kT9ctF4X",
     sticker: "Фальцевая кровля",
     description:
-      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sfLorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf",
+      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
     link: "krovelnye-materialy/falcevaya_cherepitca",
   },
   {
@@ -149,7 +149,7 @@ let servicesList = [
     img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/tile-1591715_1920.jpg?itok=3rWt9kI4",
     sticker: "Рулонные гидроизоляционные материалы",
     description:
-      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sfLorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf",
+      "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
     link: "krovelnye-materialy/gidroizolyazionnye_materialy",
   },
 ];

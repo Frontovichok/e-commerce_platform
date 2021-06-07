@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import ProductsGroup from "../ProductsGroup/ProductsGroup";
+import { Icon } from "semantic-ui-react";
 import styles from "./ModalNavbar.module.css";
 
 function ModalNavbar({ products }) {
@@ -12,13 +13,15 @@ function ModalNavbar({ products }) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
+      <div className={styles.openModalContainer}>
+        <Button onClick={handleShow} className={styles.btnOpenModal}>
+          <Icon color="white" name="filter" />
+          &nbsp; Категория
+        </Button>
+      </div>
+      <Modal show={show} onHide={handleClose} scrollable={true}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Категория</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ul className={styles.navbarItems}>
@@ -35,11 +38,12 @@ function ModalNavbar({ products }) {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button
+            variant="primary"
+            onClick={handleClose}
+            className={styles.btnSaveModal}
+          >
+            Применить
           </Button>
         </Modal.Footer>
       </Modal>

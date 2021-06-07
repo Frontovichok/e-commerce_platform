@@ -24,8 +24,8 @@ function ProductsPage() {
             <NavLink to="/">Главная</NavLink>
             <p>&nbsp; / &nbsp;</p>
             <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
-            <p>&nbsp; / &nbsp;</p>
-            <p>{pageData.title}</p>
+            {/* <p>&nbsp; / &nbsp;</p> */}
+            {/* <p>{pageData.title}</p> */}
           </div>
           <div className={styles.content}>
             <ProductsNavBar products={productsLinks} />

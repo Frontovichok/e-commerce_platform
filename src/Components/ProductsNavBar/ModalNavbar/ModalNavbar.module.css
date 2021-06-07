@@ -1,0 +1,56 @@
+.navbarItems {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 0;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.navbarItemsGroup {
+  display: flex;
+  flex-direction: column;
+}
+.item:global(.active) {
+  color: #ff8843 !important;
+  border-bottom: 1px solid #ff8843;
+}
+.item {
+  font-size: 1.1rem;
+  color: #1d1d1d;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #e1e1e1;
+  transition: 0.1s all linear;
+}
+.item.active {
+  border-bottom: 1px solid #ff8843;
+  color: #ff8843;
+}
+.item:hover {
+  text-decoration: none;
+  color: #ff8843;
+}
+.btnOpenModal {
+  background: var(--global-gradient);
+  border: none;
+  margin: 0 10px 15px;
+}
+.openModalContainer {
+  display: flex;
+}
+.openModalContainer :global(.btn.btn-primary).btnOpenModal:focus {
+  background: var(--global-gradient);
+  border: none;
+  box-shadow: none;
+}
+:global(.btn.btn-primary).btnOpenModal:active {
+  background: var(--global-gradient);
+  border: none;
+  box-shadow: none;
+}
+.btnSaveModal {
+  background: var(--global-gradient);
+  border: none;
+}

@@ -12,11 +12,9 @@ function ModalWindow(props) {
       onOpen={() => setOpen(true)}
       trigger={props.button}
     >
-      <Modal.Header>Галлерея</Modal.Header>
       <Modal.Content scrolling>
         <Modal.Description>
           <p className={styles.name}>{gallery.name}</p>
-          <p>{gallery.data}</p>
           <p className={styles.description}>{gallery.description}</p>
           {gallery.images.map((image, i) => (
             <Image key={i} size="massive" src={image} wrapped />

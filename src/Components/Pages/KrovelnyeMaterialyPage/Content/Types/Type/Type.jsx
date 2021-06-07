@@ -18,7 +18,7 @@ function Type(props) {
             <ModalWindow
               gallery={props.gallery}
               button={
-                <button className={styles.galleryButton}>Галлерея</button>
+                <button className={styles.galleryButton}>Подробнее</button>
               }
             />
           ) : (
