@@ -22,7 +22,7 @@ function Content() {
       <News />
       <WorkingSteps />
       <ContactWithMe />
-      <PopUpWindow />
+      {/* <PopUpWindow /> */}
     </>
   );
 }

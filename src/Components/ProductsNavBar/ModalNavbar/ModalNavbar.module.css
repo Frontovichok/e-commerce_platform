@@ -63,6 +63,16 @@
   background: var(--global-gradient);
   border: none;
 }
+.btnSaveModal:focus {
+  background: var(--global-gradient);
+  border: none;
+  box-shadow: none;
+}
+.btnSaveModal:active {
+  background: var(--global-gradient);
+  border: none;
+  box-shadow: none;
+}
 .error {
   display: block;
   margin-top: 5px;
