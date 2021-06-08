@@ -1,6 +1,6 @@
 import Types from "./Types/Types";
 import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
-import ContactWithMe from "../../../ContactWithMe/ContactWithMe";
+import ContactWithMe from "../../../Common/ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
 import Advaces from "./Advices/Advaces";
 import { NavLink } from "react-router-dom";

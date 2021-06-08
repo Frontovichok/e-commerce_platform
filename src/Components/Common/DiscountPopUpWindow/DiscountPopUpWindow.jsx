@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./PopUpWindow.module.css";
+import styles from "./DiscountPopUpWindow.module.css";
 import SalePopUp from "./SalePopUp/SalePopUp";
 
 function PopUpWindow() {

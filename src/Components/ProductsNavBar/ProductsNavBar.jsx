@@ -3,7 +3,7 @@ import ModalNavbar from "./ModalNavbar/ModalNavbar";
 import ProductsGroup from "./ProductsGroup/ProductsGroup";
 import styles from "./ProductsNavBar.module.css";
 
-const isMobile = window.innerWidth <= 500;
+const isMobile = window.innerWidth <= 900;
 
 function ProductsNavBar(props) {
   let products = props.products;

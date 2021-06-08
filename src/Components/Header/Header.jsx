@@ -2,12 +2,14 @@ import Logo from "./Logo/Logo";
 import Menu from "./Menu/Menu";
 import styles from "./Header.module.css";
 import DrawerMenu from "./Drawer/Drawer";
+import SearchProduct from "../Common/SearchProduct/SearchProduct";
 
 function Header() {
-  const isMobile = window.innerWidth <= 700;
+  const isMobile = window.innerWidth <= 1500;
   return (
     <div className={styles.header}>
       <Logo />
+      <SearchProduct />
       {isMobile ? (
         <DrawerMenu menuItems={menuItems} />
       ) : (

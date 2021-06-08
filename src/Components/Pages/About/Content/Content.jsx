@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Content.module.css";
 import ControlledCarousel from "./Carousel/Carousel";
-import ContactWithMe from "../../../ContactWithMe/ContactWithMe";
+import ContactWithMe from "../../../Common/ContactWithMe/ContactWithMe";
 import OurTeam from "../../../Common/OurTeam/OurTeam";
 import Reviews from "../../../Common/Reviews/Reviews";
 

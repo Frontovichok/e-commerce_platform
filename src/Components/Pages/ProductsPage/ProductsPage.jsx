@@ -3,9 +3,9 @@ import TopBar from "../../TopBar/TopBar";
 import Header from "../../Header/Header";
 import GlobalContent from "../../GlobalContent/GlobalContent";
 import Footer from "../../Footer/Footer";
-import CallMe from "../../CallMe/CallMe";
+import CallMeFixedBlock from "../../Common/CallMeFixedBlock/CallMeFixedBlock";
 import ProductsNavBar from "../../ProductsNavBar/ProductsNavBar";
-import ContactWithMe from "../../ContactWithMe/ContactWithMe";
+import ContactWithMe from "../../Common/ContactWithMe/ContactWithMe";
 import styles from "./ProductsPage.module.css";
 import Products from "./Products/Products";
 import { NavLink } from "react-router-dom";
@@ -39,7 +39,7 @@ function ProductsPage() {
         </div>
       </GlobalContent>
       <Footer />
-      <CallMe />
+      <CallMeFixedBlock />
     </>
   );
 }

@@ -9,7 +9,7 @@ import PricePage from "./Components/Pages/PricePage/PricePage";
 import About from "./Components/Pages/About/About";
 import FasadnyeSistemyPage from "./Components/Pages/FasadnyeSistemyPage/FasadnyeSistemyPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
-import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
 
 function App() {
   return (

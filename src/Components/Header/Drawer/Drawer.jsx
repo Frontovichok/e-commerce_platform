@@ -9,6 +9,7 @@ import ListItem from "@material-ui/core/ListItem";
 import hamburgerMenu from "./hamburger-menu.png";
 import { NavLink } from "react-router-dom";
 import styles from "./Drawer.module.css";
+import { Icon, Button as ButtonSemantic } from "semantic-ui-react";
 
 const useStyles = makeStyles({
   list: {
@@ -76,6 +77,10 @@ export default function DrawerMenu({ menuItems }) {
 
   return (
     <div>
+      <ButtonSemantic className={styles.btnOpenModal}>
+        <Icon className={styles.listIcon} color="white" name="list" />
+        &nbsp; Каталог &nbsp;
+      </ButtonSemantic>
       <React.Fragment key={"left"}>
         <Button onClick={toggleDrawer("left", true)}>
           <img width={30} src={hamburgerMenu} alt="hamburgerMenu" />

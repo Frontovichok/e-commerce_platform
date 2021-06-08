@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // import MaskedInput from 'react-text-mask';
 import NumberFormat from "react-number-format";
 import { TextField } from "@material-ui/core";
-import styles from "./CallMe.module.css";
+import styles from "./CallMeFixedBlock.module.css";
 import callImage from "./call-back.svg";
 import { Icon } from "semantic-ui-react";
 function NumberFormatCustom(props) {
@@ -35,7 +35,7 @@ NumberFormatCustom.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-function CallMe() {
+function CallMeFixedBlock() {
   const { handleSubmit, register } = useForm();
   const [callMeState, toggleCallMeState] = useState(false);
   const onSubmit = (data, e) => {
@@ -132,4 +132,4 @@ function CallMe() {
   );
 }
 
-export default CallMe;
+export default CallMeFixedBlock;
