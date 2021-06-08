@@ -13,7 +13,7 @@ function Content() {
         <div className="breadcrumb">
           <NavLink to="/">Главная</NavLink>
           <p>&nbsp; / &nbsp;</p>
-          <p>Цены</p>
+          <p>Цены за работу</p>
         </div>
         <div className={styles.content}>
           {isMobile ? (

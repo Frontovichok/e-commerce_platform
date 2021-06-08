@@ -115,8 +115,10 @@ body {
   background-color: transparent;
   padding: 0.75rem 1rem;
 }
-.body .breadcrumb1 p {
+.body .breadcrumb p {
   margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
 }
 .body .breadcrumb a {
   color: #ff8200;

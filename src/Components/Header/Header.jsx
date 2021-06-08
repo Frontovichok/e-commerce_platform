@@ -21,7 +21,6 @@ export default Header;
 
 const menuItems = [
   { title: "О компании", link: "/about", subMenu: [] },
-  { title: "Цены", link: "/price", subMenu: [] },
   {
     title: "Кровельные материалы",
     link: "/krovelnye-materialy",
@@ -83,4 +82,5 @@ const menuItems = [
       },
     ],
   },
+  { title: "Цены за работу", link: "/price", subMenu: [] },
 ];
