@@ -14,7 +14,7 @@ function ModalNavbar({ products }) {
   const [show, setShow] = useState(false);
   const [radioState, setRadioState] = useState("");
   const [kategoryLink, setKategoryLink] = useState("/");
-  const [errorText, setErrorText] = useState("");
+  const [errorState, setErrorState] = useState(false);
   let history = useHistory();
   const location = useLocation();
 
@@ -29,7 +29,7 @@ function ModalNavbar({ products }) {
       radioState !== "" && history.push(kategoryLink);
       setShow(false);
     } else {
-      setErrorText("Выберите категорию");
+      setErrorState(true);
     }
   };
   const handleShow = () => setShow(true);
@@ -39,15 +39,22 @@ function ModalNavbar({ products }) {
     <>
       <div className={styles.openModalContainer}>
         <Button onClick={handleShow} className={styles.btnOpenModal}>
-          <Icon color="white" name="filter" />
-          &nbsp; Категория
+          <Icon className={styles.listIcon} color="white" name="list" />
+          &nbsp; Категории &nbsp;
+          <Icon
+            className={styles.arrowRightIcon}
+            color="white"
+            name="angle right"
+          />
         </Button>
       </div>
       <Modal show={show} onHide={handleClose} scrollable={true}>
         <Modal.Header closeButton>
           <Modal.Title>
-            Категория &nbsp;
-            <label className={styles.error}>{errorText}</label>
+            Категории &nbsp;
+            <label className={`${styles.error} ${errorState && styles.active}`}>
+              Выберите категорию
+            </label>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>

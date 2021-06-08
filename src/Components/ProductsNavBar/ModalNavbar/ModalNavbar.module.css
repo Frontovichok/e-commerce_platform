@@ -36,13 +36,22 @@
   background: var(--global-gradient);
   border: none;
   margin: 0 10px 15px;
+  display: flex;
+  flex: 1 1;
+  /* background: transparent;
+  color: #3c3c3c;
+  box-shadow: 0 0 5px #848484; */
+}
+.btnOpenModal .arrowRightIcon {
+  flex: 1;
+  text-align: right;
 }
 .openModalContainer {
   display: flex;
 }
 .openModalContainer :global(.btn.btn-primary).btnOpenModal:focus {
-  background: var(--global-gradient);
   border: none;
+  background: var(--global-gradient);
   box-shadow: none;
 }
 :global(.btn.btn-primary).btnOpenModal:active {
@@ -58,6 +67,11 @@
   display: block;
   margin-top: 5px;
   margin-bottom: 0;
-  font-size: 10px;
+  font-size: 1px;
+  color: transparent;
+  transition: all 0.3s linear;
+}
+.error.active {
   color: red;
+  font-size: 10px;
 }
