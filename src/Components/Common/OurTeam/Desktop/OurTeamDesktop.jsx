@@ -1,4 +1,6 @@
 import styles from "./OurTeamDesktop.module.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 function OurTeamDesktop(props) {
   return (
@@ -12,10 +14,16 @@ function OurTeamDesktop(props) {
         <div className={`${styles.container} teamContainer`}>
           {props.workers.map((worker, i) => (
             <div className={styles.workerContainer} key={worker.id}>
-              <img
+              {/* <img
                 className={`${styles.avatar} worker_${i + 1}`}
                 src={worker.avatar}
                 alt="Worker"
+              /> */}
+              <LazyLoadImage
+                className={`${styles.avatar} worker_${i + 1}`}
+                alt="Worker"
+                effect="opacity"
+                src={worker.avatar}
               />
               <div className={styles.aboutWorkerContainer}>
                 <p className={styles.name}>{worker.name}</p>

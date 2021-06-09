@@ -1,13 +1,22 @@
 import styles from "./ProductCard.module.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 function ProductCard(product) {
   return (
     <div className={styles.card}>
-      <img src={product.img} alt="Product"/>
+      {/* <img src={product.img} alt="Product" /> */}
+      <LazyLoadImage
+        alt="product"
+        effect="opacity"
+        src={product.img} // use normal <img> attributes as props
+      />
       {product.tags.length !== 0 && (
         <div className={styles.tagsContainer}>
           {product.tags.map((tag, i) => (
-            <label className={styles.tag} key={i}>{tag}</label>
+            <label className={styles.tag} key={i}>
+              {tag}
+            </label>
           ))}
         </div>
       )}

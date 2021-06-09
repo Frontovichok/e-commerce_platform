@@ -2,6 +2,8 @@ import { CarouselProvider, DotGroup, Slide, Slider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import ModalNews from "../ModalNews/ModalNews";
 import styles from "./NewsMobile.module.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 function NewsMobile(props) {
   return (
@@ -26,10 +28,11 @@ function NewsMobile(props) {
               <Slide index={i} key={news.id}>
                 <div className={styles.newsItemContainer}>
                   <div className={styles.newsItem}>
-                    <img
+                    <LazyLoadImage
                       className={`${styles.image} n${i + 1}`}
-                      src={news.img}
                       alt="News"
+                      effect="opacity"
+                      src={news.img}
                     />
                     <div className={styles.content}>
                       <p className={styles.name}>{news.name}</p>

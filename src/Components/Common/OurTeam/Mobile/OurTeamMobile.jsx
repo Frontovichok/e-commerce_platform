@@ -1,6 +1,8 @@
 import { CarouselProvider, DotGroup, Slide, Slider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "./OurTeamMobile.module.css";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/opacity.css";
 
 function OurTeamMobile(props) {
   return (
@@ -31,6 +33,12 @@ function OurTeamMobile(props) {
                         src={worker.avatar}
                         alt="Worker"
                       />
+                      {/* <LazyLoadImage
+                        className={`${styles.image} n${i + 1}`}
+                        alt="Worker"
+                        effect="opacity"
+                        src={worker.avatar}
+                      /> */}
                       <p className={styles.name}>{worker.name}</p>
                       <p className={styles.position}>{worker.position}</p>
                       <p className={styles.description}>{worker.description}</p>

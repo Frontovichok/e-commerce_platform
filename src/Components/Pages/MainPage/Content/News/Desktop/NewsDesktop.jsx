@@ -1,5 +1,7 @@
 import ModalNews from "../ModalNews/ModalNews";
 import styles from "./NewsDesktop.module.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 function NewsDesktop(props) {
   return (
@@ -14,7 +16,13 @@ function NewsDesktop(props) {
           {props.newsList.map((news, i) => (
             <div className={styles.news} key={news.id}>
               <div className={styles.imageContainer}>
-                <img className={styles.image} src={news.img} alt="News"></img>
+                {/* <img className={styles.image} src={news.img} alt="News"></img> */}
+                <LazyLoadImage
+                  className={styles.image}
+                  alt="News"
+                  effect="opacity"
+                  src={news.img}
+                />
                 <p className={styles.sticker}>{news.sticker}</p>
               </div>
               <div className={styles.content}>

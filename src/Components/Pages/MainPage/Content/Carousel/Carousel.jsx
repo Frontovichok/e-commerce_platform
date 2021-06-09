@@ -34,7 +34,6 @@ function ControlledCarousel() {
             alt="Second slide"
             height={500}
           />
-
           <Carousel.Caption>
             <h1 className={styles.carouselTtemTitle}>Индивидуальный подход</h1>
             <p className={styles.carouselTtemDescription}>
