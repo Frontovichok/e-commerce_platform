@@ -9,7 +9,6 @@ function OurProducts() {
     0,
     showedProducts
   );
-  console.log(showedProductsList);
   return (
     <section className="sectionMainPage">
       <h2 className={"sectionTitle"}>

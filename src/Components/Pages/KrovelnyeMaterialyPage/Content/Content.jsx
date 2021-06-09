@@ -4,7 +4,7 @@ import ContactWithMe from "../../../Common/ContactWithMe/ContactWithMe";
 import styles from "./Content.module.css";
 import Advaces from "./Advices/Advaces";
 import { NavLink } from "react-router-dom";
-// import Gallery from "./Gallery/Gallery";
+import { useEffect } from "react";
 
 function Content() {
   return (

@@ -10,12 +10,12 @@ import About from "./Components/Pages/About/About";
 import FasadnyeSistemyPage from "./Components/Pages/FasadnyeSistemyPage/FasadnyeSistemyPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
 import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
+import { createBrowserHistory } from "history";
 
 function App() {
   return (
     <BrowserRouter>
-      <>
-        <ScrollToTop />
+      <ScrollToTop>
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route
@@ -69,7 +69,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route component={NotFound} />
         </Switch>
-      </>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }
