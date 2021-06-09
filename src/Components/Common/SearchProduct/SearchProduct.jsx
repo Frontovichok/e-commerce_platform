@@ -1,18 +1,19 @@
 import _ from "lodash";
 import React from "react";
 import { Search, Grid, Header, Segment } from "semantic-ui-react";
+import styles from "./SearchProduct.module.css";
 
 const source = [
   {
     title: "title1",
     description: "description1",
-    image: "image1",
+    image: "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/15569321.jpg",
     price: 1,
   },
   {
     title: "title2",
     description: "description2",
-    image: "image2",
+    image: "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/11756305.jpg",
     price: 2,
   },
 ];
@@ -70,7 +71,7 @@ function SearchProduct() {
   }, []);
 
   return (
-    <Grid>
+    <Grid className={styles.searchContainer}>
       <Grid.Column width={6}>
         <Search
           loading={loading}
@@ -80,6 +81,7 @@ function SearchProduct() {
           onSearchChange={handleSearchChange}
           results={results}
           value={value}
+          placeholder="Поиск   товаров"
         />
       </Grid.Column>
 

@@ -7,14 +7,16 @@ import SearchProduct from "../Common/SearchProduct/SearchProduct";
 function Header() {
   const isMobile = window.innerWidth <= 1500;
   return (
-    <div className={styles.header}>
-      <Logo />
+    <div>
+      <div className={styles.header}>
+        <Logo />
+        {isMobile ? (
+          <DrawerMenu menuItems={menuItems} />
+        ) : (
+          <Menu menuItems={menuItems} />
+        )}
+      </div>
       <SearchProduct />
-      {isMobile ? (
-        <DrawerMenu menuItems={menuItems} />
-      ) : (
-        <Menu menuItems={menuItems} />
-      )}
     </div>
   );
 }

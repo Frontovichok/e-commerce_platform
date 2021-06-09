@@ -1,0 +1,34 @@
+.searchContainer :global(.ui.search) {
+  width: 100%;
+}
+.searchContainer :global(.ui.icon.input) {
+  width: 100%;
+}
+.searchContainer :global(.ui.input) input {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px #dcdcdc;
+}
+
+@media (min-width: 320px) {
+  :global(.ui.grid).searchContainer {
+    width: 100%;
+    margin: auto;
+  }
+  :global(.ui.grid).searchContainer :global(.wide.column) {
+    width: 100% !important;
+    padding: 0 40px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1281px) {
+  :global(.ui.grid).searchContainer {
+    width: calc(var(--global-max-width));
+    margin: auto;
+  }
+  :global(.ui.grid).searchContainer :global(.wide.column) {
+    width: 100% !important;
+    padding: 0 11rem;
+    padding-bottom: 35px;
+  }
+}
