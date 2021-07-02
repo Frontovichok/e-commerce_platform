@@ -81,8 +81,9 @@ function SearchProduct() {
           onSearchChange={handleSearchChange}
           results={results}
           value={value}
-          placeholder="Поиск   товаров"
+          placeholder="Найти товар"
         />
+        <button className={styles.searchButton}>Найти</button>
       </Grid.Column>
 
       {/* <Grid.Column width={10}>
