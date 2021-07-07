@@ -14,7 +14,6 @@ export default function NotFound() {
         setState(res.message);
         console.log("res: ", res);
       });
-    console.log("jjjj");
     setTimeout(() => console.log(state), 3000);
   });
   return (

@@ -8,6 +8,7 @@ import NotFound from "./Components/Pages/NotFound/NotFound";
 import PricePage from "./Components/Pages/PricePage/PricePage";
 import About from "./Components/Pages/About/About";
 import FasadnyeSistemyPage from "./Components/Pages/FasadnyeSistemyPage/FasadnyeSistemyPage";
+import ProductPage from "./Components/Pages/ProductPage/ProductPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
 import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
 import { createBrowserHistory } from "history";
@@ -64,7 +65,7 @@ function App() {
             path="/fasadnye-sistemy"
             component={FasadnyeSistemyPage}
           />
-
+          <Route path="/product/:productId?" component={ProductPage} />
           <Route exact path="/price" component={PricePage} />
           <Route exact path="/about" component={About} />
           <Route component={NotFound} />

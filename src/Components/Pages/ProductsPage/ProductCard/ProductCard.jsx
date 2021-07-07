@@ -1,6 +1,7 @@
 import styles from "./ProductCard.module.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
+import { NavLink } from "react-router-dom";
 
 function ProductCard(product) {
   return (
@@ -10,6 +11,7 @@ function ProductCard(product) {
         alt="product"
         effect="opacity"
         src={product.img} // use normal <img> attributes as props
+        className={styles.productImage}
       />
       {product.tags.length !== 0 && (
         <div className={styles.tagsContainer}>
@@ -37,9 +39,9 @@ function ProductCard(product) {
           )}
         </div>
       </div>
-      {/* <button className={styles.button}>
-        Добавить в избранное
-      </button> */}
+      <NavLink to={`/product/${product.id}`} className={styles.button}>
+        Подробнее
+      </NavLink>
     </div>
   );
 }
