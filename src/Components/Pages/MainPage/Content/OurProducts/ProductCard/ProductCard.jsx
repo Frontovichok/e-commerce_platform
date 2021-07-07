@@ -7,7 +7,12 @@ function ProductCard(product) {
   return (
     <div className={styles.card}>
       {/* <img src={product.img} alt="Product" /> */}
-      <LazyLoadImage alt="Product" effect="opacity" src={product.img} className={styles.cardImage}/>
+      <LazyLoadImage
+        alt="Product"
+        effect="opacity"
+        src={product.img}
+        className={styles.cardImage}
+      />
       {product.tags.length !== 0 && (
         <div className={styles.tagsContainer}>
           {product.tags.map((tag, i) => (
@@ -34,8 +39,8 @@ function ProductCard(product) {
           )}
         </div>
       </div>
-      <NavLink to="/krovelnye-materialy" className={styles.button}>
-        Перейти в каталог
+      <NavLink to={`/product/${product.id}`} className={styles.button}>
+        Подробнее
       </NavLink>
     </div>
   );

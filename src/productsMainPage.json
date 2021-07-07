@@ -69,6 +69,23 @@
       "artNumber": "Арт. 12345",
       "price": 100,
       "tags": ["Лучшая цена"]
+    },
+    {
+      "id": 9,
+      "title": "Профнастил С20 0.35 мм 1150х2000 мм коричневый RAL 8017",
+      "img": "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/17115461.jpg",
+      "artNumber": "Арт. 12345",
+      "price": 999,
+      "newPrice": 99,
+      "tags": ["Скидка 5%"]
+    },
+    {
+      "id": 10,
+      "title": "Металлочерепица 0.4 мм 2250х1180 мм красный RAL 3005",
+      "img": "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/15569304.jpg",
+      "artNumber": "Арт. 12345",
+      "price": 100,
+      "tags": ["Лучшая цена"]
     }
   ]
 }

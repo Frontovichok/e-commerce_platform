@@ -4,7 +4,7 @@ import { useState } from "react";
 import productsMainPage from "../../../../../productsMainPage.json";
 
 function OurProducts() {
-  let [showedProducts, setShowedProducts] = useState(4);
+  let [showedProducts, setShowedProducts] = useState(5);
   let showedProductsList = [...productsMainPage.products].slice(
     0,
     showedProducts
@@ -21,11 +21,11 @@ function OurProducts() {
           <ProductCard key={product.id} {...product} />
         ))}
       </div>
-      {showedProducts < 8 && (
+      {showedProducts < 10 && (
         <div className={styles.showMoreContainer}>
           <button
             className={styles.showMoreBtn}
-            onClick={() => setShowedProducts(showedProducts + 4)}
+            onClick={() => setShowedProducts(showedProducts + 5)}
           >
             Показать еще
           </button>

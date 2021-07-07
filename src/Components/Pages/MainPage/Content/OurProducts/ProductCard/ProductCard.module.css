@@ -1,146 +1,149 @@
 .card {
-    display: flex;
-    width: 22%;
-    flex-direction: column;
-    position: relative;
-    background-color: white;
-    margin-bottom: 30px;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px #a9a9a9;
+  display: flex;
+  width: 22%;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px #a9a9a9;
 }
 
 .content {
-    padding: 15px;
-    flex: 1;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid #f1f0f0;
+  padding: 15px;
+  flex: 1;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #f1f0f0;
 }
 
-.productImage {}
+.productImage {
+}
 
 .tagsContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 5px;
 }
 
 .tag {
-    background-color: #8dc628;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 3px 10px;
-    border-radius: 3px;
+  background-color: #8dc628;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 3px 10px;
+  border-radius: 3px;
 }
 
 .tag:nth-child(even) {
-    background-color: #f96363;
+  background-color: #f96363;
 }
 
 .title {
-    flex: 1;
-    font-weight: bold;
-    color: #3c3c3c;
+  flex: 1;
+  font-weight: bold;
+  color: #3c3c3c;
 }
 
 .priceContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 .priceSale {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 .oldPrice {
-    color: gray;
-    margin-right: 5px;
-    text-decoration: line-through;
-    font-size: 1.2rem;
+  color: gray;
+  margin-right: 5px;
+  text-decoration: line-through;
+  font-size: 1.2rem;
 }
 
 .newPrice {
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-right: 5px;
-    color: #ff5555;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-right: 5px;
+  color: #ff5555;
 }
 
 .price {
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-right: 5px;
-    color: #3c3c3c;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-right: 5px;
+  color: #3c3c3c;
 }
 
 .priceUnit {
-    font-weight: bold;
-    color: #3c3c3c;
+  font-weight: bold;
+  color: #3c3c3c;
 }
 
 .priceSale .priceUnit {
-    color: #ff5555;
+  color: #ff5555;
 }
 
 .button {
-    padding: 7px 15px;
-    color: white;
-    background: var(--global-gradient);
-    align-self: center;
-    border-radius: 5px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: 0.1s linear;
-    font-size: 0.9rem;
+  padding: 7px 25px;
+  color: white;
+  background: var(--global-gradient);
+  align-self: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: 0.1s linear;
+  font-size: 0.9rem;
+  margin-right: auto;
+  margin-left: 15px;
 }
 
 .button:hover {
-    color: white;
-    box-shadow: 0 1px 3px #8a5512;
-    text-decoration: none;
+  color: white;
+  box-shadow: 0 1px 3px #8a5512;
+  text-decoration: none;
 }
 
 .cardImage {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 320px) {
-    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-    .card {
-        width: calc(50% - 5px);
-        margin-bottom: 10px;
-    }
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .card {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: 480px) {
-    /* smartphones, Android phones, landscape iPhone */
+  /* smartphones, Android phones, landscape iPhone */
 }
 
 @media (min-width: 600px) {
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
 @media (min-width: 801px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 
 @media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
+  /* big landscape tablets, laptops, and desktops */
 }
 
 @media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-    .card {
-        width: calc(25% - 20px);
-        margin-bottom: 20px;
-    }
+  /* hi-res laptops and desktops */
+  .card {
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+  }
 }
