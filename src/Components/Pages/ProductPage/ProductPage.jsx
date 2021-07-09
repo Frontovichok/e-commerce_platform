@@ -8,21 +8,53 @@ import GlobalContent from "../../GlobalContent/GlobalContent";
 import ImageGallery from "react-image-gallery";
 import styles from "./ProductPage.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
+import { property } from "lodash";
 
 const images = [
   {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    original:
+      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
+    thumbnail:
+      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
   },
   {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
+    original:
+      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-2-500x335.jpg",
+    thumbnail:
+      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-2-500x335.jpg",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original:
+      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-500x335.jpg",
+    thumbnail:
+      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-500x335.jpg",
   },
 ];
+
+const properties = [
+  { name: "Цвет", value: "Красный" },
+  { name: "Ширина", value: "10 см" },
+  { name: "Высота", value: "20 см" },
+  { name: "Цвет", value: "Красный" },
+  { name: "Ширина", value: "10 см" },
+  { name: "Высота", value: "20 см" },
+  { name: "Цвет", value: "Красный" },
+  { name: "Ширина", value: "10 см" },
+  { name: "Высота", value: "20 см" },
+];
+
+const product = {
+  id: 1,
+  title: "Черепица гибкая Mida Прима красный 3 м²",
+  img: "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/15569321.jpg",
+  artNumber: "Арт. 12345",
+  price: 1000,
+  newPrice: 200,
+  tags: ["Новая модель"],
+};
+// function Property(property) {
+//   return <div>{property.color}</div>;
+// }
 
 export default function ProductPage() {
   const location = useLocation();
@@ -43,7 +75,7 @@ export default function ProductPage() {
             </NavLink>
           </div>
           <div className={styles.tags}>
-            <div className={styles.tag}>Скидка 5%</div>
+            <div className={styles.tag}>Скидка</div>
             <div className={styles.tag}>Новая модель</div>
           </div>
           <div className={styles.name}>
@@ -62,9 +94,45 @@ export default function ProductPage() {
               />
             </div>
             <div className={styles.info}>
-              <div className={styles.price}>Цена</div>
-              <div className={styles.description}>Описание</div>
-              <div className={styles.properties}>Характеристики</div>
+              <div className={styles.priceBlock}>
+                <div className={styles.priceContainer}>
+                  {product.newPrice ? (
+                    <div className={styles.priceSale}>
+                      <p className={styles.newPrice}>{product.newPrice} ₽/м²</p>
+                      <p className={styles.oldPrice}>{product.price} ₽/м²</p>
+                      {/* <p className={styles.priceUnit}>₽/м²</p> */}
+                    </div>
+                  ) : (
+                    <>
+                      <p className={styles.price}>{product.price}</p>
+                      <p className={styles.priceUnit}>₽/м²</p>
+                    </>
+                  )}
+                </div>
+                <button className={styles.clarifуPriceButton}>
+                  Уточнить актуальную цену
+                </button>
+              </div>
+              <div className={styles.description}>
+                <h3 className={styles.propertiesTitle}>Описание</h3>
+                <p>
+                  Ни одна из частей этого документа не может быть
+                  воспроизведена, опубликована, сохранена в электронной базе
+                  данных или передана в любой форме или любыми средствами,
+                  такими как электронные, механические, записывающие или иначе,
+                  для любой цели без предварительного письменного разрешения
+                  Русика.
+                </p>
+              </div>
+              <div className={styles.properties}>
+                <h3 className={styles.propertiesTitle}>Характеристики</h3>
+                {properties.map((property, i) => (
+                  <div key={i} className={styles.propery}>
+                    <div className={styles.propertyName}>{property.name}</div>
+                    <div className={styles.propertyValue}>{property.value}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
