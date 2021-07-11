@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 // import { Icon } from "semantic-ui-react";
-import styles from "./Menu.module.css";
+import styles from "./MenuTop.module.css";
 
 function RenderMenuSubItems({ subMenu }) {
   return (
@@ -36,14 +36,14 @@ function RenderMenuItem({ menuItem }) {
   );
 }
 
-function Menu({ menuItems }) {
+function MenuTop({ menuTopItems }) {
   return (
     <div className={styles.menuContainer}>
-      {menuItems.map((menuItem, i) => (
+      {menuTopItems.map((menuItem, i) => (
         <RenderMenuItem key={i} menuItem={menuItem} />
       ))}
     </div>
   );
 }
 
-export default Menu;
+export default MenuTop;

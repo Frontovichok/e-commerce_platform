@@ -11,4 +11,30 @@
 .listItem .menuItem {
   color: rgb(112, 112, 112);
   flex: 1 1;
+  padding: 10px 0;
+}
+.menuItemAccordion {
+  display: flex;
+  flex-direction: row;
+}
+.menuItem {
+  flex: 1 1;
+  text-transform: uppercase;
+  color: black;
+}
+.subMenuContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+.menuContainer {
+  border-bottom: 1px solid rgb(228 226 226);
+  padding: 10px;
+}
+.subMenuItem {
+  color: rgb(68, 68, 68);
+  padding: 5px 10px;
+}
+.hamburgerButton {
+  padding-right: 0;
 }

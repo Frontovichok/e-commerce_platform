@@ -1,8 +1,8 @@
 import Logo from "./Logo/Logo";
-import Menu from "./Menu/Menu";
+import MenuTop from "./MenuTop/MenuTop";
 import styles from "./Header.module.css";
 import DrawerMenu from "./Drawer/Drawer";
-import SearchProduct from "../Common/SearchProduct/SearchProduct";
+import SearchProduct from "./SearchProduct/SearchProduct";
 
 function Header() {
   const isMobile = window.innerWidth <= 1500;
@@ -11,9 +11,12 @@ function Header() {
       <div className={styles.header}>
         <Logo />
         {isMobile ? (
-          <DrawerMenu menuItems={menuItems} />
+          <DrawerMenu
+            menuTopItems={menuTopItems}
+            menuBottomItems={menuBottomItems}
+          />
         ) : (
-          <Menu menuItems={menuItems} />
+          <MenuTop menuTopItems={menuTopItems} />
         )}
       </div>
       <SearchProduct />
@@ -23,8 +26,15 @@ function Header() {
 
 export default Header;
 
-const menuItems = [
+const menuTopItems = [
   { title: "О компании", link: "/about", subMenu: [] },
+  { title: "Доставка", link: "/delivery", subMenu: [] },
+  { title: "Оплата", link: "/pay", subMenu: [] },
+  { title: "Цены за работу", link: "/price", subMenu: [] },
+  { title: "Контакты", link: "/contacts", subMenu: [] },
+];
+
+const menuBottomItems = [
   {
     title: "Кровельные материалы",
     link: "/krovelnye-materialy",
@@ -57,7 +67,7 @@ const menuItems = [
     ],
   },
   {
-    title: "... системы 1",
+    title: "Фасадные материалы",
     link: "/systems-1",
     subMenu: [
       {
@@ -67,7 +77,7 @@ const menuItems = [
     ],
   },
   {
-    title: "... системы 2",
+    title: "Водосточные системы",
     link: "/systems-2",
     subMenu: [
       {
@@ -77,7 +87,7 @@ const menuItems = [
     ],
   },
   {
-    title: "... системы 3",
+    title: "Мансардные окна",
     link: "/systems-3",
     subMenu: [
       {
@@ -86,5 +96,14 @@ const menuItems = [
       },
     ],
   },
-  { title: "Цены за работу", link: "/price", subMenu: [] },
+  {
+    title: "Снегозадержание",
+    link: "/systems-3",
+    subMenu: [
+      {
+        title: "... системы 1",
+        link: "/systems-3/1",
+      },
+    ],
+  },
 ];

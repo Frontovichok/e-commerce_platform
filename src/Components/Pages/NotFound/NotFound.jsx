@@ -18,8 +18,6 @@ export default function NotFound() {
   });
   return (
     <>
-      <TopBar />
-      <Header />
       <div className={styles.breadcrumbContainer}>
         <div className="breadcrumb">
           <NavLink to="/">Главная</NavLink>
@@ -34,7 +32,6 @@ export default function NotFound() {
           Перейти на главную страницу
         </NavLink>
       </div>
-      <Footer />
     </>
   );
 }

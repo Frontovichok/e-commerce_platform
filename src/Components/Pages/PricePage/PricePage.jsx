@@ -10,12 +10,9 @@ import Mobile from "./Content/Mobile/Mobile";
 function PricePage() {
   return (
     <>
-      <TopBar />
-      <Header />
       <GlobalContent>
         <Content />
       </GlobalContent>
-      <Footer />
       <CallMeFixedBlock />
     </>
   );

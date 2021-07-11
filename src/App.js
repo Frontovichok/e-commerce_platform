@@ -12,10 +12,15 @@ import ProductPage from "./Components/Pages/ProductPage/ProductPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
 import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
 import { createBrowserHistory } from "history";
+import TopBar from "./Components/TopBar/TopBar";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <BrowserRouter>
+      <TopBar />
+      <Header />
       <ScrollToTop>
         <Switch>
           <Route exact path="/" component={MainPage} />
@@ -71,6 +76,7 @@ function App() {
           <Route component={NotFound} />
         </Switch>
       </ScrollToTop>
+      <Footer />
     </BrowserRouter>
   );
 }

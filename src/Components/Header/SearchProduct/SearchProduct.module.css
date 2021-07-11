@@ -1,16 +1,33 @@
-.searchContainer :global(.ui.search) {
-  width: 100%;
+.searchContainer {
+  display: flex;
+  flex-direction: wrap;
 }
-
-.searchContainer :global(.ui.icon.input) {
-  width: 100%;
+.productsButton {
+  padding: 10px 25px;
+  color: white;
+  background: var(--global-gradient);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.1s linear;
+  margin-right: 15px;
+  box-shadow: 0 3px 9px rgb(169 79 2 / 38%), 0 0 0 rgb(148 68 0);
 }
-
-.searchContainer :global(.ui.input) input {
+.searchInputContainer {
+  flex: 1 1;
+}
+.searchInput {
   width: 100%;
   border-radius: 5px;
-  /* box-shadow: inset 0 0 10px #dcdcdc; */
-  padding: 13px 1em;
+  padding: 10px 1em;
+  box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
+  border: 1px solid transparent;
+  background: url(./loupe.png) no-repeat right 10px top 10px;
+  background-size: 20px 20px;
+  padding-right: 40px;
+  outline: none;
 }
 
 .searchButton {
@@ -28,12 +45,9 @@
 }
 
 @media (min-width: 320px) {
-  :global(.ui.grid).searchContainer {
+  .searchContainer {
     width: 100%;
     margin: auto;
-  }
-  :global(.ui.grid).searchContainer :global(.wide.column) {
-    width: 100% !important;
     padding: 0 10px;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -44,13 +58,9 @@
 }
 
 @media (min-width: 1281px) {
-  :global(.ui.grid).searchContainer {
+  .searchContainer {
     width: calc(var(--global-max-width));
     margin: auto;
-  }
-  :global(.ui.grid).searchContainer :global(.wide.column) {
-    display: flex;
-    width: 100%;
     border-radius: 5px;
     padding: 0 0;
     margin-bottom: 30px;
@@ -59,16 +69,16 @@
   .searchButton {
     display: block;
   }
-  .searchContainer :global(.ui.input) input {
+  .searchInput {
+    font-size: 1.2rem;
     width: 100%;
     border-radius: 5px;
-    /* box-shadow: none; */
-    /* border: 1px solid #f09047; */
     box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
     border: 1px solid transparent;
     transition: border 0.2s linear;
   }
-  .searchContainer input:focus {
+  .searchInput:focus {
+    outline: none;
     border: 1px solid rgb(190, 190, 190) !important;
     box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%) !important;
   }

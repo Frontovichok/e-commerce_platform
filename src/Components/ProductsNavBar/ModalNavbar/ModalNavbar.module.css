@@ -1,3 +1,6 @@
+.kategoryModal :global(.modal-dialog) {
+  height: calc(100vh - 1rem);
+}
 .navbarItems {
   display: flex;
   flex-direction: column;

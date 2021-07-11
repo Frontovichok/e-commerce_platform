@@ -61,8 +61,6 @@ export default function ProductPage() {
   let currentPagePath = location.pathname.split("/")[2];
   return (
     <>
-      <TopBar />
-      <Header />
       <GlobalContent>
         <div className={styles.container}>
           <div className="breadcrumb">
@@ -137,7 +135,6 @@ export default function ProductPage() {
           </div>
         </div>
       </GlobalContent>
-      <Footer />
     </>
   );
 }

@@ -101,7 +101,7 @@ let servicesList = [
   {
     id: 1,
     title: "Металлочерепица",
-    img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/polimernye-membrany-gallery-12.png?itok=ihxv8eqP",
+    img: "https://feokrovlya.com/wp-content/uploads/2020/07/metallocherepica-otzyvy-i-nedostatki-materiala-1.jpg",
     sticker: "Металлочерепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
@@ -110,7 +110,7 @@ let servicesList = [
   {
     id: 2,
     title: "Гибкая черепица",
-    img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/remont-krovli-krishy.jpg?itok=QTNL25_G",
+    img: "https://prometey-ural.ru/upload/iblock/873/873590939f54effa78e2a0fd5ba46b3e.jpeg",
     sticker: "Гибкая черепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
@@ -119,7 +119,7 @@ let servicesList = [
   {
     id: 3,
     title: "Композитная черепица",
-    img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/naplav.jpg?itok=7SRJsVGa",
+    img: "https://www.icopal-russia.ru/upload/information_system_5/5/2/4/item_52434/item_52434.png",
     sticker: "Композитная черепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
@@ -128,7 +128,7 @@ let servicesList = [
   {
     id: 4,
     title: "Натуральная черепица",
-    img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/fa97f11bb4ee7e7954824fcf12a26778.jpg?itok=7aBHpVyu",
+    img: "https://remstroiblog.ru/wp-content/uploads/1115.jpg",
     sticker: "Натуральная черепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
@@ -137,7 +137,7 @@ let servicesList = [
   {
     id: 5,
     title: "Фальцевая кровля",
-    img: "https://кровля-в-москве.рф/sites/default/files/styles/new/public/ondulinmon3t.jpg?itok=kT9ctF4X",
+    img: "https://kryshadoma.com/upload/medialibrary/d68/d686d34419b14f6a432164bde96afa0f.jpg",
     sticker: "Фальцевая кровля",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",

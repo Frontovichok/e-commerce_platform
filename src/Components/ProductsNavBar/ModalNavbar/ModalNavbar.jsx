@@ -48,7 +48,12 @@ function ModalNavbar({ products }) {
           />
         </Button>
       </div>
-      <Modal show={show} onHide={handleClose} scrollable={true}>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        scrollable={true}
+        className={styles.kategoryModal}
+      >
         <Modal.Header closeButton>
           <Modal.Title>
             Категории &nbsp;

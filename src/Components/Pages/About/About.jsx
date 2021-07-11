@@ -9,12 +9,9 @@ import CallMeFixedBlock from "../../Common/CallMeFixedBlock/CallMeFixedBlock";
 function About() {
   return (
     <>
-      <TopBar />
-      <Header />
       <GlobalContent>
         <Content />
       </GlobalContent>
-      <Footer />
       <CallMeFixedBlock />
     </>
   );

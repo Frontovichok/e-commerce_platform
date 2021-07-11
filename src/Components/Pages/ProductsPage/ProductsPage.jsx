@@ -19,8 +19,7 @@ function ProductsPage() {
   let pageData = getPageData(currentPagePath);
   return (
     <>
-      <TopBar />
-      <Header />
+      
       <GlobalContent>
         <div className={styles.container}>
           <div className="breadcrumb">
@@ -41,7 +40,6 @@ function ProductsPage() {
           </div>
         </div>
       </GlobalContent>
-      <Footer />
       <CallMeFixedBlock />
     </>
   );

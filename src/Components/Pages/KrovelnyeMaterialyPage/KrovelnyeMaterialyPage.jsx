@@ -9,12 +9,10 @@ import CallMeFixedBlock from "../../Common/CallMeFixedBlock/CallMeFixedBlock";
 function KrovelnyeMaterialyPage() {
   return (
     <>
-      <TopBar />
-      <Header />
+      
       <GlobalContent>
         <Content />
       </GlobalContent>
-      <Footer />
       <CallMeFixedBlock />
     </>
   );
