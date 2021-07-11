@@ -40,7 +40,11 @@ function SearchProduct({ menuItems }) {
       <div className={styles.searchContainer}>
         {!isMobile && (
           <button className={styles.productsButton} onClick={toggleOpenState}>
-            <Icon className={styles.listIcon} color="white" name="list" />
+            <Icon
+              className={styles.listIcon}
+              color="white"
+              name={openState ? "chevron up" : "list ul"}
+            />
             &nbsp; Каталог товаров
           </button>
         )}
@@ -52,7 +56,11 @@ function SearchProduct({ menuItems }) {
         </div>
         <button className={styles.searchButton}>Найти</button>
       </div>
-      <MenuExpanded openState={openState} setOpenState={setOpenState} menuItems={menuItems} />
+      <MenuExpanded
+        openState={openState}
+        setOpenState={setOpenState}
+        menuItems={menuItems}
+      />
     </div>
   );
 }
