@@ -7,7 +7,7 @@
   margin-bottom: 30px;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1px 3px #a9a9a9;
+  box-shadow: 0 3px 9px rgb(216 216 216), 0 0 0 rgb(0 26 52 / 5%);
 }
 
 .content {

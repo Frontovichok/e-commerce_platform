@@ -5,12 +5,11 @@
   padding: 13px;
   width: 270px;
   z-index: 2;
-  box-shadow: 1px 3px 5px #ff74008c;
-  border-radius: 50px;
-  border: 3px solid #f87d21;
+  border-radius: 10px;
+  border: 1px solid #ffc59a;
   transition: 0.15s linear;
   user-select: none;
-  background: #ff75001f;
+  box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
 }
 /* .callMe:hover {
   background-color: #ffe7be;
@@ -75,11 +74,11 @@
 .formTitle {
   text-align: center;
   padding: 20px 0;
-  padding-top: 10px;
+  padding-top: 35px;
   padding-bottom: 10px;
   margin-bottom: 0;
   color: #f16b07;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
 }
 .textField {
   margin-bottom: 30px;
@@ -91,28 +90,17 @@
   border-bottom: 2px solid #f16b07;
 }
 .calculateButton {
-  /* width: 100%; */
-  display: inherit;
-  margin-top: 10px;
-  padding: 10px 5px;
-  align-items: inherit;
-  justify-content: inherit;
+  padding: 10px 25px;
   color: white;
+  background: var(--global-gradient);
   outline: none;
-  text-align: center;
-  display: inline-block;
-  background: var(--global-gradient);;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 500;
-  line-height: 1.75;
-  border-radius: 49px;
-  letter-spacing: 0.02857em;
-  text-transform: uppercase;
   border: none;
-  /* box-shadow: 1px 1px 5px #fb9446; */
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
   transition: 0.1s linear;
-  margin-bottom: 7px;
-  padding: 10px 30px;
+  margin-left: 15px;
+  box-shadow: 0 3px 9px rgb(169 79 2 / 38%), 0 0 0 rgb(148 68 0);
 }
 .calculateButton:hover {
   background-color: #e96d00;

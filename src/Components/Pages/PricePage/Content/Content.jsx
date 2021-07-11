@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import ProductsNavBar from "../../../ProductsNavBar/ProductsNavBar";
 import PriceTable from "./PriceTable/PriceTable";
 import Mobile from "./Mobile/Mobile";
 import styles from "./Content.module.css";
@@ -20,7 +19,6 @@ function Content() {
             <Mobile products={products} />
           ) : (
             <>
-              <ProductsNavBar products={products} />
               <PriceTable />
             </>
           )}

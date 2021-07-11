@@ -1,3 +1,8 @@
+.container {
+  width: calc(var(--global-max-width));
+  margin: auto;
+  position: relative;
+}
 .searchContainer {
   display: flex;
   flex-direction: wrap;
@@ -16,20 +21,26 @@
   box-shadow: 0 3px 9px rgb(169 79 2 / 38%), 0 0 0 rgb(148 68 0);
 }
 .searchInputContainer {
+  display: flex;
+  flex-direction: row;
   flex: 1 1;
+  position: relative;
 }
 .searchInput {
-  width: 100%;
+  flex: 1 1;
   border-radius: 5px;
   padding: 10px 1em;
   box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
   border: 1px solid transparent;
-  background: url(./loupe.png) no-repeat right 10px top 10px;
-  background-size: 20px 20px;
   padding-right: 40px;
   outline: none;
 }
-
+.mobileSearchButton {
+  background: none;
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+}
 .searchButton {
   padding: 10px 25px;
   color: white;
@@ -43,7 +54,6 @@
   margin-left: 15px;
   box-shadow: 0 3px 9px rgb(169 79 2 / 38%), 0 0 0 rgb(148 68 0);
 }
-
 @media (min-width: 320px) {
   .searchContainer {
     width: 100%;
@@ -59,8 +69,6 @@
 
 @media (min-width: 1281px) {
   .searchContainer {
-    width: calc(var(--global-max-width));
-    margin: auto;
     border-radius: 5px;
     padding: 0 0;
     margin-bottom: 30px;

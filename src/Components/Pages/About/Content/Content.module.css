@@ -17,7 +17,11 @@
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 0 3px #a9a9a9;
+  box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
+}
+.block :global(.lazy-load-image-background.opacity.lazy-load-image-loaded) {
+  width: 100%;
+  height: 100%;
 }
 .imageContainer {
   width: 50%;

@@ -19,7 +19,7 @@ function Header() {
           <MenuTop menuTopItems={menuTopItems} />
         )}
       </div>
-      <SearchProduct />
+      <SearchProduct menuItems={menuBottomItems} />
     </div>
   );
 }

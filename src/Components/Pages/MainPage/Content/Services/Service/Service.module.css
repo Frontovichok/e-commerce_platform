@@ -8,7 +8,7 @@
     background: white;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 1px 3px #a9a9a9;
+    box-shadow: 0 3px 9px rgb(216 216 216), 0 0 0 rgb(0 26 52 / 5%);
 }
 
 .service:hover {
@@ -73,7 +73,7 @@
     border-bottom: 2px solid #f87d21;
 }
 
-:global(.lazy-load-image-background.opacity.lazy-load-image-loaded) {
+.service :global(.lazy-load-image-background.opacity.lazy-load-image-loaded) {
     width: 100%;
 }
 

@@ -1,4 +1,6 @@
-import { Icon } from "semantic-ui-react";
+import { useState } from "react";
+import { Button, Icon } from "semantic-ui-react";
+import MenuExpanded from "../MenuExpanded/MenuExpanded";
 import styles from "./SearchProduct.module.css";
 
 const isMobile = window.innerWidth <= 900;
@@ -26,19 +28,31 @@ const initialState = {
   value: "",
 };
 
-function SearchProduct() {
+function SearchProduct({ menuItems }) {
+  let [openState, setOpenState] = useState(false);
+
+  let toggleOpenState = () => {
+    setOpenState(!openState);
+  };
+
   return (
-    <div className={styles.searchContainer}>
-      {!isMobile && (
-        <button className={styles.productsButton}>
-          <Icon className={styles.listIcon} color="white" name="list" />
-          &nbsp; Каталог товаров
-        </button>
-      )}
-      <div className={styles.searchInputContainer}>
-        <input className={styles.searchInput} placeholder="Что ищем?" />
+    <div className={styles.container}>
+      <div className={styles.searchContainer}>
+        {!isMobile && (
+          <button className={styles.productsButton} onClick={toggleOpenState}>
+            <Icon className={styles.listIcon} color="white" name="list" />
+            &nbsp; Каталог товаров
+          </button>
+        )}
+        <div className={styles.searchInputContainer}>
+          <input className={styles.searchInput} placeholder="Что ищем?" />
+          {isMobile && (
+            <Button className={styles.mobileSearchButton} icon="search" />
+          )}
+        </div>
+        <button className={styles.searchButton}>Найти</button>
       </div>
-      <button className={styles.searchButton}>Найти</button>
+      <MenuExpanded openState={openState} setOpenState={setOpenState} menuItems={menuItems} />
     </div>
   );
 }

@@ -1,0 +1,115 @@
+.menuExpanded {
+  opacity: 0;
+  top: -9999px;
+  left: -9999px;
+  right: 9999px;
+  z-index: 1000;
+  background: #fff;
+  position: absolute;
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+  border-radius: 5px;
+  box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
+  -webkit-transition: all 0s ease 0.35s, opacity 0.35s ease;
+  -o-transition: all 0s ease 0.35s, opacity 0.35s ease;
+  transition: all 0s ease 0.35s, opacity 0.35s ease;
+}
+.menuExpanded.open {
+  left: -30px;
+  right: -30px;
+  top: calc(100% + 10px);
+  opacity: 1;
+  -webkit-transition: opacity 0.35s ease;
+  -o-transition: opacity 0.35s ease;
+  transition: opacity 0.35s ease;
+}
+.menuExpandedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding: 35px 20px;
+}
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dad9d9;
+  padding-right: 35px;
+}
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* position: relative; */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.menuItem:hover {
+  background: rgb(237 237 237);
+}
+.menuItem:last-child {
+  margin-bottom: 0;
+}
+.menuItemLink {
+  color: rgb(80, 80, 80);
+  margin-right: 30px;
+}
+.menuItemLink:hover {
+  color: #f18447;
+  text-decoration: none;
+}
+.menuItemIcon {
+  color: rgb(149 149 149);
+}
+.menuItem:hover .menuItemIcon {
+  color: #f18447;
+}
+.menuItem:hover .subMenuContainer {
+  opacity: 1;
+  left: 20rem;
+  top: 25px;
+  z-index: 1000;
+}
+.subMenuContainer {
+  opacity: 0;
+  position: absolute;
+  left: 20rem;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s linear;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+}
+.subMenuTitle {
+  color: rgb(59, 59, 59);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.subMenuTitle:hover {
+  cursor: pointer;
+  color: #f18447;
+}
+.subMenuItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.subMenuItem {
+  color: rgb(59, 59, 59);
+  margin-bottom: 2rem;
+  font-size: 0.9em;
+  width: 30%;
+  padding-right: 20px;
+}
+.subMenuItem:hover {
+  cursor: pointer;
+  color: #f18447;
+}
+.activeLink {
+  color: #f18447;
+}

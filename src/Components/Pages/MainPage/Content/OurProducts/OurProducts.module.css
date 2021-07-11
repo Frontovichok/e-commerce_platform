@@ -19,6 +19,7 @@
   text-transform: uppercase;
   font-weight: bold;
   transition: 0.1s linear;
+  box-shadow: 0 3px 9px rgb(169 79 2 / 38%), 0 0 0 rgb(148 68 0);
 }
 .showMoreBtn:hover {
   color: white;
