@@ -9,12 +9,9 @@
   border: 1px solid #ffc59a;
   transition: 0.15s linear;
   user-select: none;
+  overflow: hidden;
   box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
 }
-/* .callMe:hover {
-  background-color: #ffe7be;
-  cursor: pointer;
-} */
 .callMe.expanded {
   background-color: white;
 }
@@ -23,10 +20,6 @@
   flex-direction: row;
   height: 50px;
 }
-/* .callMe.expanded .callMeHeader {
-  visibility: hidden;
-  height: 0;
-} */
 .callImage {
   width: 50px;
 }
