@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Footer from "../../Footer/Footer";
-import Header from "../../Header/Header";
-import TopBar from "../../TopBar/TopBar";
 import styles from "./NotFound.module.css";
 
 export default function NotFound() {

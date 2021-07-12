@@ -1,0 +1,11 @@
+.container {
+  width: calc(var(--global-max-width));
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+}
+.content {
+  flex: 1 1;
+}

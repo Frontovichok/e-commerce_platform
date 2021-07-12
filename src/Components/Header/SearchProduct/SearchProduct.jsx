@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Icon } from "semantic-ui-react";
 import MenuExpanded from "../MenuExpanded/MenuExpanded";
+import { useHistory } from "react-router-dom";
 import styles from "./SearchProduct.module.css";
 
 const isMobile = window.innerWidth <= 900;
@@ -29,7 +30,21 @@ const initialState = {
 };
 
 function SearchProduct({ menuItems }) {
+  let history = useHistory();
   let [openState, setOpenState] = useState(false);
+  let [searchQuery, setSearchQuery] = useState("");
+
+  let handleChangeSearchQuery = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  let handleKeyDownSearchQuery = (e) => {
+    if (e.keyCode == 13) {
+      searchSubmit();
+    }
+  };
+  let searchSubmit = () => {
+    history.push("/search/" + searchQuery);
+  };
 
   let toggleOpenState = () => {
     setOpenState(!openState);
@@ -49,12 +64,20 @@ function SearchProduct({ menuItems }) {
           </button>
         )}
         <div className={styles.searchInputContainer}>
-          <input className={styles.searchInput} placeholder="Что ищем?" />
+          <input
+            className={styles.searchInput}
+            placeholder="Что ищем?"
+            value={searchQuery}
+            onKeyDown={handleKeyDownSearchQuery}
+            onChange={handleChangeSearchQuery}
+          />
           {isMobile && (
             <Button className={styles.mobileSearchButton} icon="search" />
           )}
         </div>
-        <button className={styles.searchButton}>Найти</button>
+        <button className={styles.searchButton} onClick={searchSubmit}>
+          Найти
+        </button>
       </div>
       <MenuExpanded
         openState={openState}

@@ -108,6 +108,12 @@
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
   .callMe {
+    display: none;
+  }
+}
+@media (min-width: 1700px) {
+  /* hi-res laptops and desktops */
+  .callMe {
     display: block;
   }
 }

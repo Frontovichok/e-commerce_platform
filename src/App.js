@@ -10,8 +10,8 @@ import About from "./Components/Pages/About/About";
 import FasadnyeSistemyPage from "./Components/Pages/FasadnyeSistemyPage/FasadnyeSistemyPage";
 import ProductPage from "./Components/Pages/ProductPage/ProductPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
+import FindedProducts from "./Components/Pages/FindedProducts/FindedProducts";
 import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
-import { createBrowserHistory } from "history";
 import TopBar from "./Components/TopBar/TopBar";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
@@ -71,6 +71,7 @@ function App() {
             component={FasadnyeSistemyPage}
           />
           <Route path="/product/:productId?" component={ProductPage} />
+          <Route path="/search/:q?" component={FindedProducts} />
           <Route exact path="/price" component={PricePage} />
           <Route exact path="/about" component={About} />
           <Route component={NotFound} />

@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import Footer from "../../Footer/Footer";
-import Header from "../../Header/Header";
-import TopBar from "../../TopBar/TopBar";
 import GlobalContent from "../../GlobalContent/GlobalContent";
 import ImageGallery from "react-image-gallery";
 import styles from "./ProductPage.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { property } from "lodash";
 
 const images = [
   {
