@@ -5,6 +5,7 @@ import GlobalContent from "../../GlobalContent/GlobalContent";
 import ImageGallery from "react-image-gallery";
 import styles from "./ProductPage.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
+import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 
 const images = [
   {
@@ -59,15 +60,18 @@ export default function ProductPage() {
     <>
       <GlobalContent>
         <div className={styles.container}>
-          <div className="breadcrumb">
-            <NavLink to="/">Главная</NavLink>
-            <p>&nbsp; / &nbsp;</p>
-            <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
-            <p>&nbsp; / &nbsp;</p>
-            <NavLink to="/krovelnye-materialy/metallocherepitca">
-              Металлочерепица
-            </NavLink>
-          </div>
+          <Breadcrumb
+            path={[
+              { link: "/", text: "Главная" },
+              { text: "/" },
+              { link: "/krovelnye-materialy", text: "Кровельные материалы" },
+              { text: "/" },
+              {
+                link: "/krovelnye-materialy/metallocherepitca",
+                text: "Металлочерепица",
+              },
+            ]}
+          />
           <div className={styles.tags}>
             <div className={styles.tag}>Скидка</div>
             <div className={styles.tag}>Новая модель</div>

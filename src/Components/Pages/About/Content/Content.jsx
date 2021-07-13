@@ -7,6 +7,7 @@ import Reviews from "../../../Common/Reviews/Reviews";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 import aboutCompanyData from "../../../../aboutCompany.json";
+import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
 
 function Content() {
   let aboutCompany = aboutCompanyData.aboutCompany;
@@ -14,11 +15,13 @@ function Content() {
   return (
     <div>
       <section className="section">
-        <div className="breadcrumb">
-          <NavLink to="/">Главная</NavLink>
-          <p>&nbsp; / &nbsp;</p>
-          <p>О компании</p>
-        </div>
+        <Breadcrumb
+          path={[
+            { link: "/", text: "Главная" },
+            { text: "/" },
+            { text: "О компании" },
+          ]}
+        />
         <div className={styles.contentContainer}>
           <ControlledCarousel />
           <div className={styles.blocksContainer}>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 import styles from "./NotFound.module.css";
 
 export default function NotFound() {
@@ -16,10 +17,7 @@ export default function NotFound() {
   return (
     <>
       <div className={styles.breadcrumbContainer}>
-        <div className="breadcrumb">
-          <NavLink to="/">Главная</NavLink>
-          <p>&nbsp; / &nbsp;</p>
-        </div>
+        <Breadcrumb path={[{ link: "/", text: "Главная" }, { text: "/" }]} />
       </div>
       <div className={styles.notFoundContainer}>
         <h1 className={styles.errorCode}>404</h1>

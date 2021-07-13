@@ -10,6 +10,7 @@ import styles from "./ProductsPage.module.css";
 import Products from "./Products/Products";
 import { NavLink } from "react-router-dom";
 import productsData from "../../../products.json";
+import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 
 let products = productsData.krovelnyeMaterialy;
 
@@ -19,16 +20,17 @@ function ProductsPage() {
   let pageData = getPageData(currentPagePath);
   return (
     <>
-      
       <GlobalContent>
         <div className={styles.container}>
-          <div className="breadcrumb">
-            <NavLink to="/">Главная</NavLink>
-            <p>&nbsp; / &nbsp;</p>
-            <NavLink to="/krovelnye-materialy">Кровельные материалы</NavLink>
-            {/* <p>&nbsp; / &nbsp;</p> */}
-            {/* <p>{pageData.title}</p> */}
-          </div>
+          <Breadcrumb
+            path={[
+              { link: "/", text: "Главная" },
+              { text: "/" },
+              { link: "/krovelnye-materialy", text: "Кровельные материалы" },
+              { text: "/" },
+              { text: pageData.title },
+            ]}
+          />
           <div className={styles.content}>
             <ProductsNavBar products={productsLinks} />
             <div className={styles.productsContainer}>

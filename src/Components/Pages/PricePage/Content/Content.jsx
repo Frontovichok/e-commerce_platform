@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import PriceTable from "./PriceTable/PriceTable";
 import Mobile from "./Mobile/Mobile";
 import styles from "./Content.module.css";
+import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
 
 const isMobile = window.innerWidth <= 500;
 
@@ -9,11 +10,13 @@ function Content() {
   return (
     <div>
       <section className="section">
-        <div className="breadcrumb">
-          <NavLink to="/">Главная</NavLink>
-          <p>&nbsp; / &nbsp;</p>
-          <p>Цены за работу</p>
-        </div>
+        <Breadcrumb
+          path={[
+            { link: "/", text: "Главная" },
+            { text: "/" },
+            { text: "Цены за работу" },
+          ]}
+        />
         <div className={styles.content}>
           {isMobile ? (
             <Mobile products={products} />

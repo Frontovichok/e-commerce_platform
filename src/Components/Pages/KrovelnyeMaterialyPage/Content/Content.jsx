@@ -5,15 +5,18 @@ import styles from "./Content.module.css";
 import Advaces from "./Advices/Advaces";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
+import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
 
 function Content() {
   return (
     <div className={styles.container}>
-      <div className="breadcrumb">
-        <NavLink to="/">Главная</NavLink>
-        <p>&nbsp; / &nbsp;</p>
-        <p>Кровельные материалы</p>
-      </div>
+      <Breadcrumb
+        path={[
+          { link: "/", text: "Главная" },
+          { text: "/" },
+          { text: "Кровельные материалы" },
+        ]}
+      />
       <div className={styles.content}>
         <ProductsNavBar products={products} />
         <div>

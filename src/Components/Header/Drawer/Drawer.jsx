@@ -26,7 +26,6 @@ export default function DrawerMenu({ menuTopItems, menuBottomItems }) {
     ...menuBottomItems,
     ...menuTopItems,
   ];
-  console.log(menuItems);
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -91,6 +90,7 @@ export default function DrawerMenu({ menuTopItems, menuBottomItems }) {
             {menuItem.subMenu.length > 0 && (
               <Icon
                 name={activeMenuItem === i ? "caret up" : "caret down"}
+                className={styles.iconExpandSubmenu}
                 onClick={() => {
                   activeMenuItem === i
                     ? setActiveMenuItem(-1)
@@ -110,7 +110,10 @@ export default function DrawerMenu({ menuTopItems, menuBottomItems }) {
   return (
     <div>
       <React.Fragment key={"left"}>
-        <Button onClick={toggleDrawer("left", true)} className={styles.hamburgerButton}>
+        <Button
+          onClick={toggleDrawer("left", true)}
+          className={styles.hamburgerButton}
+        >
           <img width={30} src={hamburgerMenu} alt="hamburgerMenu" />
         </Button>
         <Drawer

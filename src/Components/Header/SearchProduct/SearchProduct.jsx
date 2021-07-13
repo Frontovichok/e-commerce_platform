@@ -46,6 +46,10 @@ function SearchProduct({ menuItems }) {
     history.push("/search/" + searchQuery);
   };
 
+  let clearSearchInput = () => {
+    setSearchQuery("");
+  };
+
   let toggleOpenState = () => {
     setOpenState(!openState);
   };
@@ -71,9 +75,11 @@ function SearchProduct({ menuItems }) {
             onKeyDown={handleKeyDownSearchQuery}
             onChange={handleChangeSearchQuery}
           />
-          {isMobile && (
-            <Button className={styles.mobileSearchButton} icon="search" />
-          )}
+          <Button
+            className={styles.clearSearchFieldButton}
+            icon={searchQuery.length > 0 ? "close" : "search"}
+            onClick={clearSearchInput}
+          />
         </div>
         <button className={styles.searchButton} onClick={searchSubmit}>
           Найти

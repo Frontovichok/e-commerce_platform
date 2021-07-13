@@ -16,11 +16,14 @@
 .menuItemAccordion {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+.iconExpandSubmenu {
+  padding: 0 20px;
 }
 .menuItem {
-  flex: 1 1;
-  text-transform: uppercase;
-  color: black;
+  font-size: 1.1rem;
+  color: #303030;
 }
 .subMenuContainer {
   display: flex;
@@ -32,9 +35,12 @@
   padding: 10px;
 }
 .subMenuItem {
-  color: rgb(68, 68, 68);
+  color: rgb(103 103 103);
   padding: 5px 10px;
 }
 .hamburgerButton {
   padding-right: 0;
+}
+.hamburgerButton :global(.MuiButton-label) {
+  justify-content: flex-end;
 }

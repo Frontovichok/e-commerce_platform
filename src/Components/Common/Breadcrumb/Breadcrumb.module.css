@@ -1,0 +1,36 @@
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  line-height: 1.4285em;
+  margin-bottom: 0;
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+}
+.breadcrumb {
+  -ms-overflow-style: none;
+}
+.breadcrumb::-webkit-scrollbar {
+  display: none;
+}
+.breadcrumbText {
+  margin: 0;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.breadcrumbLink {
+  color: #ff8200;
+  white-space: nowrap;
+}
+@media (min-width: 320px) {
+  .breadcrumb {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 1281px) {
+  .breadcrumb {
+    padding-left: 0;
+  }
+}
