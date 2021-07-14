@@ -6,6 +6,7 @@ import ImageGallery from "react-image-gallery";
 import styles from "./ProductPage.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
+import CarouselProductImages from "./CarouselProductImages/CarouselProductImages";
 
 const images = [
   {
@@ -16,9 +17,9 @@ const images = [
   },
   {
     original:
-      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-2-500x335.jpg",
+      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
     thumbnail:
-      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-2-500x335.jpg",
+      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
   },
   {
     original:
@@ -49,9 +50,8 @@ const product = {
   newPrice: 200,
   tags: ["Новая модель"],
 };
-// function Property(property) {
-//   return <div>{property.color}</div>;
-// }
+
+const isMobile = window.innerWidth <= 1500;
 
 export default function ProductPage() {
   const location = useLocation();
@@ -82,14 +82,18 @@ export default function ProductPage() {
           </div>
           <div className={styles.productBlock}>
             <div className={styles.images}>
-              <ImageGallery
-                items={images}
-                autoPlay={true}
-                lazyLoad={true}
-                showPlayButton={false}
-                autoPlay={true}
-                thumbnailPosition="bottom"
-              />
+              {isMobile ? (
+                <CarouselProductImages images={images} />
+              ) : (
+                <ImageGallery
+                  items={images}
+                  autoPlay={true}
+                  lazyLoad={true}
+                  showPlayButton={false}
+                  autoPlay={true}
+                  thumbnailPosition="bottom"
+                />
+              )}
             </div>
             <div className={styles.info}>
               <div className={styles.priceBlock}>

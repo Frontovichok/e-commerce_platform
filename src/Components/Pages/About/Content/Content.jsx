@@ -29,7 +29,6 @@ function Content() {
               <div key={i} className={styles.block}>
                 <div className={styles.imageContainer}>
                   <h2 className={styles.titleMobile}>{block.title}</h2>
-                  {/* <img src={block.image} /> */}
                   <LazyLoadImage
                     alt="about"
                     effect="opacity"

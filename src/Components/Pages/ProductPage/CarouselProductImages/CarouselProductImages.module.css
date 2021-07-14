@@ -1,0 +1,19 @@
+.carousel {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: inherit;
+}
+.carousel :global(.carousel) {
+  overflow: inherit;
+}
+.carousel :global(.d-block.w-100) {
+  object-fit: cover;
+  height: 300px;
+}
+.carousel :global(.carousel-indicators) {
+  bottom: -40px;
+}
+.carousel :global(.carousel-indicators) li {
+  background-color: #f47046;
+}
+
