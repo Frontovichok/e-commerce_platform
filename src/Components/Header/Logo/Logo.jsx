@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Logo.module.css";
+import logoImg from "./logo4.png";
 
 function Logo() {
   return (
     <div className={styles.logoContainer}>
-      <NavLink to={`/`}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Service_mark.svg/1280px-Service_mark.svg.png" className={styles.logoImg} alt="logo"></img>
+      <NavLink to={`/`} className={styles.logoLink}>
+        <img src={logoImg} className={styles.logoImg} alt="logo"></img>
+        <p className={styles.logoText}>Кровля Тула</p>
       </NavLink>
     </div>
   );
