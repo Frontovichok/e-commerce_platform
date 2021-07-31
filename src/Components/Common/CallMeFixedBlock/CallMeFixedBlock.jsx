@@ -80,7 +80,7 @@ function CallMeFixedBlock() {
           <Icon
             name="angle up"
             size="big"
-            color="orange"
+            color="green"
             onClick={() => {
               toggleCallMeState(!callMeState);
             }}

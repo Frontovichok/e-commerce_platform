@@ -6,11 +6,11 @@
   width: 270px;
   z-index: 2;
   border-radius: 10px;
-  border: 1px solid #ffc59a;
+  border: 1px solid #9affb3;
   transition: 0.15s linear;
   user-select: none;
   overflow: hidden;
-  box-shadow: 0 3px 9px rgb(0 26 52 / 25%), 0 0 0 rgb(0 26 52 / 5%);
+  box-shadow: var(--global-box-shadow);
 }
 .callMe.expanded {
   background-color: white;
@@ -33,7 +33,7 @@
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #f57a22;
+  color: #66d18b;
   margin-bottom: 0;
 }
 .callMeExpandButton {
@@ -41,7 +41,7 @@
   align-items: center;
 }
 .callMeExpandButton:hover > i {
-  background-color: #ffbe86;
+  background-color: #90ff86;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.2s linear;
@@ -70,17 +70,17 @@
   padding-top: 35px;
   padding-bottom: 10px;
   margin-bottom: 0;
-  color: #f16b07;
+  color: #66d18b;
   font-size: 1.8rem;
 }
 .textField {
   margin-bottom: 30px;
 }
 .textField :global .MuiFormLabel-root.Mui-focused {
-  color: #f16b07;
+  color: #66d18b;
 }
 .textField :global .MuiInput-underline:after {
-  border-bottom: 2px solid #f16b07;
+  border-bottom: 2px solid #66d18b;
 }
 .calculateButton {
   padding: 10px 25px;
@@ -93,11 +93,11 @@
   font-weight: bold;
   transition: 0.1s linear;
   margin-left: 15px;
-  box-shadow: 0 3px 9px rgb(169 79 2 / 38%), 0 0 0 rgb(148 68 0);
+  box-shadow: var(--global-box-shadow);
 }
 .calculateButton:hover {
-  background-color: #e96d00;
-  box-shadow: 1px 2px 5px #502f0c;
+  background-color: #66d18b;
+  box-shadow: var(--global-box-shadow);
 }
 
 @media (min-width: 320px) {

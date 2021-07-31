@@ -1,6 +1,7 @@
 :root {
   --global-max-width: 1300px;
-  --global-gradient: linear-gradient(45deg, #f46b45, #eea849);
+  --global-gradient: linear-gradient(45deg, #5aad77, #68d88f);
+  --global-box-shadow: 0 3px 9px rgb(28 169 2 / 38%), 0 0 0 rgb(0 148 4);
 }
 $t: 1s;
 $d: 0.08em;
@@ -9,7 +10,7 @@ $n: 3;
 $e: linear;
 $front: #222222;
 $front_dark: white;
-$back: #ff7e29;
+$back: #68d88f;
 body {
   display: flex;
   flex-direction: column;

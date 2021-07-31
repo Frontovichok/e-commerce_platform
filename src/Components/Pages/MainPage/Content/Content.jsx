@@ -17,7 +17,7 @@ function Content() {
       <Services />
       <WhyWe />
       <OurProducts />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <Reviews />
       <News />
       <WorkingSteps />

@@ -49,7 +49,7 @@
   color: #3c3c3c;
 }
 .position {
-  color: #ff5858;
+  color: #14ad49;
   font-weight: bold;
 }
 .description {
@@ -78,7 +78,7 @@
   background-color: #ffbb94;
 }
 .news :global button.carousel__dot.carousel__dot--selected {
-  background-color: #ff7625;
+  background-color: #14ad49;
 }
 .news :global .carousel__slide-focus-ring {
   display: none;
@@ -87,7 +87,7 @@
   align-self: center;
   border: none;
   outline: none;
-  color: #ff7625;
+  color: #14ad49;
   background: transparent;
   margin-bottom: 30px;
   border-radius: 5px;

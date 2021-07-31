@@ -63,7 +63,7 @@
   width: 100%;
 }
 .continueReadButton {
-  color: #ff9b00;
+  color: #14ad49;
   background: none;
   text-decoration: none;
   border: none;
@@ -78,7 +78,7 @@
 .continueReadButton:hover {
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 2px solid #ff6500;
+  border-bottom: 2px solid #14ad49;
 }
 
 @media (min-width: 320px) {

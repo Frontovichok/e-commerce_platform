@@ -98,13 +98,13 @@
   background: none;
   border-bottom: 1px solid transparent;
   align-self: center;
-  color: #f55f0f;
+  color: #14ad49;
   font-size: 16px;
   font-weight: normal;
   border-radius: unset;
 }
 .continueRead:hover {
-  border-bottom: 1px solid #f55f0f;
+  border-bottom: 1px solid #68d88f;
 }
 :global .slide___3-Nqo {
   padding-bottom: 17.5% !important;
@@ -126,7 +126,7 @@
   background-color: #ffbb94;
 }
 :global button.carousel__dot.carousel__dot--selected {
-  background-color: #ff7625;
+  background-color: #68d88f;
 }
 :global .carousel__slide-focus-ring {
   display: none;

@@ -56,7 +56,7 @@
 }
 
 .content a {
-    color: #ff6500;
+    color: #68d88f;
     text-decoration: none;
     text-transform: uppercase;
     align-self: flex-start;
@@ -67,10 +67,10 @@
 }
 
 .content a:hover {
-    color: #ff5100;
+    color: #68d88f;
     text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 2px solid #f87d21;
+    border-bottom: 2px solid #68d88f;
 }
 
 .service :global(.lazy-load-image-background.opacity.lazy-load-image-loaded) {

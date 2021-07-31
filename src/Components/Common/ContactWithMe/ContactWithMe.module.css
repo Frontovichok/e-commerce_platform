@@ -27,7 +27,7 @@
 }
 .sectionTitle {
   display: inline-block;
-  border-bottom: solid 3px #ff7e29;
+  border-bottom: solid 3px #66d18b;
 }
 .inputField {
   background-color: white;
@@ -51,10 +51,10 @@
   font-size: 1.3rem;
 }
 :global .MuiInput-root.MuiInput-underline:after {
-  border-bottom: 2px solid #ff6d18;
+  border-bottom: 2px solid #66d18b;
 }
 :global label.MuiFormLabel-root.Mui-focused {
-  color: #ff6d18;
+  color: #66d18b;
 }
 
 @media (min-width: 320px) {

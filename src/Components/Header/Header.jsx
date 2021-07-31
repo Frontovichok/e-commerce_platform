@@ -42,27 +42,157 @@ const menuBottomItems = [
       {
         title: "Металлочерепица",
         link: "/krovelnye-materialy/metallocherepitca",
+        subMenu: [
+          {
+            title: "Classic",
+            link: "/krovelnye-materialy/metallocherepitca/classic",
+          },
+          {
+            title: "Kamea",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Kredo",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Kvinta plus",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Kvinta plus 3D",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Kvinta Uno",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Modern",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Quadro profi",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+        ],
+      },
+      { title: "Профнастил", link: "/krovelnye-materialy/profnastil" },
+      {
+        title: "Фальцевая кровля",
+        link: "/krovelnye-materialy/faltsevaya-krovlya",
+        subMenu: [
+          {
+            title: "Кликфальц ",
+            link: "/krovelnye-materialy/metallocherepitca/classic",
+          },
+          {
+            title: "Кликфальц Pro",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Кликфальц Pro Gofr",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Кликфальц Pro Line",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Кликфальц mini",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Кликфальц Line",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Фальц двойной стоячий",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+          {
+            title: "Фальц двойной стоячий Line",
+            link: "/krovelnye-materialy/metallocherepitca/kamea",
+          },
+        ],
+      },
+      {
+        title: "Композитная черепица",
+        link: "/krovelnye-materialy/kompositnaya_cherepitca",
+        subMenu: [
+          {
+            title: "Листы",
+            link: "/krovelnye-materialy/kompositnaya_cherepitca/classic",
+          },
+          {
+            title: "Доборные элементы",
+            link: "/krovelnye-materialy/kompositnaya_cherepitca/classic",
+          },
+          {
+            title: "Комплектующие",
+            link: "/krovelnye-materialy/kompositnaya_cherepitca/classic",
+          },
+        ],
       },
       {
         title: "Гибкая черепица",
         link: "/krovelnye-materialy/gibkaya_cherepitca",
+        subMenu: [
+          {
+            title: "Katepal",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+          {
+            title: "Рулонная черепица",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+          {
+            title: "Шингас",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+          {
+            title: "Икопал",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+          {
+            title: "Технониколь",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+          {
+            title: "CertainTeed",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+          {
+            title: "Tegola",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+          {
+            title: "Комплектующие",
+            link: "/krovelnye-materialy/gibkaya_cherepitca/classic",
+          },
+        ],
       },
-      { title: "Профнастил", link: "/krovelnye-materialy/profnastil" },
       {
-        title: "Композитная черепица",
-        link: "/krovelnye-materialy/kompositnaya_cherepitca",
-      },
-      {
-        title: "Фасадная черепица",
+        title: "ЦПЧ и натуральная черепица",
         link: "/krovelnye-materialy/falcevaya_cherepitca",
+        subMenu: [
+          {
+            title: "Керамическая черепица Braas",
+            link: "/krovelnye-materialy/cpch_naturalnaya_cherepitsa/classic",
+          },
+          {
+            title: "ЦПЧ Braas",
+            link: "/krovelnye-materialy/cpch_naturalnaya_cherepitsa/classic",
+          },
+          {
+            title: "Комплектующие Braas",
+            link: "/krovelnye-materialy/cpch_naturalnaya_cherepitsa/classic",
+          },
+        ],
       },
       {
-        title: "Гидроизоляционные материалы",
-        link: "/krovelnye-materialy/gidroizolyazionnye_materialy",
-      },
-      {
-        title: "Комплектующие",
-        link: "/krovelnye-materialy/kopmplectuyshie",
+        title: "Рулонные кровельные материалы",
+        link: "/krovelnye-materialy/rulonnye_kroverlnye_materialy",
       },
     ],
   },

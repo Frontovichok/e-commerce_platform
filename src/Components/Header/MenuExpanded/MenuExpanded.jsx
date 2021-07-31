@@ -9,17 +9,19 @@ function MenuExpanded({ openState, setOpenState, menuItems }) {
         <div className={styles.menuItems}>
           {menuItems.map((item, i) => (
             <div className={styles.menuItem}>
-              <NavLink
-                to={item.link}
-                className={styles.menuItemLink}
-                activeClassName={styles.activeLink}
-                onClick={() => {
-                  setOpenState(false);
-                }}
-              >
-                {item.title}
-              </NavLink>
-              <Icon className={styles.menuItemIcon} name="angle right" />
+              <div className={styles.menuItemLinkContainer}>
+                <NavLink
+                  to={item.link}
+                  className={styles.menuItemLink}
+                  activeClassName={styles.activeLink}
+                  onClick={() => {
+                    setOpenState(false);
+                  }}
+                >
+                  {item.title}
+                </NavLink>
+                <Icon className={styles.menuItemIcon} name="angle right" />
+              </div>
               <div className={styles.subMenuContainer}>
                 <NavLink
                   to={item.link}
@@ -33,17 +35,32 @@ function MenuExpanded({ openState, setOpenState, menuItems }) {
                 </NavLink>
                 <div className={styles.subMenuItems}>
                   {item.subMenu.map((item, i) => (
-                    <NavLink
-                      to={item.link}
-                      key={i}
-                      className={styles.subMenuItem}
-                      activeClassName={styles.activeLink}
-                      onClick={() => {
-                        setOpenState(false);
-                      }}
-                    >
-                      {item.title}
-                    </NavLink>
+                    <div className={styles.subMenuItemContainer}>
+                      <NavLink
+                        to={item.link}
+                        key={i}
+                        className={styles.subMenuItem}
+                        activeClassName={styles.activeLink}
+                        onClick={() => {
+                          setOpenState(false);
+                        }}
+                      >
+                        {item.title}
+                      </NavLink>
+                      {item.subMenu?.map((subItem, j) => (
+                        <NavLink
+                          to={subItem.link}
+                          key={j}
+                          className={styles.subItem}
+                          activeClassName={styles.activeLink}
+                          onClick={() => {
+                            setOpenState(false);
+                          }}
+                        >
+                          {subItem.title}
+                        </NavLink>
+                      ))}
+                    </div>
                   ))}
                 </div>
               </div>

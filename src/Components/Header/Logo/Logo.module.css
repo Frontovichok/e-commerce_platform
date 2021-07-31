@@ -17,17 +17,17 @@
   /* max-width: 230px; */
   /* padding: 20px; */
   /* padding-left: 10px; */
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
+  width: 300px;
+  height: 130%;
+  /* border-radius: 5px; */
 }
 .logoText {
   font-size: 2rem;
-  color: #f37245;
+  color: #66d18b;
   text-transform: uppercase;
   font-family: sans-serif;
-  margin-left: 20px;
-  text-shadow: 0 3px 9px rgb(169 79 2 / 38%), 0 0 0 rgb(148 68 0);
+  margin-left: 93px;
+  text-shadow: 0 3px 9px rgb(28 169 2 / 38%), 0 0 0 rgb(0 148 66);
   font-weight: normal;
-  position: relative;
+  position: absolute;
 }
