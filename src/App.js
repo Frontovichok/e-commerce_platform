@@ -25,7 +25,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route
-            path="/krovelnye-materialy"
+            path="/krovlya"
             render={({ match: { url } }) => (
               <>
                 <Route
@@ -34,7 +34,7 @@ function App() {
                   exact
                 />
                 <Route
-                  path={`${url}/metallocherepitca`}
+                  path={`${url}/metallocherepitsa`}
                   component={ProductsPage}
                 />
                 <Route

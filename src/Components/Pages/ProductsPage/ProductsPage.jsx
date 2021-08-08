@@ -12,7 +12,7 @@ import { NavLink } from "react-router-dom";
 import productsData from "../../../products.json";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 
-let products = productsData.krovelnyeMaterialy;
+let products = productsData.krovlya;
 
 function ProductsPage() {
   const location = useLocation();
@@ -26,7 +26,7 @@ function ProductsPage() {
             path={[
               { link: "/", text: "Главная" },
               { text: "/" },
-              { link: "/krovelnye-materialy", text: "Кровельные материалы" },
+              { link: "/krovlya", text: "Кровельные материалы" },
               { text: "/" },
               { text: pageData.title },
             ]}
@@ -50,10 +50,9 @@ function ProductsPage() {
 export default ProductsPage;
 
 function getPageData(pagePath) {
-  console.log(products);
   let pageData = { title: "", products: [] };
   switch (pagePath) {
-    case "metallocherepitca":
+    case "metallocherepitsa":
       pageData = { title: "Металлочерепица", products: products };
       break;
     case "gibkaya_cherepitca":
@@ -115,35 +114,35 @@ function getPageData(pagePath) {
 
 let productsLinks = [
   {
-    link: "/krovelnye-materialy/metallocherepitca",
+    link: "/krovlya/metallocherepitsa",
     name: "Металлочерепица",
   },
   {
-    link: "/krovelnye-materialy/gibkaya_cherepitca",
+    link: "/krovlya/gibkaya_cherepitca",
     name: "Гибкая черепица",
   },
   {
-    link: "/krovelnye-materialy/profnastil",
+    link: "/krovlya/profnastil",
     name: "Профнастил",
   },
   {
-    link: "/krovelnye-materialy/kompositnaya_cherepitca",
+    link: "/krovlya/kompositnaya_cherepitca",
     name: "Композитная черепица",
   },
   {
-    link: "/krovelnye-materialy/naturalnaya_cherepitca",
+    link: "/krovlya/naturalnaya_cherepitca",
     name: "Натуральная черепица",
   },
   {
-    link: "/krovelnye-materialy/falcevaya_cherepitca",
+    link: "/krovlya/falcevaya_cherepitca",
     name: "Фальцевая черепица",
   },
   {
-    link: "/krovelnye-materialy/gidroizolyazionnye_materialy",
+    link: "/krovlya/gidroizolyazionnye_materialy",
     name: "Рулонные гидроизоляционные материалы",
   },
   {
-    link: "/krovelnye-materialy/kopmplectuyshie",
+    link: "/krovlya/kopmplectuyshie",
     name: "Комплектующие",
   },
 ];

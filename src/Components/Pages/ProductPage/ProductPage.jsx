@@ -64,10 +64,10 @@ export default function ProductPage() {
             path={[
               { link: "/", text: "Главная" },
               { text: "/" },
-              { link: "/krovelnye-materialy", text: "Кровельные материалы" },
+              { link: "/krovlya", text: "Кровельные материалы" },
               { text: "/" },
               {
-                link: "/krovelnye-materialy/metallocherepitca",
+                link: "/krovlya/metallocherepitsa",
                 text: "Металлочерепица",
               },
             ]}

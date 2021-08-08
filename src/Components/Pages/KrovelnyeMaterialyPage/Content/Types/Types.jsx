@@ -105,7 +105,7 @@ let servicesList = [
     sticker: "Металлочерепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
-    link: "krovelnye-materialy/metallocherepitca",
+    link: "krovlya/metallocherepitsa",
   },
   {
     id: 2,
@@ -114,7 +114,7 @@ let servicesList = [
     sticker: "Гибкая черепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
-    link: "krovelnye-materialy/gibkaya_cherepitca",
+    link: "krovlya/gibkaya_cherepitca",
   },
   {
     id: 3,
@@ -123,7 +123,7 @@ let servicesList = [
     sticker: "Композитная черепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
-    link: "krovelnye-materialy/kompositnaya_cherepitca",
+    link: "krovlya/kompositnaya_cherepitca",
   },
   {
     id: 4,
@@ -132,7 +132,7 @@ let servicesList = [
     sticker: "Натуральная черепица",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
-    link: "krovelnye-materialy/naturalnaya_cherepitca",
+    link: "krovlya/naturalnaya_cherepitca",
   },
   {
     id: 5,
@@ -141,7 +141,7 @@ let servicesList = [
     sticker: "Фальцевая кровля",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
-    link: "krovelnye-materialy/falcevaya_cherepitca",
+    link: "krovlya/falcevaya_cherepitca",
   },
   {
     id: 6,
@@ -150,7 +150,7 @@ let servicesList = [
     sticker: "Рулонные гидроизоляционные материалы",
     description:
       "Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl. dsh ogl. hskj ljio, sdsyhy sf Lorem ipsum sadfk slf hgsklkj lsalf kkf hahg otl.",
-    link: "krovelnye-materialy/gidroizolyazionnye_materialy",
+    link: "krovlya/gidroizolyazionnye_materialy",
   },
 ];
 

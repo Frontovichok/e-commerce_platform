@@ -36,35 +36,35 @@ export default Content;
 
 let products = [
   {
-    link: "/krovelnye-materialy/metallocherepitca",
+    link: "/krovlya/metallocherepitsa",
     name: "Металлочерепица",
   },
   {
-    link: "/krovelnye-materialy/gibkaya_cherepitca",
+    link: "/krovlya/gibkaya_cherepitca",
     name: "Гибкая черепица",
   },
   {
-    link: "/krovelnye-materialy/profnastil",
+    link: "/krovlya/profnastil",
     name: "Профнастил",
   },
   {
-    link: "/krovelnye-materialy/kompositnaya_cherepitca",
+    link: "/krovlya/kompositnaya_cherepitca",
     name: "Композитная черепица",
   },
   {
-    link: "/krovelnye-materialy/naturalnaya_cherepitca",
+    link: "/krovlya/naturalnaya_cherepitca",
     name: "Натуральная черепица",
   },
   {
-    link: "/krovelnye-materialy/falcevaya_cherepitca",
+    link: "/krovlya/falcevaya_cherepitca",
     name: "Фальцевая черепица",
   },
   {
-    link: "/krovelnye-materialy/gidroizolyazionnye_materialy",
+    link: "/krovlya/gidroizolyazionnye_materialy",
     name: "Рулонные гидроизоляционные материалы",
   },
   {
-    link: "/krovelnye-materialy/kopmplectuyshie",
+    link: "/krovlya/kopmplectuyshie",
     name: "Комплектующие",
   },
 ];
