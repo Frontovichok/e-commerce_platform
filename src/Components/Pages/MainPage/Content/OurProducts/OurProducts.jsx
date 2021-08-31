@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard/ProductCard";
 import styles from "./OurProducts.module.css";
 import { useState } from "react";
-import productsMainPage from "../../../../../productsMainPage.json";
+import productsMainPage from "../../../../../data/productsMainPage.json";
 
 function OurProducts() {
   let [showedProducts, setShowedProducts] = useState(5);

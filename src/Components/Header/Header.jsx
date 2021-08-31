@@ -3,7 +3,7 @@ import MenuTop from "./MenuTop/MenuTop";
 import styles from "./Header.module.css";
 import DrawerMenu from "./Drawer/Drawer";
 import SearchProduct from "./SearchProduct/SearchProduct";
-import menuBottomItems from "../../productsCategories.json";
+import menuBottomItems from "../../data/productsCategories.json";
 
 function Header() {
   const isMobile = window.innerWidth <= 1500;

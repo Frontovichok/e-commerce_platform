@@ -9,10 +9,10 @@ import ContactWithMe from "../../Common/ContactWithMe/ContactWithMe";
 import styles from "./ProductsPage.module.css";
 import Products from "./Products/Products";
 import { NavLink } from "react-router-dom";
-import productsData from "../../../products.json";
+import productsData from "../../../data/categoriesData/krovlya.json";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 
-let products = productsData.krovlya;
+let products = productsData.subMenu[0].subMenu[0].productsData;
 
 function ProductsPage() {
   const location = useLocation();
@@ -32,7 +32,7 @@ function ProductsPage() {
             ]}
           />
           <div className={styles.content}>
-            <ProductsNavBar products={productsLinks} />
+            {/* <ProductsNavBar products={productsLinks} /> */}
             <div className={styles.productsContainer}>
               <Products pageData={pageData} />
               <div className={styles.contactWithMe}>
@@ -50,99 +50,7 @@ function ProductsPage() {
 export default ProductsPage;
 
 function getPageData(pagePath) {
-  let pageData = { title: "", products: [] };
-  switch (pagePath) {
-    case "metallocherepitsa":
-      pageData = { title: "Металлочерепица", products: products };
-      break;
-    case "gibkaya_cherepitca":
-      pageData = {
-        title: "Гибкая черепица",
-        products: [...products].reverse(),
-      };
-      break;
-    case "gibkaya_cherepitca":
-      pageData = {
-        title: "Гибкая черепица",
-        products: [...products],
-      };
-      break;
-    case "profnastil":
-      pageData = {
-        title: "Профнастил",
-        products: [...products].reverse(),
-      };
-      break;
-    case "kompositnaya_cherepitca":
-      pageData = {
-        title: "Композитная черепица",
-        products: [...products],
-      };
-      break;
-    case "naturalnaya_cherepitca":
-      pageData = {
-        title: "Натуральная черепица",
-        products: [...products].reverse(),
-      };
-      break;
-    case "falcevaya_cherepitca":
-      pageData = {
-        title: "Фальцевая черепица",
-        products: [...products],
-      };
-      break;
-    case "gidroizolyazionnye_materialy":
-      pageData = {
-        title: "Гидроизоляционные материалы",
-        products: [...products].reverse(),
-      };
-      break;
-    case "kopmplectuyshie":
-      pageData = {
-        title: "Комплектующие",
-        products: [...products],
-      };
-      break;
-    default:
-      pageData = {
-        title: "ХЗ",
-        products: [...products].reverse(),
-      };
-  }
+  let pageData = { title: "Hi", products: [...products] };
+
   return pageData;
 }
-
-let productsLinks = [
-  {
-    link: "/krovlya/metallocherepitsa",
-    name: "Металлочерепица",
-  },
-  {
-    link: "/krovlya/gibkaya_cherepitca",
-    name: "Гибкая черепица",
-  },
-  {
-    link: "/krovlya/profnastil",
-    name: "Профнастил",
-  },
-  {
-    link: "/krovlya/kompositnaya_cherepitca",
-    name: "Композитная черепица",
-  },
-  {
-    link: "/krovlya/naturalnaya_cherepitca",
-    name: "Натуральная черепица",
-  },
-  {
-    link: "/krovlya/falcevaya_cherepitca",
-    name: "Фальцевая черепица",
-  },
-  {
-    link: "/krovlya/gidroizolyazionnye_materialy",
-    name: "Рулонные гидроизоляционные материалы",
-  },
-  {
-    link: "/krovlya/kopmplectuyshie",
-    name: "Комплектующие",
-  },
-];

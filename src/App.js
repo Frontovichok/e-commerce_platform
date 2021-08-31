@@ -7,7 +7,6 @@ import KrovelnyeMaterialyPage from "./Components/Pages/KrovelnyeMaterialyPage/Kr
 import NotFound from "./Components/Pages/NotFound/NotFound";
 import PricePage from "./Components/Pages/PricePage/PricePage";
 import About from "./Components/Pages/About/About";
-import FasadnyeSistemyPage from "./Components/Pages/FasadnyeSistemyPage/FasadnyeSistemyPage";
 import ProductPage from "./Components/Pages/ProductPage/ProductPage";
 import ProductsPage from "./Components/Pages/ProductsPage/ProductsPage";
 import FindedProducts from "./Components/Pages/FindedProducts/FindedProducts";
@@ -64,11 +63,6 @@ function App() {
                 />
               </>
             )}
-          />
-          <Route
-            exact
-            path="/fasadnye-sistemy"
-            component={FasadnyeSistemyPage}
           />
           <Route path="/product/:productId?" component={ProductPage} />
           <Route path="/search/:q?" component={FindedProducts} />
