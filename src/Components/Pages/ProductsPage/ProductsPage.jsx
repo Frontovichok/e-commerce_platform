@@ -1,23 +1,41 @@
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import TopBar from "../../TopBar/TopBar";
-import Header from "../../Header/Header";
 import GlobalContent from "../../GlobalContent/GlobalContent";
-import Footer from "../../Footer/Footer";
 import CallMeFixedBlock from "../../Common/CallMeFixedBlock/CallMeFixedBlock";
-import ProductsNavBar from "../../ProductsNavBar/ProductsNavBar";
-import ContactWithMe from "../../Common/ContactWithMe/ContactWithMe";
-import styles from "./ProductsPage.module.css";
 import Products from "./Products/Products";
-import { NavLink } from "react-router-dom";
-import productsData from "../../../data/categoriesData/krovlya.json";
+import styles from "./ProductsPage.module.css";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
-
-let products = productsData.subMenu[0].subMenu[0].productsData;
+import ProductsNavBar from "../../ProductsNavBar/ProductsNavBar";
+import productsCategories from "../../../data/productsCategories.json";
 
 function ProductsPage() {
   const location = useLocation();
-  let currentPagePath = location.pathname.split("/")[2];
-  let pageData = getPageData(currentPagePath);
+  let [category, setCategory] = useState({ title: "", link: "" });
+  let [subCategory, setSubCategory] = useState({});
+  let [subCategories, setSubCategories] = useState([]);
+  let currentCategory = location.pathname.split("/")[1];
+  let currentSubCategory = location.pathname.split("/")[2];
+  // let curentCategoryData = productsCategories.filter(
+  //   (categ) => categ.link === `/${category.link}`
+  // )[0];
+  useEffect(() => {
+    fetch(`http://localhost:3000/categoriesData/${currentCategory}.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("data: ", data);
+        setCategory({ title: data.title, link: data.link });
+        setSubCategories(data.subMenu);
+
+        data.subMenu.map((subCategory) => {
+          if (subCategory.link.split("/")[2] === currentSubCategory) {
+            setSubCategory(subCategory);
+          }
+        });
+        console.log("hhhhhhhhhhh ", subCategory);
+      });
+  }, []);
+  console.log(currentCategory);
+  console.log(currentSubCategory);
   return (
     <>
       <GlobalContent>
@@ -26,18 +44,18 @@ function ProductsPage() {
             path={[
               { link: "/", text: "Главная" },
               { text: "/" },
-              { link: "/krovlya", text: "Кровельные материалы" },
+              { link: category.link, text: category.title },
               { text: "/" },
-              { text: pageData.title },
+              { text: subCategory.title },
             ]}
           />
           <div className={styles.content}>
-            {/* <ProductsNavBar products={productsLinks} /> */}
+            <ProductsNavBar products={subCategories} />
             <div className={styles.productsContainer}>
-              <Products pageData={pageData} />
-              <div className={styles.contactWithMe}>
+              <Products pageData={subCategory} />
+              {/* <div className={styles.contactWithMe}>
                 <ContactWithMe />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -49,8 +67,8 @@ function ProductsPage() {
 
 export default ProductsPage;
 
-function getPageData(pagePath) {
-  let pageData = { title: "Hi", products: [...products] };
+// function getPageData(pagePath) {
+// let pageData = { title: "Hi", products: [...products] };
 
-  return pageData;
-}
+// return pageData;
+// }

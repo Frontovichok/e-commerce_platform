@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MainPage from "./Components/Pages/MainPage/MainPage";
 import "semantic-ui-css/semantic.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import KrovelnyeMaterialyPage from "./Components/Pages/KrovelnyeMaterialyPage/KrovelnyeMaterialyPage";
+import ProductCategoryPage from "./Components/Pages/ProductCategoryPage/ProductCategoryPage";
 import NotFound from "./Components/Pages/NotFound/NotFound";
 import PricePage from "./Components/Pages/PricePage/PricePage";
 import About from "./Components/Pages/About/About";
@@ -14,6 +14,7 @@ import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
 import TopBar from "./Components/TopBar/TopBar";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
+import productsCategories from "./data/productsCategories.json";
 
 function App() {
   return (
@@ -23,47 +24,30 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path="/" component={MainPage} />
-          <Route
-            path="/krovlya"
-            render={({ match: { url } }) => (
-              <>
-                <Route
-                  path={`${url}/`}
-                  component={KrovelnyeMaterialyPage}
-                  exact
-                />
-                <Route
-                  path={`${url}/metallocherepitsa`}
-                  component={ProductsPage}
-                />
-                <Route
-                  path={`${url}/gibkaya_cherepitca`}
-                  component={ProductsPage}
-                />
-                <Route path={`${url}/profnastil`} component={ProductsPage} />
-                <Route
-                  path={`${url}/kompositnaya_cherepitca`}
-                  component={ProductsPage}
-                />
-                <Route
-                  path={`${url}/naturalnaya_cherepitca`}
-                  component={ProductsPage}
-                />
-                <Route
-                  path={`${url}/falcevaya_cherepitca`}
-                  component={ProductsPage}
-                />
-                <Route
-                  path={`${url}/gidroizolyazionnye_materialy`}
-                  component={ProductsPage}
-                />
-                <Route
-                  path={`${url}/kopmplectuyshie`}
-                  component={ProductsPage}
-                />
-              </>
-            )}
-          />
+          {productsCategories.map((category, i) => {
+            return (
+              <Route
+                key={i}
+                path={category.link}
+                render={({ match: { url } }) => (
+                  <>
+                    <Route
+                      path={`${url}/`}
+                      component={ProductCategoryPage}
+                      exact
+                    />
+                    {category.subMenu.map((subCategory, j) => (
+                      <Route
+                        key={j}
+                        path={subCategory.link}
+                        component={ProductsPage}
+                      />
+                    ))}
+                  </>
+                )}
+              ></Route>
+            );
+          })}
           <Route path="/product/:productId?" component={ProductPage} />
           <Route path="/search/:q?" component={FindedProducts} />
           <Route exact path="/price" component={PricePage} />

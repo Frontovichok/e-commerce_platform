@@ -8,7 +8,7 @@ function MenuExpanded({ openState, setOpenState, menuItems }) {
       <div className={styles.menuExpandedContainer}>
         <div className={styles.menuItems}>
           {menuItems.map((item, i) => (
-            <div className={styles.menuItem}>
+            <div className={styles.menuItem} key={i}>
               <div className={styles.menuItemLinkContainer}>
                 <NavLink
                   to={item.link}
@@ -34,11 +34,10 @@ function MenuExpanded({ openState, setOpenState, menuItems }) {
                   {item.title}
                 </NavLink>
                 <div className={styles.subMenuItems}>
-                  {item.subMenu.map((item, i) => (
-                    <div className={styles.subMenuItemContainer}>
+                  {item.subMenu.map((item, k) => (
+                    <div className={styles.subMenuItemContainer} key={k}>
                       <NavLink
                         to={item.link}
-                        key={i}
                         className={styles.subMenuItem}
                         activeClassName={styles.activeLink}
                         onClick={() => {

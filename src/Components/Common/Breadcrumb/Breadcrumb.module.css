@@ -32,5 +32,6 @@
 @media (min-width: 1281px) {
   .breadcrumb {
     padding-left: 0;
+    margin-bottom: 10px;
   }
 }

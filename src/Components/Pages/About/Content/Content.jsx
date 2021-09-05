@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import styles from "./Content.module.css";
 import ControlledCarousel from "./Carousel/Carousel";
 import ContactWithMe from "../../../Common/ContactWithMe/ContactWithMe";

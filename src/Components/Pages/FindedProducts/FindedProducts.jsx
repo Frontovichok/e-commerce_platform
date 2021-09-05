@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import React from "react";
+import { useLocation, useParams } from "react-router-dom";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 import styles from "./FindedProducts.module.css";
 

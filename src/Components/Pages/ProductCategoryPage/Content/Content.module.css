@@ -1,0 +1,38 @@
+/* @import "../../../../index.css"; */
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.container {
+  width: var(--global-max-width);
+  margin: auto;
+}
+.contactWithMe {
+  margin: 30px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 3px #a9a9a9;
+}
+@media (min-width: 320px) {
+  .content {
+    flex-direction: column;
+  }
+  .container {
+    width: auto;
+  }
+  .contactWithMe {
+    margin: 30px 10px;
+  }
+}
+@media (min-width: 1281px) {
+  .content {
+    flex-direction: row;
+  }
+  .container {
+    width: var(--global-max-width);
+  }
+  .contactWithMe {
+    margin: 30px 0;
+  }
+}

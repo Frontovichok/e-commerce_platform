@@ -5,12 +5,12 @@ function ProductsGroup(props) {
   let productsGroup = props.productsGroup;
   return (
     <>
-      <p className={styles.navbarGroupItem}>{productsGroup.name}</p>
+      {/* <p className={styles.navbarGroupItem}>{productsGroup.name}</p> */}
       <div className={styles.navbarItemsGroup}>
-        {productsGroup.products.map((product, i) => (
+        {productsGroup.subMenu.map((product, i) => (
           <NavLink key={i} to={product.link} className={styles.item}>
-            {product.name}
-            <sup className={styles.productsCount}>4</sup>
+            {product.title}
+            {/* <sup className={styles.productsCount}>4</sup> */}
           </NavLink>
         ))}
       </div>

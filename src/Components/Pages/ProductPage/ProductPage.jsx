@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import GlobalContent from "../../GlobalContent/GlobalContent";
 import ImageGallery from "react-image-gallery";
@@ -90,7 +89,6 @@ export default function ProductPage() {
                   autoPlay={true}
                   lazyLoad={true}
                   showPlayButton={false}
-                  autoPlay={true}
                   thumbnailPosition="bottom"
                 />
               )}

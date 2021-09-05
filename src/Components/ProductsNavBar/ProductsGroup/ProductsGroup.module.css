@@ -1,0 +1,12 @@
+.navbarItemsGroup {
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  color: rgb(78, 78, 78);
+  padding-left: 22px;
+  margin-top: 8px;
+}
+.item:first-child {
+    margin-top: 13px;
+  }

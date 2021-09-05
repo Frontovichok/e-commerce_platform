@@ -3,9 +3,6 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
 import hamburgerMenu from "./hamburger-menu.png";
 import { NavLink } from "react-router-dom";
 import styles from "./Drawer.module.css";
@@ -126,21 +123,4 @@ export default function DrawerMenu({ menuTopItems, menuBottomItems }) {
       </React.Fragment>
     </div>
   );
-}
-
-{
-  /* <List className={styles.list}>
-  {[...[{ ...menuItem }], ...menuItem.subMenu].map((item, index) => (
-    <ListItem className={styles.listItem} button key={index}>
-      <NavLink
-        exact
-        className={styles.menuItem}
-        activeClassName={styles.activeMenuItem}
-        to={item.link}
-      >
-        {item.title}
-      </NavLink>
-    </ListItem>
-  ))}
-</List>; */
 }

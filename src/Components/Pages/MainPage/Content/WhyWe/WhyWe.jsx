@@ -1,10 +1,4 @@
 import styles from "./WhyWe.module.css";
-import hammer from "./hammer.svg";
-import rating from "./rating.svg";
-import calendar from "./calendar.svg";
-import term from "./term.svg";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-// import "react-lazy-load-image-component/src/effects/opacity.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { useState } from "react";

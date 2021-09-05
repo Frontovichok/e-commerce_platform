@@ -6,29 +6,6 @@ import styles from "./SearchProduct.module.css";
 
 const isMobile = window.innerWidth <= 900;
 
-const source = [
-  {
-    title: "title1",
-    description: "description1",
-    image:
-      "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/15569321.jpg",
-    price: 1,
-  },
-  {
-    title: "title2",
-    description: "description2",
-    image:
-      "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/11756305.jpg",
-    price: 2,
-  },
-];
-
-const initialState = {
-  loading: false,
-  results: [],
-  value: "",
-};
-
 function SearchProduct({ menuItems }) {
   let history = useHistory();
   let [openState, setOpenState] = useState(false);
@@ -38,7 +15,7 @@ function SearchProduct({ menuItems }) {
     setSearchQuery(event.target.value);
   };
   let handleKeyDownSearchQuery = (e) => {
-    if (e.keyCode == 13) {
+    if (e.keyCode === 13) {
       searchSubmit();
     }
   };
@@ -61,7 +38,7 @@ function SearchProduct({ menuItems }) {
           <button className={styles.productsButton} onClick={toggleOpenState}>
             <Icon
               className={styles.listIcon}
-              color="white"
+              // color="white"
               name={openState ? "chevron up" : "list ul"}
             />
             &nbsp; Каталог товаров
