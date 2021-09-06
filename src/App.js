@@ -24,18 +24,15 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path="/" component={MainPage} />
-          {productsCategories.map((category, i) => {
+          <Route path="/catalog" component={ProductCategoryPage} />
+          {/* {productsCategories.map((category, i) => {
             return (
               <Route
                 key={i}
                 path={category.link}
                 render={({ match: { url } }) => (
                   <>
-                    <Route
-                      path={`${url}/`}
-                      component={ProductCategoryPage}
-                      exact
-                    />
+                    <Route path={`${url}/`} component={ProductCategoryPage} />
                     {category.subMenu.map((subCategory, j) => (
                       <Route
                         key={j}
@@ -47,7 +44,7 @@ function App() {
                 )}
               ></Route>
             );
-          })}
+          })} */}
           <Route path="/product/:productId?" component={ProductPage} />
           <Route path="/search/:q?" component={FindedProducts} />
           <Route exact path="/price" component={PricePage} />

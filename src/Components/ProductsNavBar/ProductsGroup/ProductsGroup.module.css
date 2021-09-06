@@ -3,10 +3,13 @@
   flex-direction: column;
 }
 .item {
-  color: rgb(78, 78, 78);
-  padding-left: 22px;
+  color: rgb(112 112 112);
+  padding-left: 30px;
   margin-top: 8px;
 }
+.item.active {
+  color: var(--global-primary-color);
+}
 .item:first-child {
-    margin-top: 13px;
-  }
+  margin-top: 13px;
+}

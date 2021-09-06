@@ -6,12 +6,43 @@
   min-width: 280px;
   margin-right: 50px;
   margin-top: 10px;
+  box-shadow: 0 1px 6px #c4c4c4;
 }
 :global(.pricePageProductsNavbar) .container {
   position: relative;
   margin-right: 0;
   margin-top: 0;
   top: 0;
+}
+.navbar:first-child {
+  padding-top: 15px;
+}
+.navbar:last-child {
+  padding-bottom: 15px;
+}
+.navbar {
+  padding-bottom: 20px;
+}
+.categoryLinkContainer {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.expandLinks i.categoryIcon {
+  font-size: 1rem;
+}
+.categoryLink {
+  color: rgb(29, 29, 29);
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.categoryLink:hover {
+  text-decoration: none;
+  color: var(--global-primary-color);
+}
+.categoryLink.active {
+  color: var(--global-primary-color);
 }
 .navbarItems {
   display: flex;
@@ -20,21 +51,21 @@
   background-color: white;
   padding-bottom: 0;
   border-radius: 5px;
-  box-shadow: 0 1px 6px #c4c4c4;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   margin-top: 0;
 }
 .navbarItemsGroup {
   display: flex;
   flex-direction: column;
 }
-.categoryLinContainer {
+.subCategoryLinkContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .expandLinks {
   padding: 5px;
+  padding-top: 3px;
   display: flex;
 }
 .expandLinks.hidden {
@@ -54,7 +85,7 @@
 }
 .item {
   padding: 14px;
-  border-bottom: 1px solid #e1e1e1;
+  /* border-bottom: 1px solid #e1e1e1; */
   transition: 0.1s all linear;
 }
 .link {
@@ -65,12 +96,11 @@
   transition: 0.1s all linear;
 }
 .link.active {
-  border-bottom: 1px solid #ff8843;
-  color: #ff8843;
+  color: var(--global-primary-color);
 }
 .link:hover {
   text-decoration: none;
-  color: #ff8843;
+  color: var(--global-primary-color);
 }
 
 .navbarItemsGroup .item {

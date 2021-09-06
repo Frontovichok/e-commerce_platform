@@ -11,7 +11,12 @@ export default function Breadcrumb({ path }) {
               {item.text}
             </NavLink>
           ) : (
-            <p className={styles.breadcrumbText}>{item.text}</p>
+            <p
+              className={`${styles.breadcrumbText}
+                ${item.text === "/" && styles.breadcrumbSlash}`}
+            >
+              {item.text}
+            </p>
           )}
         </div>
       ))}

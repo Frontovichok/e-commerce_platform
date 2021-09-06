@@ -16,12 +16,15 @@
 }
 .breadcrumbText {
   margin: 0;
-  padding: 0 5px;
+  padding: 0;
   margin-bottom: 10px;
   white-space: nowrap;
 }
+.breadcrumbText.breadcrumbSlash {
+  padding: 0 5px;
+}
 .breadcrumbLink {
-  color: #ff8200;
+  color: var(--global-primary-color);
   white-space: nowrap;
 }
 @media (min-width: 320px) {

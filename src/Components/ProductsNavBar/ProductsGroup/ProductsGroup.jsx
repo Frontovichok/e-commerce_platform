@@ -8,7 +8,12 @@ function ProductsGroup(props) {
       {/* <p className={styles.navbarGroupItem}>{productsGroup.name}</p> */}
       <div className={styles.navbarItemsGroup}>
         {productsGroup.subMenu.map((product, i) => (
-          <NavLink key={i} to={product.link} className={styles.item}>
+          <NavLink
+            key={i}
+            to={product.link}
+            className={styles.item}
+            activeClassName={styles.active}
+          >
             {product.title}
             {/* <sup className={styles.productsCount}>4</sup> */}
           </NavLink>
