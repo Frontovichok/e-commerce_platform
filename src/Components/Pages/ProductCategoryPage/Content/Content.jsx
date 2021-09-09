@@ -6,24 +6,25 @@ import { useLocation } from "react-router-dom";
 import Advaces from "./Advices/Advaces";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
 import productsCategories from "../../../../data/productsCategories.json";
 import ProductsPage from "../../ProductsPage/ProductsPage";
 
 function Content() {
   const location = useLocation();
+  let { category, subCategory } = useParams();
   const [breadcrumbData, setBreadcrumbData] = useState([]);
   let curentCategoryPath = location.pathname.split("/")[2];
   let currentSubCategory = location.pathname.split("/")[3];
-  console.log("curentCategoryPath: ", curentCategoryPath);
-  console.log("currentSubCategory: ", currentSubCategory);
   let curentCategoryData = productsCategories.filter(
     (category) => category.link === `/catalog/${curentCategoryPath}`
   )[0];
-  console.log(curentCategoryData);
-  console.log("-------currentSubCategory: ", currentSubCategory);
   let currentCategorySubCategories = curentCategoryData.subMenu;
   let breadcrumbCurentPage = curentCategoryData.title;
+
+  console.log("--------category: ", category);
+  console.log("--------subCategory: ", subCategory);
 
   useEffect(() => {
     // setBreadcrumbData();
@@ -34,7 +35,7 @@ function Content() {
         { text: curentCategoryData.title },
       ]);
     }
-  }, []);
+  }, [location]);
 
   return (
     <div className={styles.container}>

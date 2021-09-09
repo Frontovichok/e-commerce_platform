@@ -21,14 +21,15 @@ function ProductsNavBar(props) {
         <div className={styles.container}>
           {productsCategories.map((products, i) => (
             <div className={styles.navbar}>
-              <div className={styles.categoryLinkContainer}>
-                <div
-                  className={styles.expandLinks}
-                  onClick={() => {
-                    let setShowedCategoryValue = i == showedCategory ? NaN : i;
-                    setShowedCategory(setShowedCategoryValue);
-                  }}
-                >
+              <div
+                className={styles.categoryLinkContainer}
+                onClick={() => {
+                  let setShowedCategoryValue = i == showedCategory ? NaN : i;
+                  setShowedCategory(setShowedCategoryValue);
+                  setShowedSubCategory(NaN);
+                }}
+              >
+                <div className={styles.expandLinks}>
                   <Icon
                     className={styles.categoryIcon}
                     name={i == showedCategory ? "angle up" : "angle down"}
@@ -47,18 +48,20 @@ function ProductsNavBar(props) {
                 <ul className={styles.navbarItems}>
                   {products.subMenu.map((product, j) => (
                     <div className={styles.item} key={j}>
-                      <div className={styles.subCategoryLinkContainer}>
+                      <div
+                        className={styles.subCategoryLinkContainer}
+                        onClick={() => {
+                          let setShowedSubCategoryValue =
+                            j == showedSubCategory ? NaN : j;
+                          setShowedSubCategory(setShowedSubCategoryValue);
+                        }}
+                      >
                         <div
                           className={
                             styles.expandLinks +
                             " " +
                             (product.subMenu ? styles.show : styles.hidden)
                           }
-                          onClick={() => {
-                            let setShowedSubCategoryValue =
-                              j == showedSubCategory ? NaN : j;
-                            setShowedSubCategory(setShowedSubCategoryValue);
-                          }}
                         >
                           <Icon
                             name={j == showedSubCategory ? "minus" : "plus"}

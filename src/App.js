@@ -24,7 +24,10 @@ function App() {
       <ScrollToTop>
         <Switch>
           <Route exact path="/" component={MainPage} />
-          <Route path="/catalog" component={ProductCategoryPage} />
+          <Route
+            path="/catalog/:categoryName/:subCategoryName?/:subSubCategoryName?"
+            component={ProductCategoryPage}
+          />
           {/* {productsCategories.map((category, i) => {
             return (
               <Route
