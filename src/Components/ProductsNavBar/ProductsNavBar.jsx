@@ -1,18 +1,46 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
 import ModalNavbar from "./ModalNavbar/ModalNavbar";
 import ProductsGroup from "./ProductsGroup/ProductsGroup";
 import productsCategories from "../../data/productsCategories.json";
 import styles from "./ProductsNavBar.module.css";
+import { useEffect } from "react";
 
 const isMobile = window.innerWidth <= 900;
 
-function ProductsNavBar(props) {
-  // let products = props.products;
+function ProductsNavBar() {
+  let locationPath = useLocation().pathname;
   let products2 = productsCategories[0].subMenu;
   let [showedCategory, setShowedCategory] = useState(NaN);
   let [showedSubCategory, setShowedSubCategory] = useState(NaN);
+  useEffect(() => {
+    for (let i = 0; i < productsCategories.length; i++) {
+      let products = productsCategories[i];
+      let showedCategoryValue =
+        products.link.indexOf(locationPath) === 0 ||
+        locationPath.indexOf(products.link) === 0
+          ? i
+          : NaN;
+      if (Number.isNaN(showedCategoryValue) === false) {
+        setShowedCategory(showedCategoryValue);
+        setShowedSubCategory(NaN);
+        for (let j = 0; j < products.subMenu.length; j++) {
+          let product = products.subMenu[j];
+          let setShowedSubCategoryValue =
+            product.link.indexOf(locationPath) === 0 ||
+            locationPath.indexOf(product.link) === 0
+              ? j
+              : NaN;
+          if (Number.isNaN(setShowedSubCategoryValue) === false) {
+            setShowedSubCategory(setShowedSubCategoryValue);
+            break;
+          }
+        }
+        break;
+      }
+    }
+  }, [locationPath]);
   return (
     <div>
       {isMobile ? (
@@ -24,8 +52,8 @@ function ProductsNavBar(props) {
               <div
                 className={styles.categoryLinkContainer}
                 onClick={() => {
-                  let setShowedCategoryValue = i == showedCategory ? NaN : i;
-                  setShowedCategory(setShowedCategoryValue);
+                  let showedCategoryValue = i == showedCategory ? NaN : i;
+                  setShowedCategory(showedCategoryValue);
                   setShowedSubCategory(NaN);
                 }}
               >

@@ -1,42 +1,61 @@
 import { useEffect, useState } from "react";
 import { Loader } from "semantic-ui-react";
+import PaginationControl from "../../../Common/Pagination/PaginationControl";
 import ProductCard from "../ProductCard/ProductCard";
 import styles from "./Products.module.css";
 
-function Products({ pageData, loadingState }) {
-  // console.log("pageData: ", pageData);
-  // let [products, setProducts] = useState([]);
-  // useEffect(() => {
+function sliceProductsByPage(products, productsPerPage, countPages) {
+  let slicedProducts = [];
+
+  for (let i = 0; i <= countPages; i++) {
+    let leftEnd = i * productsPerPage;
+    let rightEnd = (i + 1) * productsPerPage;
+    slicedProducts.push(products.slice(leftEnd, rightEnd));
+  }
+  return slicedProducts;
+}
+
+function Products({ pageData }) {
+  let [activePage, setActivePage] = useState(1);
   let productsArr = [];
+  let loadingState = false;
   if (pageData.productsData) {
-    // setProducts(...pageData.productsData);
     productsArr.push(...pageData.productsData);
+    loadingState = true;
   } else if (pageData.subMenu) {
     pageData.subMenu.map((subMenu) => {
-      // console.log("subMenu title: ", subMenu.title);
-      // console.log("subMenu.productsData: ", subMenu.productsData);
-      console.log("subMenu.productsData.length: ", subMenu.productsData.length);
       productsArr.push(...subMenu.productsData);
-      // console.log("productsArr: ", productsArr);
     });
+    loadingState = true;
   }
-  // setProducts(...[productsArr]);
-  // console.log("products length mf: ", products.length);
-  // }, [pageData]);
 
-  // console.log("productsArr: ", productsArr);
-  // console.log("products length: ", products.length);
+  let productsPerPage = 15;
+  let countPages = Math.ceil(productsArr.length / productsPerPage);
+  let slicedProducts = sliceProductsByPage(
+    productsArr,
+    productsPerPage,
+    countPages
+  );
 
   return (
     <section className={styles.products}>
-      {/* <h2 className="sectionTitle">{pageData.title}</h2> */}
-      <div className={styles.productsContainer}>
-        {productsArr && loadingState ? (
-          productsArr.map((product, i) => <ProductCard key={i} {...product} />)
-        ) : (
-          <Loader active inline />
-        )}
-      </div>
+      {productsArr && loadingState ? (
+        <>
+          <div className={styles.productsContainer}>
+            {slicedProducts[activePage - 1].map((product, i) => (
+              <ProductCard key={i} {...product} />
+            ))}
+          </div>
+          <PaginationControl
+            size="large"
+            page={activePage}
+            count={countPages}
+            handleChange={setActivePage}
+          />
+        </>
+      ) : (
+        <Loader active inline />
+      )}
     </section>
   );
 }
