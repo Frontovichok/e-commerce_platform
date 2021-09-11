@@ -1,27 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import Products from "./Products/Products";
-import productsAPI from "../../../api/api";
 import styles from "./ProductsPage.module.css";
 import { connect } from "react-redux";
 import { getProducts } from "../../../Redux/actions/productsActions";
 
 function ProductsPage(props) {
-  // const pathName = useLocation().pathname;
-  // let [subCategory, setSubCategory] = useState({});
-  // let [subSubCategory, setSubSubCategory] = useState({});
-  // let { categoryName, subCategoryName, subSubCategoryName } = useParams();
-  // let products = props.products[`/${categoryName}`];
-
-  // fetch(`http://localhost:3000/categoriesData/${categoryName}.json`)
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  // console.log("products: ", products);
-
-  // });
-  // const products22 = await productsAPI.getProducts(`${categoryName}.json`);
-  // console.log("products22: ", products22);
-
   return (
     <>
       <div className={styles.productsContainer}>
@@ -30,8 +14,6 @@ function ProductsPage(props) {
     </>
   );
 }
-
-// export default ProductsPage;
 
 function ProductsPageContainer(props) {
   const setBreadcrumbData = props.setBreadcrumbData;
