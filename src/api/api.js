@@ -1,20 +1,20 @@
-import * as axios from 'axios'
+import * as axios from "axios";
 
 const instance = axios.create({
-	baseURL: 'http://emphasoft-test-assignment.herokuapp.com/',
-})
+  baseURL: "http://localhost:3000/categoriesData/",
+});
 
-export const usersAPI = {
-	getUsers: async (accessToken) => {
-		try {
-			const response = await instance.get('api/v1/users/', {
-				headers: {
-					Authorization: `Token ${accessToken}`,
-				},
-			})
-			return response
-		} catch (err) {
-			return { err, isError: true }
-		}
-	},
-}
+const productsAPI = {
+  getProducts: async (productsCategory) => {
+    try {
+      const response = await instance.get(productsCategory, {
+        headers: {},
+      });
+      return response;
+    } catch (err) {
+      return { err, isError: true };
+    }
+  },
+};
+
+export default productsAPI;

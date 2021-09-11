@@ -52,7 +52,7 @@ function ProductsNavBar() {
               <div
                 className={styles.categoryLinkContainer}
                 onClick={() => {
-                  let showedCategoryValue = i == showedCategory ? NaN : i;
+                  let showedCategoryValue = i === showedCategory ? NaN : i;
                   setShowedCategory(showedCategoryValue);
                   setShowedSubCategory(NaN);
                 }}
@@ -60,7 +60,7 @@ function ProductsNavBar() {
                 <div className={styles.expandLinks}>
                   <Icon
                     className={styles.categoryIcon}
-                    name={i == showedCategory ? "angle up" : "angle down"}
+                    name={i === showedCategory ? "angle up" : "angle down"}
                   />
                 </div>
                 <NavLink
@@ -80,7 +80,7 @@ function ProductsNavBar() {
                         className={styles.subCategoryLinkContainer}
                         onClick={() => {
                           let setShowedSubCategoryValue =
-                            j == showedSubCategory ? NaN : j;
+                            j === showedSubCategory ? NaN : j;
                           setShowedSubCategory(setShowedSubCategoryValue);
                         }}
                       >
@@ -92,7 +92,7 @@ function ProductsNavBar() {
                           }
                         >
                           <Icon
-                            name={j == showedSubCategory ? "minus" : "plus"}
+                            name={j === showedSubCategory ? "minus" : "plus"}
                           />
                         </div>
                         <NavLink
@@ -104,7 +104,7 @@ function ProductsNavBar() {
                           {product.title}
                         </NavLink>
                       </div>
-                      {product.subMenu && j == showedSubCategory && (
+                      {product.subMenu && j === showedSubCategory && (
                         <ProductsGroup key={j} productsGroup={product} />
                       )}
                     </div>

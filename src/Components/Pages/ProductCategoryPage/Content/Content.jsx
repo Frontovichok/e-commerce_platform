@@ -27,9 +27,6 @@ function Content() {
         { text: curentCategoryData.title },
       ]);
     }
-    // console.log("--------categoryName_: ", categoryName);
-    // console.log("--------subCategoryName_: ", subCategoryName);
-    // console.log("--------subSubCategoryName_: ", subSubCategoryName);
   }, [categoryName, subCategoryName, subSubCategoryName]);
 
   return (

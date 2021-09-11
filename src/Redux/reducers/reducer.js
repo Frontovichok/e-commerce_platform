@@ -10,12 +10,15 @@ const initialState = {
   loadingFailed: false,
 };
 
-function usersReducer(state = initialState, action) {
+function productsReducer(state = initialState, action) {
   switch (action.type) {
     case SET_PRODUCTS:
+      const productsCategory = {};
+      productsCategory[action.payload.link] = action.payload;
+      // console.log(state.products);
       return {
         ...state,
-        products: { ...state.products, ...action.payload },
+        products: { ...{ ...state.products }, ...productsCategory },
         isLoading: false,
         loadingFailed: false,
       };
@@ -28,4 +31,4 @@ function usersReducer(state = initialState, action) {
   }
 }
 
-export default usersReducer;
+export default productsReducer;
