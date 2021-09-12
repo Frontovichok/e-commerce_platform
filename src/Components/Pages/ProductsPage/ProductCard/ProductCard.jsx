@@ -3,9 +3,19 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 import { NavLink } from "react-router-dom";
 
-function ProductCard(product) {
-  // let product = JSON.parse(product2);
-  // console.log(JSON.parse(product));
+export default function ProductCard({ product, categories }) {
+  let queryParams = `${
+    categories.categoryName ? "?category=" + categories.categoryName : ""
+  }${
+    categories.subCategoryName
+      ? "&subCategory=" + categories.subCategoryName
+      : ""
+  }${
+    categories.subSubCategoryName
+      ? "&subSubCategory=" + categories.subSubCategoryName
+      : ""
+  }`;
+
   return (
     <div className={styles.card}>
       {/* <img src={JSON.parse(product.linksToImages)[0]} alt="Product" /> */}
@@ -47,11 +57,12 @@ function ProductCard(product) {
           </>
         </div>
       </div>
-      <NavLink to={`/product/${product.article}`} className={styles.button}>
+      <NavLink
+        to={`/product/${product.article}${queryParams}`}
+        className={styles.button}
+      >
         Подробнее
       </NavLink>
     </div>
   );
 }
-
-export default ProductCard;

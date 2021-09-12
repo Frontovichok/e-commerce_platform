@@ -2,6 +2,7 @@ import {
   PRODUCTS_LOADING,
   PRODUCTS_LOADING_FAILED,
   SET_PRODUCTS,
+  SET_CATEGORIES,
 } from "../types";
 import productsAPI from "../../api/api";
 

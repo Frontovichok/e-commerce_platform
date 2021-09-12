@@ -1,11 +1,16 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { useLocation, useParams } from "react-router-dom";
 import GlobalContent from "../../GlobalContent/GlobalContent";
 import ImageGallery from "react-image-gallery";
 import styles from "./ProductPage.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 import CarouselProductImages from "./CarouselProductImages/CarouselProductImages";
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 const images = [
   {
@@ -52,91 +57,212 @@ const product = {
 
 const isMobile = window.innerWidth <= 1500;
 
-export default function ProductPage() {
+function getProductData(products, category, article) {
+  console.log(article);
+  let productData = {};
+  let breadcrumbData = [];
+  for (let i = 0; i < products[`/${category}`].subMenu.length; i++) {
+    let subCat = products[`/${category}`].subMenu[i];
+    if (subCat.subMenu) {
+      for (let j = 0; j < subCat.subMenu.length; j++) {
+        let subSubCat = subCat.subMenu[j];
+        for (let k = 0; k < subSubCat.productsData.length; k++) {
+          let product = subSubCat.productsData[k];
+          if (product.article === article) {
+            breadcrumbData = [
+              { link: "/", text: "Главная" },
+              { text: "/" },
+              {
+                link: "/catalog" + products[`/${category}`].link,
+                text: products[`/${category}`].title,
+              },
+              { text: "/" },
+              { link: `/catalog${subCat.link}`, text: subCat.title },
+              { text: "/" },
+              { link: `/catalog${subSubCat.link}`, text: subSubCat.title },
+            ];
+            productData = { ...product };
+            return [productData, breadcrumbData];
+          }
+        }
+      }
+    } else {
+      for (let k = 0; k < subCat.productsData.length; k++) {
+        let product = subCat.productsData[k];
+        if (product.article === article) {
+          breadcrumbData = [
+            { link: "/", text: "Главная" },
+            { text: "/" },
+            {
+              link: "/catalog" + products[`/${category}`].link,
+              text: products[`/${category}`].title,
+            },
+            { text: "/" },
+            { link: `/catalog${subCat.link}`, text: subCat.title },
+          ];
+          productData = { ...product };
+          return [productData, breadcrumbData];
+        }
+      }
+    }
+  }
+  return [productData, breadcrumbData];
+}
+
+function ProductPage({ products, categories, isAllCategoriesLoaded }) {
+  // const [breadcrumbData, setBreadcrumbData] = useState([]);
+  let query = useQuery();
+  let category = query.get("category");
+  let subCategory = query.get("subCategory");
+  let subSubCategory = query.get("subSubCategory");
   const location = useLocation();
   let currentPagePath = location.pathname.split("/")[2];
+  let { article } = useParams();
+  let breadcrumbData = [];
+
+  let productData = {};
+
+  console.log("category: ", category);
+  console.log("products: ", products);
+  console.log("products[category]: ", products[`/${category}`]);
+
+  if (category && products[`/${category}`]) {
+    [productData, breadcrumbData] = getProductData(products, category, article);
+    console.log("6666", productData);
+    // categoryLoop: for (
+    //   let i = 0;
+    //   i < products[`/${category}`].subMenu.length;
+    //   i++
+    // ) {
+    //   let subCat = products[`/${category}`].subMenu[i];
+    //   for (let j = 0; j < subCat.subMenu.length; j++) {
+    //     let subSubCat = subCat.subMenu[j];
+    //     for (let k = 0; k < subSubCat.productsData.length; k++) {
+    //       let product = subSubCat.productsData[k];
+    //       if (product.article === article) {
+    //         console.log("------------");
+    //         breadcrumbData = [
+    //           { link: "/", text: "Главная" },
+    //           { text: "/" },
+    //           {
+    //             link: "/catalog" + products[`/${category}`].link,
+    //             text: products[`/${category}`].title,
+    //           },
+    //           { text: "/" },
+    //           { link: `/catalog${subCat.link}`, text: subCat.title },
+    //           { text: "/" },
+    //           { link: `/catalog${subSubCat.link}`, text: subSubCat.title },
+    //         ];
+    //         productData = { ...product };
+    //         i = products[`/${category}`].subMenu.length;
+    //         j = subCat.subMenu.length;
+    //         k = subSubCat.productsData.length;
+    //         // break subSubCategoryLoop;
+    //       }
+    //       console.log("-");
+    //     }
+    //   }
+    // }
+    productData.images = [];
+    JSON.parse(productData.linksToImages).map((image) => {
+      console.log("image:", image);
+      productData.images.push({ original: image, thumbnail: image });
+    });
+  }
+
+  if (!isAllCategoriesLoaded) {
+    console.log("!isAllCategoriesLoaded: ");
+  }
   return (
     <>
       <GlobalContent>
         <div className={styles.container}>
-          <Breadcrumb
-            path={[
-              { link: "/", text: "Главная" },
-              { text: "/" },
-              { link: "/krovlya", text: "Кровельные материалы" },
-              { text: "/" },
-              {
-                link: "/krovlya/metallocherepitsa",
-                text: "Металлочерепица",
-              },
-            ]}
-          />
-          <div className={styles.tags}>
-            <div className={styles.tag}>Скидка</div>
-            <div className={styles.tag}>Новая модель</div>
-          </div>
-          <div className={styles.name}>
-            {currentPagePath} Профнастил С8А Grand Line 0,5 Atlas с пленкой RAL
-            8017 шоколад
-          </div>
-          <div className={styles.productBlock}>
-            <div className={styles.images}>
-              {isMobile ? (
-                <CarouselProductImages images={images} />
-              ) : (
-                <ImageGallery
-                  items={images}
-                  autoPlay={true}
-                  lazyLoad={true}
-                  showPlayButton={false}
-                  thumbnailPosition="bottom"
-                />
-              )}
-            </div>
-            <div className={styles.info}>
-              <div className={styles.priceBlock}>
-                <div className={styles.priceContainer}>
-                  {product.newPrice ? (
-                    <div className={styles.priceSale}>
-                      <p className={styles.newPrice}>{product.newPrice} ₽/м²</p>
-                      <p className={styles.oldPrice}>{product.price} ₽/м²</p>
-                      {/* <p className={styles.priceUnit}>₽/м²</p> */}
-                    </div>
+          <Breadcrumb path={breadcrumbData} />
+          {productData.name ? (
+            <>
+              {/* <div className={styles.tags}>
+                <div className={styles.tag}>Скидка</div>
+                <div className={styles.tag}>Новая модель</div>
+              </div> */}
+              <div className={styles.head}>
+                <div className={styles.name}>
+                  <p>{productData.name}</p>
+                </div>
+                <div className={styles.articleContainer}>
+                  <p>Артикул:</p>
+                  <p className={styles.article}>{productData.article}</p>
+                </div>
+              </div>
+
+              <div className={styles.productBlock}>
+                <div className={styles.images}>
+                  {isMobile ? (
+                    <CarouselProductImages images={productData.images} />
                   ) : (
-                    <>
-                      <p className={styles.price}>{product.price}</p>
-                      <p className={styles.priceUnit}>₽/м²</p>
-                    </>
+                    <ImageGallery
+                      items={productData.images}
+                      autoPlay={false}
+                      lazyLoad={true}
+                      showPlayButton={false}
+                      thumbnailPosition="bottom"
+                    />
                   )}
                 </div>
-                <button className={styles.clarifуPriceButton}>
-                  Уточнить актуальную цену
-                </button>
-              </div>
-              <div className={styles.description}>
-                <h3 className={styles.propertiesTitle}>Описание</h3>
-                <p>
-                  Ни одна из частей этого документа не может быть
-                  воспроизведена, опубликована, сохранена в электронной базе
-                  данных или передана в любой форме или любыми средствами,
-                  такими как электронные, механические, записывающие или иначе,
-                  для любой цели без предварительного письменного разрешения
-                  Русика.
-                </p>
-              </div>
-              <div className={styles.properties}>
-                <h3 className={styles.propertiesTitle}>Характеристики</h3>
-                {properties.map((property, i) => (
-                  <div key={i} className={styles.propery}>
-                    <div className={styles.propertyName}>{property.name}</div>
-                    <div className={styles.propertyValue}>{property.value}</div>
+                <div className={styles.info}>
+                  <div className={styles.priceBlock}>
+                    <div className={styles.priceContainer}>
+                      <p className={styles.price}>{productData.price}</p>
+                      {/* {product.newPrice ? (
+                        <div className={styles.priceSale}>
+                          <p className={styles.newPrice}>
+                            {product.newPrice} ₽/м²
+                          </p>
+                          <p className={styles.oldPrice}>
+                            {product.price} ₽/м²
+                          </p>
+                        </div>
+                      ) : (
+                        <>
+                          <p className={styles.price}>{product.price}</p>
+                          <p className={styles.priceUnit}>₽/м²</p>
+                        </>
+                      )} */}
+                    </div>
+                    <button className={styles.clarifуPriceButton}>
+                      Уточнить актуальную цену
+                    </button>
                   </div>
-                ))}
+                  <div className={styles.description}>
+                    <h3 className={styles.propertiesTitle}>Описание</h3>
+                    <p>{productData.description}</p>
+                  </div>
+                  <div className={styles.properties}>
+                    <h3 className={styles.propertiesTitle}>Характеристики</h3>
+                    {properties.map((property, i) => (
+                      <div key={i} className={styles.propery}>
+                        <div className={styles.propertyName}>
+                          {property.name}
+                        </div>
+                        <div className={styles.propertyValue}>
+                          {property.value}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </>
+          ) : (
+            <div>Not found</div>
+          )}
         </div>
       </GlobalContent>
     </>
   );
 }
+const mapStateToProps = (state) => ({
+  products: state.products.products,
+  categories: state.products.categories,
+  isAllCategoriesLoaded: state.products.isAllCategoriesLoaded,
+});
+export default connect(mapStateToProps, {})(ProductPage);

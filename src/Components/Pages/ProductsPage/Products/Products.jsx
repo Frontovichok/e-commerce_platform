@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { useLocation } from "react-router";
 import { Loader } from "semantic-ui-react";
 import PaginationControl from "../../../Common/Pagination/PaginationControl";
 import ProductCard from "../ProductCard/ProductCard";
@@ -15,18 +16,24 @@ function sliceProductsByPage(products, productsPerPage, countPages) {
   return slicedProducts;
 }
 
-function Products({ pageData }) {
-  let [activePage, setActivePage] = useState(1);
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+function Products({ pageData, categories }) {
+  let query = useQuery();
+  let pageNow = +query.get("page") || 1;
   let productsArr = [];
-  let loadingState = false;
+  let isLoaded = false;
   if (pageData.productsData) {
     productsArr.push(...pageData.productsData);
-    loadingState = true;
+    isLoaded = true;
   } else if (pageData.subMenu) {
+    console.log(pageData.subMenu);
     pageData.subMenu.map((subMenu) => {
       productsArr.push(...subMenu.productsData);
     });
-    loadingState = true;
+    isLoaded = true;
   }
 
   let productsPerPage = 15;
@@ -39,19 +46,14 @@ function Products({ pageData }) {
 
   return (
     <section className={styles.products}>
-      {productsArr && loadingState ? (
+      {productsArr && isLoaded ? (
         <>
           <div className={styles.productsContainer}>
-            {slicedProducts[activePage - 1].map((product, i) => (
-              <ProductCard key={i} {...product} />
+            {slicedProducts[pageNow - 1].map((product, i) => (
+              <ProductCard key={i} product={product} categories={categories} />
             ))}
           </div>
-          <PaginationControl
-            size="large"
-            page={activePage}
-            count={countPages}
-            handleChange={setActivePage}
-          />
+          <PaginationControl size="large" page={pageNow} count={countPages} />
         </>
       ) : (
         <Loader active inline />

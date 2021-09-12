@@ -48,7 +48,7 @@ function App() {
               ></Route>
             );
           })} */}
-          <Route path="/product/:productId?" component={ProductPage} />
+          <Route path="/product/:article?" component={ProductPage} />
           <Route path="/search/:q?" component={FindedProducts} />
           <Route exact path="/price" component={PricePage} />
           <Route exact path="/about" component={About} />

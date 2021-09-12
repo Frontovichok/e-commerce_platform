@@ -1,11 +1,14 @@
 import {
   SET_PRODUCTS,
+  SET_CATEGORIES,
   PRODUCTS_LOADING,
   PRODUCTS_LOADING_FAILED,
 } from "../types";
 
 const initialState = {
   products: {},
+  categories: {},
+  isAllCategoriesLoaded: false,
   isLoading: false,
   loadingFailed: false,
 };
@@ -21,6 +24,12 @@ function productsReducer(state = initialState, action) {
         products: { ...{ ...state.products }, ...productsCategory },
         isLoading: false,
         loadingFailed: false,
+      };
+    case SET_CATEGORIES:
+      return {
+        ...state,
+        categories: action.payload,
+        isAllCategoriesLoaded: true,
       };
     case PRODUCTS_LOADING:
       return { ...state, isLoading: true };

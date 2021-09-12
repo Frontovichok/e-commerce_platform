@@ -23,6 +23,24 @@
   width: 55%;
   margin-right: 20px;
 }
+.images
+  :global(.image-gallery-content .image-gallery-slide .image-gallery-image) {
+  max-height: 500px;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.articleContainer {
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+}
+.article {
+  margin-left: 10px;
+  font-weight: bold;
+}
 .info {
   display: flex;
   width: 45%;
@@ -191,7 +209,7 @@
 }
 @media (min-width: 1281px) {
   .container {
-    padding-left: 10px;
+    /* padding-left: 10px; */
     width: var(--global-max-width);
     margin: auto;
     margin-bottom: 2rem;

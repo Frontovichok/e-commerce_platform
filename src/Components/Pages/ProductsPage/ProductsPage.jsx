@@ -9,7 +9,7 @@ function ProductsPage(props) {
   return (
     <>
       <div className={styles.productsContainer}>
-        <Products pageData={props.productsData} />
+        <Products pageData={props.productsData} categories={props.categories} />
       </div>
     </>
   );
@@ -21,6 +21,7 @@ function ProductsPageContainer(props) {
   let [subCategory, setSubCategory] = useState({});
   let [subSubCategory, setSubSubCategory] = useState({});
   let { categoryName, subCategoryName, subSubCategoryName } = useParams();
+
   let products = props.products[`/${categoryName}`];
   useEffect(async () => {
     if (
@@ -76,6 +77,7 @@ function ProductsPageContainer(props) {
         productsData={
           Object.keys(subSubCategory).length > 0 ? subSubCategory : subCategory
         }
+        categories={{ categoryName, subCategoryName, subSubCategoryName }}
       />
     );
   } else {
