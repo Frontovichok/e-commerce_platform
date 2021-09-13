@@ -22,18 +22,15 @@ function ProductsPageContainer(props) {
   let [subSubCategory, setSubSubCategory] = useState({});
   let { categoryName, subCategoryName, subSubCategoryName } = useParams();
 
-  let products = props.products[`/${categoryName}`];
+  let products = props.products[categoryName];
   useEffect(async () => {
     if (
-      props.products[`/${categoryName}`] === undefined &&
+      props.products[categoryName] === undefined &&
       props.productsIsLoading === false
     ) {
       props.getProducts(`${categoryName}.json`);
     }
-    if (
-      props.productsIsLoading === false &&
-      props.products[`/${categoryName}`]
-    ) {
+    if (props.productsIsLoading === false && props.products[categoryName]) {
       products.subMenu.map((subCategoryItem) => {
         if (subCategoryItem.link.split("/")[2] === subCategoryName) {
           setSubCategory(subCategoryItem);
@@ -70,7 +67,7 @@ function ProductsPageContainer(props) {
     }
   }, [pathName, props.productsIsLoading, subCategory, subCategoryName]);
 
-  if (props.productsIsLoading === false && props.products[`/${categoryName}`]) {
+  if (props.productsIsLoading === false && props.products[categoryName]) {
     return (
       <ProductsPage
         {...props}

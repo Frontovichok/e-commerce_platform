@@ -8,7 +8,7 @@ import {
 
 const initialState = {
   products: {},
-  categories: [],
+  categories: {},
   isAllCategoriesLoaded: false,
   isLoading: false,
   loadingFailed: false,
@@ -27,7 +27,7 @@ function productsReducer(state = initialState, action) {
       });
       return {
         ...state,
-        products: { ...{ ...state.products }, ...action.payload },
+        products: { ...{ ...state.products, ...action.payload } },
         isLoading: false,
         loadingFailed: false,
       };
@@ -37,14 +37,14 @@ function productsReducer(state = initialState, action) {
       // console.log(state.products);
       return {
         ...state,
-        products: { ...{ ...state.products }, ...action.payload },
+        products: { ...{ ...state.products, ...action.payload } },
         isLoading: false,
         loadingFailed: false,
       };
     case SET_CATEGORIES:
       return {
         ...state,
-        categories: action.payload,
+        categories: { ...{ ...state.categories, ...action.payload } },
         isAllCategoriesLoaded: true,
       };
     case PRODUCTS_LOADING:

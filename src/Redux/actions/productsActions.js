@@ -26,7 +26,7 @@ export const getProducts = (categoryPath) => {
     dispatch(productsIsLoading());
     const response = await productsAPI.getProducts(categoryPath);
     if (!response.isError) {
-      categoriesData[response.data.link] = response.data;
+      categoriesData[response.data.link.split("/")[1]] = response.data;
       dispatch(setProducts(categoriesData));
     } else {
       dispatch(productsLoadingFailed());
@@ -35,9 +35,9 @@ export const getProducts = (categoryPath) => {
 };
 
 const getCategories = () => {
-  let allCategories = [];
+  let allCategories = {};
   productsCategories.map((category) => {
-    allCategories.push(category.link.split("/")[2]);
+    allCategories[category.link.split("/")[2]] = true;
   });
   // dispatch(setCategories(categoriesNames));
   return allCategories;
@@ -47,8 +47,7 @@ export const getAllProducts = (productsInState, categories) => {
   let allCategories = getCategories();
   let missedCategories = [];
   let missedCategoriesData = {};
-  allCategories.map((category) => {
-    console.log("1");
+  Object.keys(allCategories).map((category) => {
     if (productsInState[`/${category}`] === undefined) {
       missedCategories.push(category);
       console.log("2");
