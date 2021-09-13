@@ -1,5 +1,6 @@
 import {
   SET_PRODUCTS,
+  SET_MISSED_PRODUCTS,
   SET_CATEGORIES,
   PRODUCTS_LOADING,
   PRODUCTS_LOADING_FAILED,
@@ -7,7 +8,7 @@ import {
 
 const initialState = {
   products: {},
-  categories: {},
+  categories: [],
   isAllCategoriesLoaded: false,
   isLoading: false,
   loadingFailed: false,
@@ -16,12 +17,27 @@ const initialState = {
 function productsReducer(state = initialState, action) {
   switch (action.type) {
     case SET_PRODUCTS:
-      const productsCategory = {};
-      productsCategory[action.payload.link] = action.payload;
+      // const productsCategory = {};
+      // productsCategory[action.payload.link] = action.payload;
+
+      // console.log("productsCategory: ", productsCategory);
+      const categoriesPayload = [];
+      Object.keys(action.payload).map((key) => {
+        categoriesPayload.push(key.split("/")[1]);
+      });
+      return {
+        ...state,
+        products: { ...{ ...state.products }, ...action.payload },
+        isLoading: false,
+        loadingFailed: false,
+      };
+    case SET_MISSED_PRODUCTS:
+      // const productsCategory = {};
+      // productsCategory[action.payload.link] = action.payload;
       // console.log(state.products);
       return {
         ...state,
-        products: { ...{ ...state.products }, ...productsCategory },
+        products: { ...{ ...state.products }, ...action.payload },
         isLoading: false,
         loadingFailed: false,
       };

@@ -12,53 +12,9 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-const images = [
-  {
-    original:
-      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
-    thumbnail:
-      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
-  },
-  {
-    original:
-      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
-    thumbnail:
-      "https://www.grandline.ru/image/cache/data/shop1c/13/54113-500x335.jpg",
-  },
-  {
-    original:
-      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-500x335.jpg",
-    thumbnail:
-      "https://www.grandline.ru/image/cache/data/photo/krovlya/metallocherepica/classic/3005/gl/atlas-ral-3005-500x335.jpg",
-  },
-];
-
-const properties = [
-  { name: "Цвет", value: "Красный" },
-  { name: "Ширина", value: "10 см" },
-  { name: "Высота", value: "20 см" },
-  { name: "Цвет", value: "Красный" },
-  { name: "Ширина", value: "10 см" },
-  { name: "Высота", value: "20 см" },
-  { name: "Цвет", value: "Красный" },
-  { name: "Ширина", value: "10 см" },
-  { name: "Высота", value: "20 см" },
-];
-
-const product = {
-  id: 1,
-  title: "Черепица гибкая Mida Прима красный 3 м²",
-  img: "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_240,h_240,c_pad,b_white,d_photoiscoming.png,dpr_1.0/LMCode/15569321.jpg",
-  artNumber: "Арт. 12345",
-  price: 1000,
-  newPrice: 200,
-  tags: ["Новая модель"],
-};
-
 const isMobile = window.innerWidth <= 1500;
 
 function getProductData(products, category, article) {
-  console.log(article);
   let productData = {};
   let breadcrumbData = [];
   for (let i = 0; i < products[`/${category}`].subMenu.length; i++) {
@@ -109,60 +65,16 @@ function getProductData(products, category, article) {
   return [productData, breadcrumbData];
 }
 
-function ProductPage({ products, categories, isAllCategoriesLoaded }) {
-  // const [breadcrumbData, setBreadcrumbData] = useState([]);
+function ProductPage({ products, isAllCategoriesLoaded }) {
   let query = useQuery();
   let category = query.get("category");
-  let subCategory = query.get("subCategory");
-  let subSubCategory = query.get("subSubCategory");
   const location = useLocation();
-  let currentPagePath = location.pathname.split("/")[2];
   let { article } = useParams();
   let breadcrumbData = [];
 
   let productData = {};
-
-  console.log("category: ", category);
-  console.log("products: ", products);
-  console.log("products[category]: ", products[`/${category}`]);
-
   if (category && products[`/${category}`]) {
     [productData, breadcrumbData] = getProductData(products, category, article);
-    console.log("6666", productData);
-    // categoryLoop: for (
-    //   let i = 0;
-    //   i < products[`/${category}`].subMenu.length;
-    //   i++
-    // ) {
-    //   let subCat = products[`/${category}`].subMenu[i];
-    //   for (let j = 0; j < subCat.subMenu.length; j++) {
-    //     let subSubCat = subCat.subMenu[j];
-    //     for (let k = 0; k < subSubCat.productsData.length; k++) {
-    //       let product = subSubCat.productsData[k];
-    //       if (product.article === article) {
-    //         console.log("------------");
-    //         breadcrumbData = [
-    //           { link: "/", text: "Главная" },
-    //           { text: "/" },
-    //           {
-    //             link: "/catalog" + products[`/${category}`].link,
-    //             text: products[`/${category}`].title,
-    //           },
-    //           { text: "/" },
-    //           { link: `/catalog${subCat.link}`, text: subCat.title },
-    //           { text: "/" },
-    //           { link: `/catalog${subSubCat.link}`, text: subSubCat.title },
-    //         ];
-    //         productData = { ...product };
-    //         i = products[`/${category}`].subMenu.length;
-    //         j = subCat.subMenu.length;
-    //         k = subSubCat.productsData.length;
-    //         // break subSubCategoryLoop;
-    //       }
-    //       console.log("-");
-    //     }
-    //   }
-    // }
     productData.images = [];
     JSON.parse(productData.linksToImages).map((image) => {
       console.log("image:", image);
@@ -238,10 +150,10 @@ function ProductPage({ products, categories, isAllCategoriesLoaded }) {
                   </div>
                   <div className={styles.properties}>
                     <h3 className={styles.propertiesTitle}>Характеристики</h3>
-                    {properties.map((property, i) => (
+                    {JSON.parse(productData.attributes).map((property, i) => (
                       <div key={i} className={styles.propery}>
                         <div className={styles.propertyName}>
-                          {property.name}
+                          {property.key}
                         </div>
                         <div className={styles.propertyValue}>
                           {property.value}

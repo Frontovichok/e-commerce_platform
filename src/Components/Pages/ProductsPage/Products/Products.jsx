@@ -29,7 +29,6 @@ function Products({ pageData, categories }) {
     productsArr.push(...pageData.productsData);
     isLoaded = true;
   } else if (pageData.subMenu) {
-    console.log(pageData.subMenu);
     pageData.subMenu.map((subMenu) => {
       productsArr.push(...subMenu.productsData);
     });

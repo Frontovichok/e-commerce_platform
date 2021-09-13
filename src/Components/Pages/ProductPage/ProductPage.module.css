@@ -79,6 +79,7 @@
   overflow: hidden;
   padding-right: 10px;
   color: rgb(24, 24, 24);
+  white-space: nowrap;
 }
 .propertyValue {
   padding-left: 10px;

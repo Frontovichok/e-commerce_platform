@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
+import productsCategories from "../../../data/productsCategories.json";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 import styles from "./FindedProducts.module.css";
+import { getAllProducts } from "../../../Redux/actions/productsActions";
 
-export default function FindedProducts() {
+function FindedProducts(props) {
   //   const [state, setState] = useState([]);
   //   useEffect(() => {
   //     fetch("/api")
@@ -16,6 +19,19 @@ export default function FindedProducts() {
   //   });
   const location = useLocation();
   let params = useParams();
+  let categoriesNames = [];
+  console.log("props: ", props);
+  // if (!props.isAllCategoriesLoaded) {
+  console.log(productsCategories);
+  productsCategories.map((category) => {
+    categoriesNames.push(category.link.split("/")[2]);
+  });
+
+  useEffect(() => {
+    props.getAllProducts(props.products);
+  }, []);
+  // }
+  console.log(categoriesNames);
   return (
     <>
       <div className={styles.container}>
@@ -31,3 +47,10 @@ export default function FindedProducts() {
     </>
   );
 }
+
+const mapStateToProps = (state) => ({
+  isAllCategoriesLoaded: state.products.isAllCategoriesLoaded,
+  products: state.products.products,
+});
+
+export default connect(mapStateToProps, { getAllProducts })(FindedProducts);

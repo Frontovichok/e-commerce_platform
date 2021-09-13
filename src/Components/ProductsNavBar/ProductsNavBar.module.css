@@ -127,8 +127,8 @@
 }
 @media (min-width: 1281px) {
   .container {
-    position: sticky;
-    top: 30px;
+    position: relative;
+    /* top: 30px; */
     margin-top: 0;
     margin-left: 0;
     max-width: 280px;
