@@ -1,20 +1,25 @@
+import Highlighter from "react-highlight-words";
 import styles from "./ProductCard.module.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 import { NavLink } from "react-router-dom";
 
-export default function ProductCard({ product, categories }) {
-  let queryParams = `${
-    categories.categoryName ? "?category=" + categories.categoryName : ""
-  }${
-    categories.subCategoryName
-      ? "&subCategory=" + categories.subCategoryName
-      : ""
-  }${
-    categories.subSubCategoryName
-      ? "&subSubCategory=" + categories.subSubCategoryName
-      : ""
-  }`;
+export default function ProductCard({ product, categories, query }) {
+  console.log("in product cart");
+
+  let queryParams = categories
+    ? `${
+        categories.categoryName ? "?category=" + categories.categoryName : ""
+      }${
+        categories.subCategoryName
+          ? "&subCategory=" + categories.subCategoryName
+          : ""
+      }${
+        categories.subSubCategoryName
+          ? "&subSubCategory=" + categories.subSubCategoryName
+          : ""
+      }`
+    : "";
 
   return (
     <div className={styles.card}>
@@ -36,6 +41,12 @@ export default function ProductCard({ product, categories }) {
       )} */}
       <div className={styles.content}>
         <p className={styles.title}>{product.name}</p>
+        <Highlighter
+          highlightClassName="kkk"
+          searchWords={[query]}
+          autoEscape={true}
+          textToHighlight={product.username}
+        />
         {/* <div className={styles.priceContainer}>
           {product.newPrice ? (
             <div className={styles.priceSale}>

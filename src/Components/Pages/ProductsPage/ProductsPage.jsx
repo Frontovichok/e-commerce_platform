@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import Products from "./Products/Products";
+import Products from "../../Common/Products/Products";
 import styles from "./ProductsPage.module.css";
 import { connect } from "react-redux";
 import { getProducts } from "../../../Redux/actions/productsActions";
@@ -9,7 +9,11 @@ function ProductsPage(props) {
   return (
     <>
       <div className={styles.productsContainer}>
-        <Products pageData={props.productsData} categories={props.categories} />
+        <Products
+          pageData={props.productsData}
+          categories={props.categories}
+          query={props.query}
+        />
       </div>
     </>
   );

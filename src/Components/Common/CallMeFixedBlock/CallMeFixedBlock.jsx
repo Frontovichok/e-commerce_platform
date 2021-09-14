@@ -39,7 +39,7 @@ function CallMeFixedBlock() {
   const { handleSubmit, register } = useForm();
   const [callMeState, toggleCallMeState] = useState(false);
   const onSubmit = (data, e) => {
-    console.log(data);
+    // console.log(data);
     e.target.reset();
     setValues({ ...values, phone: "" });
     // e.preventDefault();

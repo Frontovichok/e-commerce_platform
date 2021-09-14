@@ -3,35 +3,59 @@ import { connect } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
 import productsCategories from "../../../data/productsCategories.json";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
+import Products from "../../Common/Products/Products";
 import styles from "./FindedProducts.module.css";
 import { getAllProducts } from "../../../Redux/actions/productsActions";
+import ProductsNavBar from "../../ProductsNavBar/ProductsNavBar";
+import filter from "lodash/filter";
 
 function FindedProducts(props) {
-  //   const [state, setState] = useState([]);
-  //   useEffect(() => {
-  //     fetch("/api")
-  //       .then((response) => response.json())
-  //       .then((res) => {
-  //         setState(res.message);
-  //         console.log("res: ", res);
-  //       });
-  //     setTimeout(() => console.log(state), 3000);
-  //   });
-  const location = useLocation();
-  let params = useParams();
+  let { searchQuery } = useParams();
   let categoriesNames = [];
-  console.log("props: ", props);
-  // if (!props.isAllCategoriesLoaded) {
-  console.log(productsCategories);
+  let productsData = [];
   productsCategories.map((category) => {
     categoriesNames.push(category.link.split("/")[2]);
   });
 
+  if (props.isAllCategoriesLoaded === true && searchQuery.length > 3) {
+    Object.keys(props.products).forEach((key) => {
+      props.products[key].subMenu.map((category) => {
+        if (category.subMenu) {
+          category.subMenu.map((subCategory) => {
+            subCategory.productsData.map((product) => {
+              if (
+                product.name
+                  .toUpperCase()
+                  .includes(searchQuery.toUpperCase()) ||
+                product.article.includes(searchQuery) ||
+                product.attributes
+                  .toUpperCase()
+                  .includes(searchQuery.toUpperCase())
+              ) {
+                productsData.push(product);
+              }
+            });
+          });
+        } else {
+          category.productsData.map((product) => {
+            if (
+              product.name.toUpperCase().includes(searchQuery.toUpperCase()) ||
+              product.article.includes(searchQuery) ||
+              product.attributes
+                .toUpperCase()
+                .includes(searchQuery.toUpperCase())
+            ) {
+              productsData.push(product);
+            }
+          });
+        }
+      });
+    });
+  }
+
   useEffect(() => {
-    props.getAllProducts(props.products);
+    props.getAllProducts(props.products, props.isAllCategoriesLoaded);
   }, []);
-  // }
-  console.log(categoriesNames);
   return (
     <>
       <div className={styles.container}>
@@ -39,9 +63,15 @@ function FindedProducts(props) {
           <Breadcrumb path={[{ link: "/", text: "Главная" }, { text: "/" }]} />
         </div>
         <div className={styles.content}>
-          <div className={styles.hi}>
-            По запросу {params.q} найдено N товаров
-          </div>
+          <ProductsNavBar />
+          {props.isAllCategoriesLoaded ? (
+            <div className={styles.hi}>
+              По запросу {searchQuery.q} найдено {productsData.length} товаров
+              <Products pageData={productsData} query={searchQuery} />
+            </div>
+          ) : (
+            <div>Nope</div>
+          )}
         </div>
       </div>
     </>

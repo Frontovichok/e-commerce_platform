@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 import { Loader } from "semantic-ui-react";
-import PaginationControl from "../../../Common/Pagination/PaginationControl";
+import PaginationControl from "../Pagination/PaginationControl";
 import ProductCard from "../ProductCard/ProductCard";
 import styles from "./Products.module.css";
 
@@ -20,7 +20,8 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-function Products({ pageData, categories }) {
+function Products({ pageData, categories, query }) {
+  console.log("in products component");
   let query = useQuery();
   let pageNow = +query.get("page") || 1;
   let productsArr = [];
@@ -33,6 +34,10 @@ function Products({ pageData, categories }) {
       productsArr.push(...subMenu.productsData);
     });
     isLoaded = true;
+  } else if (Array.isArray(pageData)) {
+    console.log("hi");
+    isLoaded = true;
+    productsArr = [...pageData];
   }
 
   let productsPerPage = 15;
@@ -49,7 +54,12 @@ function Products({ pageData, categories }) {
         <>
           <div className={styles.productsContainer}>
             {slicedProducts[pageNow - 1].map((product, i) => (
-              <ProductCard key={i} product={product} categories={categories} />
+              <ProductCard
+                key={i}
+                product={product}
+                categories={categories}
+                query={query}
+              />
             ))}
           </div>
           <PaginationControl size="large" page={pageNow} count={countPages} />

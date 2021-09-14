@@ -77,7 +77,7 @@ function ProductPage({ products, isAllCategoriesLoaded }) {
     [productData, breadcrumbData] = getProductData(products, category, article);
     productData.images = [];
     JSON.parse(productData.linksToImages).map((image) => {
-      console.log("image:", image);
+      // console.log("image:", image);
       productData.images.push({ original: image, thumbnail: image });
     });
   }

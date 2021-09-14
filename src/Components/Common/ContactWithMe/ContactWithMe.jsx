@@ -36,7 +36,7 @@ NumberFormatCustom.propTypes = {
 function ContactWithMe() {
   const { handleSubmit, register } = useForm();
   const onSubmit = ({ name, phone }) => {
-    console.log(name, phone);
+    // console.log(name, phone);
     // e.preventDefault();
     // axios({
     //   method: "POST",
