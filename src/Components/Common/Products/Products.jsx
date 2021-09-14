@@ -21,7 +21,6 @@ function useQuery() {
 }
 
 function Products({ pageData, categories, searchQuery }) {
-  console.log("in products component");
   let query = useQuery();
   let pageNow = +query.get("page") || 1;
   let productsArr = [];
@@ -35,7 +34,6 @@ function Products({ pageData, categories, searchQuery }) {
     });
     isLoaded = true;
   } else if (Array.isArray(pageData)) {
-    console.log("hi");
     isLoaded = true;
     productsArr = [...pageData];
   }
@@ -47,6 +45,9 @@ function Products({ pageData, categories, searchQuery }) {
     productsPerPage,
     countPages
   );
+  if (pageNow > countPages) {
+    pageNow = countPages;
+  }
 
   return (
     <section className={styles.products}>
