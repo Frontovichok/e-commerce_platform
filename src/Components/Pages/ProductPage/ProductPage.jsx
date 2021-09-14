@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
 import GlobalContent from "../../GlobalContent/GlobalContent";
@@ -7,6 +7,7 @@ import styles from "./ProductPage.module.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 import CarouselProductImages from "./CarouselProductImages/CarouselProductImages";
+import { getAllProducts } from "../../../Redux/actions/productsActions";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -14,72 +15,107 @@ function useQuery() {
 
 const isMobile = window.innerWidth <= 1500;
 
-function getProductData(products, category, article) {
+function getProductData(
+  products,
+  categoryArg,
+  article,
+  categoriesInState,
+  isAllCategoriesLoaded
+) {
   let productData = {};
   let breadcrumbData = [];
-  for (let i = 0; i < products[`/${category}`].subMenu.length; i++) {
-    let subCat = products[`/${category}`].subMenu[i];
-    if (subCat.subMenu) {
-      for (let j = 0; j < subCat.subMenu.length; j++) {
-        let subSubCat = subCat.subMenu[j];
-        for (let k = 0; k < subSubCat.productsData.length; k++) {
-          let product = subSubCat.productsData[k];
+  let categories = [];
+
+  if (!categoryArg && isAllCategoriesLoaded) {
+    Object.keys(categoriesInState).map((key) => {
+      categories.push(key);
+    });
+  } else {
+    categories.push(categoryArg);
+  }
+  categories.map((category) => {
+    for (let i = 0; i < products[category].subMenu.length; i++) {
+      let subCat = products[category].subMenu[i];
+      if (subCat.subMenu) {
+        for (let j = 0; j < subCat.subMenu.length; j++) {
+          let subSubCat = subCat.subMenu[j];
+          for (let k = 0; k < subSubCat.productsData.length; k++) {
+            let product = subSubCat.productsData[k];
+            if (product.article === article) {
+              breadcrumbData = [
+                { link: "/", text: "Главная" },
+                { text: "/" },
+                {
+                  link: "/catalog" + products[category].link,
+                  text: products[category].title,
+                },
+                { text: "/" },
+                { link: `/catalog${subCat.link}`, text: subCat.title },
+                { text: "/" },
+                { link: `/catalog${subSubCat.link}`, text: subSubCat.title },
+              ];
+              productData = { ...product };
+              return [productData, breadcrumbData];
+            }
+          }
+        }
+      } else {
+        for (let k = 0; k < subCat.productsData.length; k++) {
+          let product = subCat.productsData[k];
           if (product.article === article) {
             breadcrumbData = [
               { link: "/", text: "Главная" },
               { text: "/" },
               {
-                link: "/catalog" + products[`/${category}`].link,
-                text: products[`/${category}`].title,
+                link: "/catalog" + products[category].link,
+                text: products[category].title,
               },
               { text: "/" },
               { link: `/catalog${subCat.link}`, text: subCat.title },
-              { text: "/" },
-              { link: `/catalog${subSubCat.link}`, text: subSubCat.title },
             ];
             productData = { ...product };
             return [productData, breadcrumbData];
           }
         }
       }
-    } else {
-      for (let k = 0; k < subCat.productsData.length; k++) {
-        let product = subCat.productsData[k];
-        if (product.article === article) {
-          breadcrumbData = [
-            { link: "/", text: "Главная" },
-            { text: "/" },
-            {
-              link: "/catalog" + products[`/${category}`].link,
-              text: products[`/${category}`].title,
-            },
-            { text: "/" },
-            { link: `/catalog${subCat.link}`, text: subCat.title },
-          ];
-          productData = { ...product };
-          return [productData, breadcrumbData];
-        }
-      }
     }
-  }
+  });
+
   return [productData, breadcrumbData];
 }
 
-function ProductPage({ products, isAllCategoriesLoaded }) {
+function ProductPage({
+  products,
+  categoriesInState,
+  isAllCategoriesLoaded,
+  getAllProducts,
+}) {
   let query = useQuery();
   let category = query.get("category");
-  const location = useLocation();
   let { article } = useParams();
   let breadcrumbData = [];
-
   let productData = {};
-  if (category && products[`/${category}`]) {
-    [productData, breadcrumbData] = getProductData(products, category, article);
-    productData.images = [];
-    JSON.parse(productData.linksToImages).map((image) => {
-      // console.log("image:", image);
-      productData.images.push({ original: image, thumbnail: image });
-    });
+
+  useEffect(() => {
+    if (!category && !isAllCategoriesLoaded) {
+      getAllProducts(products, isAllCategoriesLoaded);
+    }
+  }, []);
+
+  if (category || isAllCategoriesLoaded) {
+    [productData, breadcrumbData] = getProductData(
+      products,
+      category,
+      article,
+      categoriesInState,
+      isAllCategoriesLoaded
+    );
+    if (breadcrumbData.length > 0) {
+      productData.images = [];
+      JSON.parse(productData.linksToImages).map((image) => {
+        productData.images.push({ original: image, thumbnail: image });
+      });
+    }
   }
 
   if (!isAllCategoriesLoaded) {
@@ -174,7 +210,7 @@ function ProductPage({ products, isAllCategoriesLoaded }) {
 }
 const mapStateToProps = (state) => ({
   products: state.products.products,
-  categories: state.products.categories,
+  categoriesInState: state.products.categories,
   isAllCategoriesLoaded: state.products.isAllCategoriesLoaded,
 });
-export default connect(mapStateToProps, {})(ProductPage);
+export default connect(mapStateToProps, { getAllProducts })(ProductPage);

@@ -2,6 +2,7 @@ import {
   SET_PRODUCTS,
   PRODUCTS_LOADING,
   PRODUCTS_LOADING_FAILED,
+  SET_SEARCH_QUERY,
 } from "../types";
 
 const initialState = {
@@ -10,10 +11,13 @@ const initialState = {
   isAllCategoriesLoaded: false,
   isLoading: false,
   loadingFailed: false,
+  searchQuery: "",
 };
 
 function productsReducer(state = initialState, action) {
   switch (action.type) {
+    case SET_SEARCH_QUERY:
+      return { ...state, searchQuery: action.payload };
     case SET_PRODUCTS:
       const productsCategories = {};
       Object.keys(action.payload.productsData).map((key) => {
@@ -23,7 +27,6 @@ function productsReducer(state = initialState, action) {
       const isAllCategoriesLoaded =
         Object.keys(categories).length ===
         Object.keys(action.payload.allCategoriesNames).length;
-
       return {
         ...state,
         products: { ...state.products, ...action.payload.productsData },

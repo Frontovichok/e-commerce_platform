@@ -2,6 +2,7 @@ import {
   PRODUCTS_LOADING,
   PRODUCTS_LOADING_FAILED,
   SET_PRODUCTS,
+  SET_SEARCH_QUERY,
 } from "../types";
 import productsAPI from "../../api/api";
 import productsCategories from "../../data/productsCategories.json";
@@ -9,6 +10,11 @@ import productsCategories from "../../data/productsCategories.json";
 const setProducts = (products) => ({ type: SET_PRODUCTS, payload: products });
 const productsLoadingFailed = () => ({ type: PRODUCTS_LOADING_FAILED });
 const productsIsLoading = () => ({ type: PRODUCTS_LOADING });
+
+export const setSearchQuery = (searchQuery) => ({
+  type: SET_SEARCH_QUERY,
+  payload: searchQuery,
+});
 
 export const getProducts = (categoryPath) => {
   const categoriesData = {};

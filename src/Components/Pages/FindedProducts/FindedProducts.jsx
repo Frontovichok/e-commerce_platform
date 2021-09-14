@@ -67,7 +67,7 @@ function FindedProducts(props) {
           {props.isAllCategoriesLoaded ? (
             <div className={styles.hi}>
               По запросу {searchQuery.q} найдено {productsData.length} товаров
-              <Products pageData={productsData} query={searchQuery} />
+              <Products pageData={productsData} searchQuery={searchQuery} />
             </div>
           ) : (
             <div>Nope</div>

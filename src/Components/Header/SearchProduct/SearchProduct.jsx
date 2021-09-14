@@ -3,13 +3,16 @@ import { Button, Icon } from "semantic-ui-react";
 import MenuExpanded from "../MenuExpanded/MenuExpanded";
 import { useHistory } from "react-router-dom";
 import styles from "./SearchProduct.module.css";
+import { connect } from "react-redux";
+import { setSearchQuery } from "../../../Redux/actions/productsActions";
 
 const isMobile = window.innerWidth <= 900;
 
-function SearchProduct({ menuItems }) {
+function SearchProduct({ menuItems, searchQuery, setSearchQuery }) {
+  console.log("searchQuery: ", searchQuery);
   let history = useHistory();
   let [openState, setOpenState] = useState(false);
-  let [searchQuery, setSearchQuery] = useState("");
+  // let [searchQuery, setSearchQuery] = useState("");
 
   let handleChangeSearchQuery = (event) => {
     setSearchQuery(event.target.value);
@@ -71,4 +74,8 @@ function SearchProduct({ menuItems }) {
   );
 }
 
-export default SearchProduct;
+const mapStateToProps = (state) => ({
+  searchQuery: state.products.searchQuery,
+});
+
+export default connect(mapStateToProps, { setSearchQuery })(SearchProduct);

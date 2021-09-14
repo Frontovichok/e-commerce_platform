@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/opacity.css";
 import { NavLink } from "react-router-dom";
 
-export default function ProductCard({ product, categories, query }) {
+export default function ProductCard({ product, categories, searchQuery = "" }) {
   console.log("in product cart");
 
   let queryParams = categories
@@ -40,12 +40,13 @@ export default function ProductCard({ product, categories, query }) {
         </div>
       )} */}
       <div className={styles.content}>
-        <p className={styles.title}>{product.name}</p>
+        {/* <p className={styles.title}>{product.name}</p> */}
         <Highlighter
-          highlightClassName="kkk"
-          searchWords={[query]}
+          className={styles.title}
+          highlightClassName="highlited-text"
+          searchWords={[searchQuery]}
           autoEscape={true}
-          textToHighlight={product.username}
+          textToHighlight={product.name}
         />
         {/* <div className={styles.priceContainer}>
           {product.newPrice ? (

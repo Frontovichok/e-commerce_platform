@@ -20,7 +20,7 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-function Products({ pageData, categories, query }) {
+function Products({ pageData, categories, searchQuery }) {
   console.log("in products component");
   let query = useQuery();
   let pageNow = +query.get("page") || 1;
@@ -58,7 +58,7 @@ function Products({ pageData, categories, query }) {
                 key={i}
                 product={product}
                 categories={categories}
-                query={query}
+                searchQuery={searchQuery}
               />
             ))}
           </div>
