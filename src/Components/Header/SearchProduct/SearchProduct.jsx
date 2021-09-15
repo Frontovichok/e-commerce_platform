@@ -23,7 +23,9 @@ function SearchProduct({ menuItems, searchQuery, setSearchQuery }) {
     }
   };
   let searchSubmit = () => {
-    history.push("/search/" + searchQuery);
+    if (searchQuery.length > 3) {
+      history.push("/search/" + searchQuery);
+    }
   };
 
   let clearSearchInput = () => {

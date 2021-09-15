@@ -6,7 +6,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.dropdowns {
+  display: flex;
+  flex-direction: row;
+}
 @media (min-width: 320px) {
   .productsContainer {
     padding: 0 10px;

@@ -8,6 +8,7 @@ import styles from "./FindedProducts.module.css";
 import { getAllProducts } from "../../../Redux/actions/productsActions";
 import ProductsNavBar from "../../ProductsNavBar/ProductsNavBar";
 import filter from "lodash/filter";
+import { Loader } from "semantic-ui-react";
 
 function FindedProducts(props) {
   let { searchQuery } = useParams();
@@ -66,11 +67,25 @@ function FindedProducts(props) {
           <ProductsNavBar />
           {props.isAllCategoriesLoaded ? (
             <div className={styles.hi}>
-              По запросу {searchQuery.q} найдено {productsData.length} товаров
-              <Products pageData={productsData} searchQuery={searchQuery} />
+              <div className={styles.numberOfCoincidencesBlock}>
+                По запросу
+                <label className={styles.searchQuery}>{searchQuery}</label>
+                найдено
+                <label className={styles.nubmberOfCoincidences}>
+                  {productsData.length}
+                </label>
+                товаров
+              </div>
+              {productsData.length > 0 && (
+                <Products
+                  pageData={productsData}
+                  searchQuery={searchQuery}
+                  isLoading={props.isLoading}
+                />
+              )}
             </div>
           ) : (
-            <div>Nope</div>
+            <Loader active inline />
           )}
         </div>
       </div>
@@ -81,6 +96,7 @@ function FindedProducts(props) {
 const mapStateToProps = (state) => ({
   isAllCategoriesLoaded: state.products.isAllCategoriesLoaded,
   products: state.products.products,
+  isLoading: state.products.isLoading,
 });
 
 export default connect(mapStateToProps, { getAllProducts })(FindedProducts);

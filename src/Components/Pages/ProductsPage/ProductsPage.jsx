@@ -13,6 +13,7 @@ function ProductsPage(props) {
           pageData={props.productsData}
           categories={props.categories}
           query={props.query}
+          isLoading={props.productsIsLoading}
         />
       </div>
     </>

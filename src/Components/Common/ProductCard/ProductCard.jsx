@@ -5,20 +5,10 @@ import "react-lazy-load-image-component/src/effects/opacity.css";
 import { NavLink } from "react-router-dom";
 
 export default function ProductCard({ product, categories, searchQuery = "" }) {
-  console.log("in product cart");
-
-  let queryParams = categories
-    ? `${
-        categories.categoryName ? "?category=" + categories.categoryName : ""
-      }${
-        categories.subCategoryName
-          ? "&subCategory=" + categories.subCategoryName
-          : ""
-      }${
-        categories.subSubCategoryName
-          ? "&subSubCategory=" + categories.subSubCategoryName
-          : ""
-      }`
+  let categoryQuery = categories
+    ? categories.categoryName
+      ? "?category=" + categories.categoryName
+      : ""
     : "";
 
   return (
@@ -70,7 +60,7 @@ export default function ProductCard({ product, categories, searchQuery = "" }) {
         </div>
       </div>
       <NavLink
-        to={`/product/${product.article}${queryParams}`}
+        to={`/product/${product.article}${categoryQuery}`}
         className={styles.button}
       >
         Подробнее

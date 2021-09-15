@@ -11,3 +11,17 @@
   flex-direction: row;
   flex: 1 1;
 }
+.numberOfCoincidencesBlock {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.searchQuery {
+  color: var(--global-primary-color);
+  padding: 0 5px;
+  font-weight: bold;
+}
+.nubmberOfCoincidences {
+  color: var(--global-primary-color);
+  padding: 0 5px;
+  font-weight: bold;
+}
