@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard/ProductCard";
+// import ProductCard from "../../../../Common/ProductCard/ProductCard";
 import styles from "./OurProducts.module.css";
 import { useState } from "react";
 import productsMainPage from "../../../../../data/productsMainPage.json";
@@ -17,8 +18,8 @@ function OurProducts() {
         ))}
       </h2>
       <div className={styles.productList}>
-        {showedProductsList.map((product) => (
-          <ProductCard key={product.id} {...product} />
+        {showedProductsList.map((product, i) => (
+          <ProductCard key={i} product={product} />
         ))}
       </div>
       {showedProducts < 10 && (

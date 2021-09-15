@@ -44,14 +44,15 @@
 
 .title {
   flex: 1;
-  font-weight: bold;
-  color: #3c3c3c;
+  /* font-weight: bold; */
+  color: #333333;
 }
 
 .priceContainer {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  margin-bottom: 5px;
 }
 
 .priceSale {
@@ -75,9 +76,10 @@
 }
 
 .price {
-  font-weight: bold;
-  font-size: 1.7rem;
+  /* font-weight: bold; */
+  font-size: 1.5rem;
   margin-right: 5px;
+
   color: #3c3c3c;
 }
 
@@ -107,13 +109,14 @@
 
 .button:hover {
   color: white;
-  box-shadow: 0 1px 3px #8a5512;
+  box-shadow: var(--global-box-shadow);
   text-decoration: none;
 }
 
 .cardImage {
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: contain;
 }
 
 @media (min-width: 320px) {

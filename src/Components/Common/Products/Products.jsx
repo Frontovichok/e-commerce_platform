@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Loader } from "semantic-ui-react";
 import PaginationControl from "../Pagination/PaginationControl";
@@ -47,7 +47,6 @@ function sortByPrice(products, direction) {
     }
     return 0;
   });
-  // console.log("products changed: ", products);
   return sortedProducts;
 }
 
@@ -58,7 +57,7 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
   let sortBy = query.get("sort") || "default";
   let productsArr = [];
   let isLoaded = false;
-  let currentUrlParams = new URLSearchParams(location.search);
+  let [show, setShow] = useState(false);
   if (pageData.productsData) {
     productsArr.push(...pageData.productsData);
     isLoaded = true;
@@ -73,7 +72,6 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
   }
 
   sortBy = query.get("sort") || "default";
-  console.log("sortBy: ", sortBy);
 
   switch (sortBy) {
     case "price_up":
@@ -92,7 +90,7 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
       productsArr = productsArr;
   }
 
-  let productsPerPage = 15;
+  let productsPerPage = +query.get("productsPerPage") || 15;
   let countPages = Math.ceil(productsArr.length / productsPerPage);
   let slicedProducts = sliceProductsByPage(
     productsArr,
@@ -103,6 +101,16 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
     pageNow = countPages;
   }
 
+  useEffect(async () => {
+    setShow(false);
+    const sleep = (milliseconds = 500) =>
+      new Promise((resolve) => {
+        setTimeout(resolve, milliseconds);
+      });
+    await sleep(200);
+    setShow(true);
+  }, [location]);
+
   return (
     <section className={styles.products}>
       {productsArr && !isLoading && isLoaded ? (
@@ -111,21 +119,30 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
             <SortDropdown />
             <ShowedProductsInPageDropdown />
           </div>
-
-          <div className={styles.productsContainer}>
-            {slicedProducts[pageNow - 1].map((product, i) => (
-              <ProductCard
-                key={i}
-                product={product}
-                categories={categories}
-                searchQuery={searchQuery}
+          {show ? (
+            <>
+              <div className={styles.productsContainer}>
+                {slicedProducts[pageNow - 1].map((product, i) => (
+                  <ProductCard
+                    key={i}
+                    product={product}
+                    categories={categories}
+                    searchQuery={searchQuery}
+                  />
+                ))}
+              </div>
+              <PaginationControl
+                size="large"
+                page={pageNow}
+                count={countPages}
               />
-            ))}
-          </div>
-          <PaginationControl size="large" page={pageNow} count={countPages} />
+            </>
+          ) : (
+            <Loader className={styles.loader} active inline size="big" />
+          )}
         </>
       ) : (
-        <Loader active inline />
+        <Loader className={styles.loader} active inline size="large" />
       )}
     </section>
   );

@@ -9,31 +9,38 @@ const options = [
 ];
 
 const ShowedProductsInPageDropdown = () => {
-  // let history = useHistory();
-  // let location = useLocation();
-  // let currentUrlParams = new URLSearchParams(location.search);
-  // let [sortBy, setSortBy] = useState(currentUrlParams.get("sort") || "default");
+  let history = useHistory();
+  let location = useLocation();
+  let currentUrlParams = new URLSearchParams(location.search);
+  let [productsPerPage, setProductsPerPage] = useState(
+    currentUrlParams.get("productsPerPage") || "15"
+  );
 
-  // useEffect(() => {
-  //   currentUrlParams.set("sort", sortBy);
-  //   history.push(location.pathname + "?" + currentUrlParams.toString());
-  // }, [sortBy]);
+  useEffect(() => {
+    if (
+      currentUrlParams.get("productsPerPage") === null ||
+      productsPerPage !== currentUrlParams.get("productsPerPage")
+    ) {
+      currentUrlParams.set("productsPerPage", productsPerPage);
+      history.push(location.pathname + "?" + currentUrlParams.toString());
+    }
+  }, [productsPerPage, location]);
 
   return (
     <div className={styles.dropdownContainer}>
       <div className={styles.label}>Товаров на странице:</div>
       <Dropdown
-        placeholder="Товаров на странице"
+        placeholder={currentUrlParams.get("productsPerPage")}
         openOnFocus
         selection
         options={options}
         className={styles.dropdown}
         onChange={(e, { value }) => {
-          // setSortBy(value);
-          // currentUrlParams.set("page", 1);
-          // history.push(location.pathname + "?" + currentUrlParams.toString());
+          setProductsPerPage(value);
+          currentUrlParams.set("page", 1);
+          history.push(location.pathname + "?" + currentUrlParams.toString());
         }}
-        // defaultValue={currentUrlParams.get("sort")}
+        defaultValue={currentUrlParams.get("productsPerPage")}
       />
     </div>
   );

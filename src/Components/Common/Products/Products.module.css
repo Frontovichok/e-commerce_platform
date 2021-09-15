@@ -1,4 +1,6 @@
 .products {
+  display: flex;
+  flex-direction: column;
 }
 .productsContainer {
   display: flex;
@@ -9,6 +11,10 @@
 .dropdowns {
   display: flex;
   flex-direction: row;
+}
+.loader:global(.ui.inline.loader) {
+  margin: auto;
+  margin-top: 150px;
 }
 @media (min-width: 320px) {
   .productsContainer {

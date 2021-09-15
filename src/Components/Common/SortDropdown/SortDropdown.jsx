@@ -16,17 +16,25 @@ const SortDropdown = () => {
   let location = useLocation();
   let currentUrlParams = new URLSearchParams(location.search);
   let [sortBy, setSortBy] = useState(currentUrlParams.get("sort") || "default");
+  let placeHolder = options.map((option) =>
+    currentUrlParams.get("sort") === option.value ? option.text : ""
+  )[0];
 
   useEffect(() => {
-    currentUrlParams.set("sort", sortBy);
-    history.push(location.pathname + "?" + currentUrlParams.toString());
-  }, [sortBy]);
+    if (
+      currentUrlParams.get("sort") === null ||
+      sortBy !== currentUrlParams.get("sort")
+    ) {
+      currentUrlParams.set("sort", sortBy);
+      history.push(location.pathname + "?" + currentUrlParams.toString());
+    }
+  }, [sortBy, location]);
 
   return (
     <div className={styles.sortDropdown}>
       <div className={styles.label}>Сотировка:</div>
       <Dropdown
-        placeholder="Сортировка"
+        placeholder={placeHolder}
         openOnFocus
         selection
         options={options}
