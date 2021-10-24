@@ -160,13 +160,30 @@ function ProductPage({
                           lazyLoad={true}
                           showPlayButton={false}
                           thumbnailPosition="bottom"
+                          showFullscreenButton={false}
                         />
                       )}
                     </div>
                     <div className={styles.info}>
                       <div className={styles.priceBlock}>
                         <div className={styles.priceContainer}>
-                          <p className={styles.price}>{productData.price}</p>
+                          {/* <p className={styles.price}>{productData.price}</p> */}
+                          {productData.oldPrice !== 0 && (
+                            <p className={styles.oldPrice}>
+                              {productData.oldPrice
+                                .toString()
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}{" "}
+                              {productData.priceCurrency}
+                            </p>
+                          )}
+                          <p className={styles.price}>
+                            {productData.price
+                              .toString()
+                              .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}{" "}
+                            {productData.price === "Товар под заказ"
+                              ? ""
+                              : productData.priceCurrency.replaceAll(" ", "")}
+                          </p>
                           {/* {product.newPrice ? (
                         <div className={styles.priceSale}>
                           <p className={styles.newPrice}>

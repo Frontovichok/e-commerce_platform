@@ -38,16 +38,26 @@ function sortByName(products, direction) {
 
 function sortByPrice(products, direction) {
   let [returnValue1, returnValue2] = direction === "up" ? [-1, 1] : [1, -1];
-  let sortedProducts = [...products].sort((a, b) => {
-    if (parseInt(a.price, 10) < parseInt(b.price, 10)) {
-      return returnValue1;
-    }
-    if (parseInt(a.price, 10) > parseInt(b.price, 10)) {
-      return returnValue2;
-    }
-    return 0;
-  });
-  return sortedProducts;
+  let sortedProducts = products
+    .map((product) =>
+      product.price === "Товар под заказ"
+        ? { ...product, price: 9999999999 }
+        : product
+    )
+    .sort((a, b) => {
+      if (a.price < b.price) {
+        return returnValue1;
+      }
+      if (a.price > b.price) {
+        return returnValue2;
+      }
+      return 0;
+    });
+  return sortedProducts.map((product) =>
+    product.price === 9999999999
+      ? { ...product, price: "Товар под заказ" }
+      : product
+  );
 }
 
 function Products({ pageData, categories, searchQuery, isLoading }) {

@@ -67,6 +67,8 @@
 }
 .propertiesTitle {
   margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--global-primary-color);
 }
 .propery {
   display: flex;
@@ -127,6 +129,14 @@
   margin: 0;
   margin-right: 5px;
   color: #ff5555;
+}
+
+.oldPrice {
+  color: gray;
+  margin-right: 5px;
+  text-decoration: line-through;
+  font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .price {

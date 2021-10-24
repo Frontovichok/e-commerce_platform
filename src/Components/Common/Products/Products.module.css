@@ -7,6 +7,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-flow: row wrap;
+  /* margin: 1em auto; */
+}
+.productsContainer::after {
+  content: "";
+  flex-grow: 0;
+  width: calc(32%);
 }
 .dropdowns {
   display: flex;

@@ -25,7 +25,13 @@
 }
 .breadcrumbLink {
   color: var(--global-primary-color);
+  border-bottom: 1px solid transparent;
   white-space: nowrap;
+}
+.breadcrumbLink:hover {
+  color: var(--global-primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--global-primary-color);
 }
 @media (min-width: 320px) {
   .breadcrumb {

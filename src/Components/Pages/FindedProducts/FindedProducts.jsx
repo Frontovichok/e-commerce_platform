@@ -66,7 +66,7 @@ function FindedProducts(props) {
         <div className={styles.content}>
           <ProductsNavBar />
           {props.isAllCategoriesLoaded ? (
-            <div className={styles.hi}>
+            <div className={styles.contentContainer}>
               <div className={styles.numberOfCoincidencesBlock}>
                 По запросу
                 <label className={styles.searchQuery}>{searchQuery}</label>
