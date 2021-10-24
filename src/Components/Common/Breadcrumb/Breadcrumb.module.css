@@ -19,14 +19,13 @@
   padding: 0;
   margin-bottom: 10px;
   white-space: nowrap;
-}
-.breadcrumbText.breadcrumbSlash {
-  padding: 0 5px;
+  margin-right: 5px;
 }
 .breadcrumbLink {
   color: var(--global-primary-color);
   border-bottom: 1px solid transparent;
   white-space: nowrap;
+  margin-right: 5px;
 }
 .breadcrumbLink:hover {
   color: var(--global-primary-color);

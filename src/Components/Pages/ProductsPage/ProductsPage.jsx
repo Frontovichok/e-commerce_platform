@@ -83,7 +83,7 @@ function ProductsPageContainer(props) {
       />
     );
   } else {
-    return <div>Hi</div>;
+    return <div>Loading...</div>;
   }
 }
 
