@@ -8,3 +8,20 @@
 .label {
   margin-right: 10px;
 }
+@media (min-width: 320px) {
+  .label {
+    display: none;
+  }
+  .sortDropdown {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .label {
+    display: inline;
+  }
+  .sortDropdown {
+    margin-left: 0;
+  }
+}

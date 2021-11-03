@@ -41,10 +41,9 @@ function Content() {
               </div>
             ))}
           </div>
-          <div className={styles.ourTeamContainer}>
-            {/* <OurTeam /> */}
+          {/* <div className={styles.ourTeamContainer}>
             <OurTeam />
-          </div>
+          </div> */}
           <Reviews />
           <div className={styles.contactWithMeContainer}>
             <ContactWithMe />

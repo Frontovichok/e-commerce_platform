@@ -105,7 +105,6 @@
 }
 
 p.price {
-  /* font-weight: bold; */
   font-size: 1.7rem;
   margin-bottom: 15px;
   color: #3c3c3c;
@@ -160,28 +159,6 @@ p.price {
   border-bottom: 1px solid var(--global-primary-color);
   text-decoration: none;
 }
-/* .button {
-  padding: 7px 15px;
-  color: white;
-  background: var(--global-gradient);
-  align-self: center;
-  border-radius: 5px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 15px;
-  transition: 0.1s linear;
-  outline: none;
-  border: none;
-  font-size: 0.9rem;
-  margin-right: auto;
-  margin-left: 15px;
-} */
-
-/* .button:hover {
-  color: white;
-  box-shadow: 0 1px 3px #8a5512;
-  text-decoration: none;
-} */
 
 .productImage {
   width: 100%;
@@ -195,6 +172,37 @@ p.price {
   .card {
     width: calc(50% - 5px);
     margin-bottom: 10px;
+  }
+  .content {
+    border-bottom: 1px solid transparent;
+  }
+  .productImage {
+    height: 160px;
+  }
+  .nameLink {
+    font-size: .9rem;
+  }
+  .priceContainer {
+    padding: 15px 0;
+    flex: 0;
+  }
+  p.price {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  .availableContainer {
+    margin-bottom: 5px;
+  }
+  .available {
+    font-size: .6rem;
+  }
+  .article {
+    font-size: .6rem;
+  }
+  .button {
+    display: none;
+    font-size: 0.7rem;
   }
 }
 
@@ -219,5 +227,35 @@ p.price {
   .card {
     width: calc(32%);
     margin-bottom: 20px;
+  }
+  .content {
+    border-bottom: 1px solid #cde8d7;
+  }
+  .productImage {
+    height: 200px;
+  }
+  .nameLink {
+    font-size: 1.1rem;
+  }
+  .priceContainer {
+    padding: 20px 0;
+    flex: 1 1;
+  }
+  p.price {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    font-weight: normal;
+  }
+  .availableContainer {
+    margin-bottom: 15px;
+  }
+  .available {
+    font-size: 1rem;
+  }
+  .article {
+    font-size: 1rem;
+  }
+  .button {
+    font-size: 0.9rem;
   }
 }

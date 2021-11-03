@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { Icon } from "semantic-ui-react";
 import { useLocation, useParams } from "react-router-dom";
 import GlobalContent from "../../GlobalContent/GlobalContent";
 import ImageGallery from "react-image-gallery";
@@ -143,12 +144,25 @@ function ProductPage({
                     <div className={styles.name}>
                       <p>{productData.name}</p>
                     </div>
-                    <div className={styles.articleContainer}>
-                      <p>Артикул:</p>
-                      <p className={styles.article}>{productData.article}</p>
+                    <div className={styles.availableAndArticleContainer}>
+                      <div className={styles.availableContainer}>
+                        {productData.available ? (
+                          <p className={styles.available}>
+                            <Icon name="check" size="small" />В наличии
+                          </p>
+                        ) : (
+                          <p className={styles.notAvailable}>
+                            <span className={styles.notAvailableIcon}>?</span>{" "}
+                            Уточняйте у менеджера
+                          </p>
+                        )}
+                      </div>
+                      <div className={styles.articleContainer}>
+                        <p>Артикул:</p>
+                        <p className={styles.article}>{productData.article}</p>
+                      </div>
                     </div>
                   </div>
-
                   <div className={styles.productBlock}>
                     <div className={styles.images}>
                       {isMobile ? (
@@ -160,7 +174,7 @@ function ProductPage({
                           lazyLoad={true}
                           showPlayButton={false}
                           thumbnailPosition="bottom"
-                          showFullscreenButton={false}
+                          // showFullscreenButton={false}
                         />
                       )}
                     </div>

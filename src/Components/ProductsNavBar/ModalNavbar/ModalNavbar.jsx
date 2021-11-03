@@ -44,7 +44,7 @@ function ModalNavbar({ products }) {
           <Icon
             className={styles.arrowRightIcon}
             color="white"
-            name="angle right"
+            name="angle down"
           />
         </Button>
       </div>

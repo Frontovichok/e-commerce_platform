@@ -67,7 +67,9 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
   let sortBy = query.get("sort") || "default";
   let productsArr = [];
   let isLoaded = false;
+  let isMobile = window.innerWidth < 500;
   let [show, setShow] = useState(false);
+
   if (pageData.productsData) {
     productsArr.push(...pageData.productsData);
     isLoaded = true;
@@ -100,7 +102,7 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
       productsArr = productsArr;
   }
 
-  let productsPerPage = +query.get("productsPerPage") || 15;
+  let productsPerPage = (isMobile && 16) || +query.get("productsPerPage") || 15;
   let countPages = Math.ceil(productsArr.length / productsPerPage);
   let slicedProducts = sliceProductsByPage(
     productsArr,
@@ -127,7 +129,7 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
         <>
           <div className={styles.dropdowns}>
             <SortDropdown />
-            <ShowedProductsInPageDropdown />
+            {!isMobile && <ShowedProductsInPageDropdown />}
           </div>
           {show ? (
             <>
