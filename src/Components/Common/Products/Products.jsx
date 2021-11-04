@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Loader } from "semantic-ui-react";
 import PaginationControl from "../Pagination/PaginationControl";
-import SortDropdown from "../SortDropdown/SortDropdown";
 import ProductCard from "../ProductCard/ProductCard";
+import SortDropdown from "../Dropdowns/SortDropdown/SortDropdown";
+import ShowedProductsInPageDropdown from "../Dropdowns/ShowedProductsInPageDropdown/ShowedProductsInPageDropdown";
+import PriceFilter from "../Dropdowns/PriceFilter/PriceFilter";
 import styles from "./Products.module.css";
-import ShowedProductsInPageDropdown from "../ShowedProductsInPageDropdown/ShowedProductsInPageDropdown";
 
 function sliceProductsByPage(products, productsPerPage, countPages) {
   let slicedProducts = [];
@@ -128,8 +129,17 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
       {productsArr && !isLoading && isLoaded ? (
         <>
           <div className={styles.dropdowns}>
-            <SortDropdown />
-            {!isMobile && <ShowedProductsInPageDropdown />}
+            <div className={styles.topDropdowns}>
+              <SortDropdown />
+              {!isMobile && <ShowedProductsInPageDropdown />}
+            </div>
+            <div className={styles.bottomDropdowns}>
+              <PriceFilter />
+              <PriceFilter />
+              <PriceFilter />
+              <PriceFilter />
+              <PriceFilter />
+            </div>
           </div>
           {show ? (
             <>

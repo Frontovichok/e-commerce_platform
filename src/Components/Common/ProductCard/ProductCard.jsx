@@ -96,12 +96,12 @@ export default function ProductCard({ product, categories, searchQuery = "" }) {
           </div>
         </div>
       </div>
-      <NavLink
+      {/* <NavLink
         to={`/product/${product.article}${categoryQuery}`}
         className={styles.button}
       >
         Подробнее
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 }

@@ -17,7 +17,16 @@
 }
 .dropdowns {
   display: flex;
+  flex-direction: column;
+}
+.topDropdowns {
+  display: flex;
   flex-direction: row;
+}
+.bottomDropdowns {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
 }
 .loader:global(.ui.inline.loader) {
   margin: auto;
