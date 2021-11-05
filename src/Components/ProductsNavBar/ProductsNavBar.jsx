@@ -48,7 +48,7 @@ function ProductsNavBar() {
       ) : (
         <div className={styles.container}>
           {productsCategories.map((products, i) => (
-            <div className={styles.navbar}>
+            <div className={styles.navbar} key={i}>
               <div
                 className={styles.categoryLinkContainer}
                 onClick={() => {

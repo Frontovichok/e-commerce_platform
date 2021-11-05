@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import { Dropdown } from "semantic-ui-react";
 import styles from "./SortDropdown.module.css";
@@ -19,17 +19,6 @@ const SortDropdown = () => {
   let placeHolder = options.map((option) =>
     currentUrlParams.get("sort") === option.value ? option.text : ""
   )[0];
-
-  useEffect(() => {
-    if (
-      currentUrlParams.get("sort") === null ||
-      sortBy !== currentUrlParams.get("sort")
-    ) {
-      currentUrlParams.set("sort", sortBy);
-      history.push(location.pathname + "?" + currentUrlParams.toString());
-    }
-  }, [sortBy, location]);
-
   return (
     <div className={styles.sortDropdown}>
       <div className={styles.label}>Сотировка:</div>
@@ -40,11 +29,11 @@ const SortDropdown = () => {
         options={options}
         className={styles.dropdown}
         onChange={(e, { value }) => {
-          setSortBy(value);
           currentUrlParams.set("page", 1);
+          currentUrlParams.set("sort", value);
           history.push(location.pathname + "?" + currentUrlParams.toString());
         }}
-        defaultValue={currentUrlParams.get("sort")}
+        defaultValue={sortBy}
       />
     </div>
   );

@@ -61,11 +61,34 @@ function sortByPrice(products, direction) {
   );
 }
 
+function filterByPrice(
+  products,
+  priceFrom,
+  priceTo,
+  isShowProductsOnlyWithPrice
+) {
+  let filteredProducts = products.filter((product) => {
+    if (!isShowProductsOnlyWithPrice && product.price === "Товар под заказ") {
+      return true;
+    }
+    return +product.price >= +priceFrom && +product.price <= +priceTo;
+  });
+  return filteredProducts;
+}
+
 function Products({ pageData, categories, searchQuery, isLoading }) {
   let query = useQuery();
   let location = useLocation();
   let pageNow = +query.get("page") || 1;
   let sortBy = query.get("sort") || "default";
+  let priceFrom = query.get("pricefrom") || "default";
+  let priceTo = query.get("priceto") || "default";
+  let isShowProductsOnlyWithPrice =
+    query.get("showProductsOnlyWithPrice") || true;
+  if (typeof isShowProductsOnlyWithPrice === "string") {
+    isShowProductsOnlyWithPrice =
+      isShowProductsOnlyWithPrice === "true" ? true : false;
+  }
   let productsArr = [];
   let isLoaded = false;
   let isMobile = window.innerWidth < 500;
@@ -82,6 +105,18 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
   } else if (Array.isArray(pageData)) {
     productsArr = [...pageData];
     isLoaded = true;
+  }
+
+  if (
+    +priceFrom === parseInt(priceFrom, 10) &&
+    +priceTo === parseInt(priceTo, 10)
+  ) {
+    productsArr = filterByPrice(
+      productsArr,
+      priceFrom,
+      priceTo,
+      isShowProductsOnlyWithPrice
+    );
   }
 
   sortBy = query.get("sort") || "default";
@@ -115,6 +150,7 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
   }
 
   useEffect(async () => {
+    console.log("useEffect in Products component");
     setShow(false);
     const sleep = (milliseconds = 500) =>
       new Promise((resolve) => {
@@ -134,10 +170,6 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
               {!isMobile && <ShowedProductsInPageDropdown />}
             </div>
             <div className={styles.bottomDropdowns}>
-              <PriceFilter />
-              <PriceFilter />
-              <PriceFilter />
-              <PriceFilter />
               <PriceFilter />
             </div>
           </div>

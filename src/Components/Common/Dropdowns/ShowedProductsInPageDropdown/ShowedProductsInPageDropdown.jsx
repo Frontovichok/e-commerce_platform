@@ -16,31 +16,21 @@ const ShowedProductsInPageDropdown = () => {
     currentUrlParams.get("productsPerPage") || "15"
   );
 
-  useEffect(() => {
-    if (
-      currentUrlParams.get("productsPerPage") === null ||
-      productsPerPage !== currentUrlParams.get("productsPerPage")
-    ) {
-      currentUrlParams.set("productsPerPage", productsPerPage);
-      history.push(location.pathname + "?" + currentUrlParams.toString());
-    }
-  }, [productsPerPage, location]);
-
   return (
     <div className={styles.dropdownContainer}>
       <div className={styles.label}>Товаров на странице:</div>
       <Dropdown
-        placeholder={currentUrlParams.get("productsPerPage")}
+        placeholder={productsPerPage}
         openOnFocus
         selection
         options={options}
         className={styles.dropdown}
         onChange={(e, { value }) => {
-          setProductsPerPage(value);
           currentUrlParams.set("page", 1);
+          currentUrlParams.set("productsPerPage", value);
           history.push(location.pathname + "?" + currentUrlParams.toString());
         }}
-        defaultValue={currentUrlParams.get("productsPerPage")}
+        defaultValue={productsPerPage}
       />
     </div>
   );

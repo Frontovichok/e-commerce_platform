@@ -34,6 +34,39 @@ body {
   flex-direction: column;
   height: 100%;
 }
+.customButton {
+  color: white;
+  background: var(--global-gradient);
+  box-shadow: var(--global-box-shadow);
+  padding: 8px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.customButton_outline {
+  color: var(--global-primary-color);
+  background: white;
+  border: 1px solid var(--global-primary-color);
+  padding: 7px 15px;
+  outline: none;
+  border-radius: 5px;
+}
+.customButton_outline:hover {
+  background: rgb(243, 255, 247);
+}
+.customButton_outline:active {
+  background: rgb(225, 252, 233);
+}
+.customButton_outline_shadow {
+  color: var(--global-primary-color);
+  background: white;
+  box-shadow: var(--global-box-shadow);
+  border: 1px solid var(--global-primary-color);
+  padding: 8px 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
 .sectionTitle {
   font-family: Futura, sans-serif;
   font-weight: 900;

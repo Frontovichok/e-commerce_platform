@@ -10,6 +10,7 @@ import Breadcrumb from "../../Common/Breadcrumb/Breadcrumb";
 import CarouselProductImages from "./CarouselProductImages/CarouselProductImages";
 import { getAllProducts } from "../../../Redux/actions/productsActions";
 import { Loader } from "semantic-ui-react";
+import { useCookies } from "react-cookie";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -93,6 +94,7 @@ function ProductPage({
   isAllCategoriesLoaded,
   getAllProducts,
 }) {
+  const [cookies, setCookie] = useCookies(["user"]);
   let query = useQuery();
   let category = query.get("category");
   let { article } = useParams();
@@ -106,7 +108,20 @@ function ProductPage({
     ) {
       getAllProducts(products, isAllCategoriesLoaded);
     }
+    if (cookies["user2"] === undefined) {
+      console.log("setting cookie 2");
+      setCookie("user2", 22222, { path: "/222" });
+    }
   }, []);
+
+  useEffect(() => {
+    console.log("aaaaa");
+    if (cookies["user"] === undefined) {
+      console.log("setting cookie");
+      setCookie("user", 111111, { path: "/" });
+    }
+  });
+  console.log("user: ", cookies["user"]);
 
   if (category || isAllCategoriesLoaded) {
     [productData, breadcrumbData] = getProductData(

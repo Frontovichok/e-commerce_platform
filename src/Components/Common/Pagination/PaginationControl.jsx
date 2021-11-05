@@ -8,6 +8,7 @@ export default function PaginationControl(props) {
   let siblingCount = width > 400 ? 1 : 0;
   let history = useHistory();
   let location = useLocation();
+  let currentUrlParams = new URLSearchParams(location.search);
 
   return (
     <div className={styles.paginationContainer}>
@@ -16,7 +17,6 @@ export default function PaginationControl(props) {
         page={props.page}
         siblingCount={siblingCount}
         onChange={(e, value) => {
-          let currentUrlParams = new URLSearchParams(location.search);
           currentUrlParams.set("page", value);
           history.push(location.pathname + "?" + currentUrlParams.toString());
         }}
