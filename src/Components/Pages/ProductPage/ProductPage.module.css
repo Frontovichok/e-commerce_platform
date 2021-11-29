@@ -23,7 +23,7 @@
   width: 55%;
   margin-right: 20px;
 }
-.images :global(.image-gallery-content) {
+.images :global(.image-gallery-slide-wrapper) {
   max-height: 500px;
 }
 .head {
