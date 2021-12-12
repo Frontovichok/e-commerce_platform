@@ -16,6 +16,7 @@
 }
 .productsContainer {
   flex: 1 1;
+  max-width: calc(100% - 280px - 50px);
 }
 @media (min-width: 320px) {
   .container {

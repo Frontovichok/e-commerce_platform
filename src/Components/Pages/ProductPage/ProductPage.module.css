@@ -248,7 +248,7 @@
     border-top: 1px solid rgb(206, 206, 206);
   }
   .images {
-    width: 55%;
+    width: calc(55% - 20px);
     margin-right: 20px;
   }
   .info {

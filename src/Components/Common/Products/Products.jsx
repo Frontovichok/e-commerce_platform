@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Loader } from "semantic-ui-react";
+import RecentlyViewedProducts from "../RecentlyViewedProducts/RecentlyViewedProducts";
 import PaginationControl from "../Pagination/PaginationControl";
 import ProductCard from "../ProductCard/ProductCard";
 import SortDropdown from "../Dropdowns/SortDropdown/SortDropdown";
@@ -194,6 +195,7 @@ function Products({ pageData, categories, searchQuery, isLoading }) {
           ) : (
             <Loader className={styles.loader} active inline size="big" />
           )}
+          <RecentlyViewedProducts />
         </>
       ) : (
         <Loader className={styles.loader} active inline size="large" />

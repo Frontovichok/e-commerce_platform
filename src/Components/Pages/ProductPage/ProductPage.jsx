@@ -11,6 +11,7 @@ import CarouselProductImages from "./CarouselProductImages/CarouselProductImages
 import { getAllProducts } from "../../../Redux/actions/productsActions";
 import { Loader } from "semantic-ui-react";
 import { useCookies } from "react-cookie";
+import RecentlyViewedProducts from "../../Common/RecentlyViewedProducts/RecentlyViewedProducts";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -113,15 +114,6 @@ function ProductPage({
       setCookie("user2", 22222, { path: "/222" });
     }
   }, []);
-
-  useEffect(() => {
-    console.log("aaaaa");
-    if (cookies["user"] === undefined) {
-      console.log("setting cookie");
-      setCookie("user", 111111, { path: "/" });
-    }
-  });
-  console.log("user: ", cookies["user"]);
 
   if (category || isAllCategoriesLoaded) {
     [productData, breadcrumbData] = getProductData(
@@ -256,6 +248,7 @@ function ProductPage({
                       </div>
                     </div>
                   </div>
+                  <RecentlyViewedProducts slidesToShow={6} />
                 </>
               ) : (
                 <div>Not found</div>

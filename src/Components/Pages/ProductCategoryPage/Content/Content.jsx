@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
 import productsCategories from "../../../../data/productsCategories.json";
-import ProductsPage from "../../ProductsPage/ProductsPage";
+import ProductsPageContainer from "../../ProductsPage/ProductsPageContainer";
 
 function Content() {
   const [breadcrumbData, setBreadcrumbData] = useState([]);
@@ -35,7 +35,7 @@ function Content() {
       <div className={styles.content}>
         <ProductsNavBar products={currentCategorySubCategories} />
         {subCategoryName ? (
-          <ProductsPage
+          <ProductsPageContainer
             setBreadcrumbData={setBreadcrumbData}
             breadcrumbData={breadcrumbData}
           />

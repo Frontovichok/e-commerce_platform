@@ -1,6 +1,7 @@
 .products {
   display: flex;
   flex-direction: column;
+  
 }
 .productsContainer {
   display: flex;

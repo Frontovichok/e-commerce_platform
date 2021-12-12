@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MainPage from "./Components/Pages/MainPage/MainPage";
 import "semantic-ui-css/semantic.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ProductCategoryPage from "./Components/Pages/ProductCategoryPage/ProductCategoryPage";
 import NotFound from "./Components/Pages/NotFound/NotFound";
 import PricePage from "./Components/Pages/PricePage/PricePage";
